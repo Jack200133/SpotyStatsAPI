@@ -1,0 +1,24 @@
+{
+  "name": "spotystatsapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jack200133/SpotyStatsAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jack200133/SpotyStatsAPI/issues"
+  },
+  "homepage": "https://github.com/Jack200133/SpotyStatsAPI#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongodb": "4.13"
+  }
+}
