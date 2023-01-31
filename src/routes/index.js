@@ -1,10 +1,11 @@
 const {Router} = require('express')
 const router = Router()
-const {getUsers,
+const {getUsers,createUser,
     passwordCheck}= require("../controllers/index.usuario")
 // http://localhost:5000/
 //router.get('/login/:pass/:correo',getUsers)
 router.post('/login/', getUsers)
+router.post('/register/', createUser)
 //router.post('/login/:pass/:correo',passwordCheck)
 //router.get('/users/:correo',getUserByID)
 //router.post('/users',createUser)
