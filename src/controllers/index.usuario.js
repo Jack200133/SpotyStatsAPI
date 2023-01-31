@@ -1,8 +1,23 @@
+const { MongoClient } = require('mongodb');
+
+
+const uri = "mongodb+srv://jackal:jackal@spotifystats.1emngx6.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri);
+
+
+
 const getUsers = async (req,res) => {
-    try{
-        const response = await pool.query('Select * from usuarios')
-        res.status(200).json(response.rows)
-    }catch (e){
+    try {
+        const database = client.db('SpotyStats')
+        const users = database.collection('users')
+        const id = req.params.id;
+
+        const query = { correo : id }
+        const user = await users.findOne(query)
+        console.log(user)
+        res.json(user)
+      } 
+      catch (e){
         console.log("ERROR")
 
         res.json({
@@ -10,111 +25,115 @@ const getUsers = async (req,res) => {
             error: e
         })
     }
+    finally {
+        // Ensures that the client will close when you finish/error
+        await client.close();
+      }
 }
 
-const getUserByID = async (req,res)=>{
-    try{
-        const id = req.params.correo
-        const response = await pool.query('SELECT nombre, descripcion FROM usuarios WHERE correo = $1',[id])
-        res.json(response.rows)
-    }catch (e){
+const passwordCheck = async (req,res) => {
+    try {
+        const database = client.db('SpotyStats')
+        const users = database.collection('users')
+        const {id} = req.params
+
+        const query = { correo : id }
+        const user = await users.findOne(query)
+        console.log(user)
+        res.json(user)
+      } 
+      catch (e){
         console.log("ERROR")
 
         res.json({
-            message:'Error'
+            message:'Error en getUsers',
+            error: e
         })
     }
+    finally {
+        // Ensures that the client will close when you finish/error
+        await client.close();
+      }
 }
 
-const createUser = async(req,res)=>{
-    const {name,correo,contrasena,descripcion} = req.body
-    const rondas = 10
-    const haspass = await bcrypt.hash(contrasena, rondas);
-    console.log(name,correo,contrasena,descripcion)
-    const response = await pool.query('insert into usuarios(nombre,correo,passw,descripcion) values($1,$2,$3,$4)',[name,correo,haspass,descripcion])
-    console.log(response)
-    res.json({
-         message:'Agregado el usuario',
-         body:{
-             user:{name,correo,descripcion}
-         },
-         completado: true
-    })
-}
-// localhost:5000/user/:id
-// body 
-const updateUser = async (req, res) => {
-    const id = req.params.id
-    const {correo,name,pass,descripcion} = req.body
-    const rondas = 10
-    const haspass = await bcrypt.hash(pass, rondas);
-    console.log(id, name, pass)
-    const response = await pool.query('Update usuarios SET correo = $1, nombre = $2, passw = $3,descripcion =$4 WHERE id =$5',[
-        correo,
-        name,
-        haspass,
-        descripcion,
-        id
-    ])
-    console.log(response)
-    res.json('User Updated')
-}
+const getArtist = async (req,res) => {
+    try {
+        const database = client.db('SpotyStats')
+        const users = database.collection('users')
 
-const passwordCheck = async (req,res) =>{
-    const correo = req.params.correo
-    const pass = req.params.pass
-    console.log(pass,correo)
-    const response = await pool.query('SELECT * FROM usuarios WHERE correo = $1',[correo])
-    console.log(response)
-    if(response.rowCount === 0){
-        res.json({
-            completado: false
-        })
-    }else{
-        const hashed = response.rows[0].passw
-        const prn = await bcrypt.compare(pass,hashed)
-        if(prn){
-            res.json({
-                completado: true
-            })
-        }else{
-            res.json({
-                completado: false
-            })
-        }
-    }
-    
-    
-}
-
-
-
-const delUser = async(req,res) =>{
-    const response = await pool.query('DELETE FROM usuarios where id=$1',[req.params.id])
-    res.json(`User ${req.params.id} eliminado de BD`)
-}
-
-const Save = async(req,res) => {
-    const {correo,id} = req.body
-    const hay = await pool.query('SELECT * FROM guardado WHERE id_receta = $1 and correo_usuario=$2',[id,correo])
-    if(hay.rowCount === 0){
-        const response = await pool.query('Insert into guardado(id_receta,correo_usuario) values($1 ,$2)',[id,correo])
-        res.json(`Relacion ${req.params.id} Agregado a Saved`)
+        const user = await users.findMany()
+        console.log(user)
+        res.json(user)
         
-    }else{
-        const response = await pool.query('delete from guardado WHERE id_receta = $1 and correo_usuario=$2 ',[id,correo])
-        res.json(`Relacion ${req.params.id} Quitado de Saved`)
+      } 
+      catch (e){
+        console.log("ERROR")
+
+        res.json({
+            message:'Error en getUsers',
+            error: e
+        })
     }
-    
-    
+    finally {
+        // Ensures that the client will close when you finish/error
+        await client.close();
+      }
+
 }
+
+const getCanciones = async (req,res) => {
+    try {
+        const database = client.db('SpotyStats')
+        const songs = database.collection('songs')
+
+        const song = await songs.findMany()
+        console.log(song)
+        res.json(song)
+        
+      } 
+      catch (e){
+        console.log("ERROR")
+
+        res.json({
+            message:'Error en getUsers',
+            error: e
+        })
+    }
+    finally {
+        // Ensures that the client will close when you finish/error
+        await client.close();
+      }
+
+}
+
+const getReproductions = async (req,res) => {
+    try {
+        const database = client.db('SpotyStats')
+        const users = database.collection('users')
+        const id = req.params.id;
+
+        const query = { correo : id }
+        const user = await users.findOne(query)
+        console.log(user)
+        res.json(user)
+      } 
+      catch (e){
+        console.log("ERROR")
+
+        res.json({
+            message:'Error en getUsers',
+            error: e
+        })
+    }
+    finally {
+        // Ensures that the client will close when you finish/error
+        await client.close();
+      }
+}
+
+
+
 
 module.exports = {
-    getUsers,
-    createUser,
-    getUserByID,
-    delUser,
-    updateUser,
-    passwordCheck,
-    Save
+    getUsers,passwordCheck,getArtist
 }
