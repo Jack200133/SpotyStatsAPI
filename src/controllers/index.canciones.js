@@ -1,8 +1,13 @@
 const { MongoClient } = require('mongodb');
-const yup = require('yup');
+//const yup = require('yup');
 const uri = "mongodb+srv://jackal:jackal@spotifystats.1emngx6.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri);
 
+const client_id = "3e5c97ca35184e2e907593dce6277b70"
+const client_secret = "508c63883dfc48f2a4988c39154a3d9e "
+const redirect_uri = "http://localhost:5000/callback"
+
+/*
 const userSchema = yup.object().shape({
     email: yup.string().required(),
     password: yup.string().required(),
@@ -13,25 +18,32 @@ const userSchema = yup.object().shape({
     cantidad_canciones: yup.number().notRequired(),
     generos: yup.array().of(yup.string()).required()
 });
+*/
 
+const refreshSongs = async (req, res) => {
+    try{
+        const database = client.db('SpotyStats')
+
+        const songs = database.collection('songs')
+
+
+        // jalar generos
+
+        // jalar 10 canciones por genero
+
+        // si no existe, crear
+
+        // si si existe, cambiar cantidad de reproducciones
+    }
+    catch (e){
+
+    }
+}
 
 
 const getUsers = async (req,res) => {
     try {
         
-
-        MongoClient.connect(uri, { useNewUrlParser: true }, (err, client) => {
-            if (err) throw err;
-            const db = client.db('SpotyStats')
-            const collection = db.collection('users')
-            const {email,password} = req.body
-    
-            collection.findOne({ email: email }, (err, user) => {
-                if (err) throw err;
-                res.send(user);
-                client.close();
-            });
-        });
       } 
       catch (e){
         console.log("ERROR ",e)
@@ -46,15 +58,11 @@ const getUsers = async (req,res) => {
         await client.close();
       }
 }
+ 
 
-const createUser = async (req,res) => {
+
+const createSong = async (req,res) => {
     {
-        try {
-            await userSchema.validate(req.body, { abortEarly: false })
-        } catch (error) {
-            return res.status(400).send(error.errors)
-        }
-    
         const user = {
             email: req.body.email,
             password: req.body.password,
@@ -65,7 +73,7 @@ const createUser = async (req,res) => {
             cantidad_canciones: req.body.cantidad_canciones,
             generos: req.body.generos
         }
-        console.log(user)
+        
         const db = client.db("SpotyStats")
         const collection = db.collection("users")
     
@@ -157,5 +165,5 @@ const getReproductions = async (req,res) => {
 
 
 module.exports = {
-    getUsers,getArtist,createUser
+    refreshSongs
 }
