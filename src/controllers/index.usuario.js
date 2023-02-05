@@ -21,17 +21,17 @@ const getUsers = async (req,res) => {
         
 
         MongoClient.connect(uri, { useNewUrlParser: true }, (err, client) => {
-            if (err) throw err;
+            if (err) throw err
             const db = client.db('SpotyStats')
             const collection = db.collection('users')
             const {email,password} = req.body
     
             collection.findOne({ email: email }, (err, user) => {
-                if (err) throw err;
-                res.send(user);
-                client.close();
-            });
-        });
+                if (err) throw err
+                res.send(user)
+                client.close()
+            })
+        })
       } 
       catch (e){
         console.log("ERROR ",e)
@@ -103,56 +103,6 @@ const getArtist = async (req,res) => {
       }
 
 }
-
-const getCanciones = async (req,res) => {
-    try {
-        const database = client.db('SpotyStats')
-        const songs = database.collection('songs')
-
-        const song = await songs.findMany()
-        console.log(song)
-        res.json(song)
-        
-      } 
-      catch (e){
-        console.log("ERROR")
-
-        res.json({
-            message:'Error en getCanciones',
-            error: e
-        })
-    }
-    finally {
-        // Ensures that the client will close when you finish/error
-        await client.close();
-      }
-
-}
-
-const getReproductions = async (req,res) => {
-    try {
-        const database = client.db('SpotyStats')
-        const reproductions = database.collection('reproductions')
-
-        const reproduction = await reproductions.findMany()
-        console.log(reproduction)
-        res.json(reproduction)
-        
-      } 
-      catch (e){
-        console.log("ERROR")
-
-        res.json({
-            message:'Error en getReproductions',
-            error: e
-        })
-    }
-    finally {
-        // Ensures that the client will close when you finish/error
-        await client.close();
-      }
-}
-
 
 
 
