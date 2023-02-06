@@ -22,63 +22,68 @@ const userSchema = yup.object().shape({
 
 const topRegion = async (req, res) => {
     try{
-        const database = client.db('SpotyStats')
+        MongoClient.connect(uri, { useNewUrlParser: true }, async (err, client) => {
+            const database = client.db('SpotyStats')
 
-        const reproducciones = database.collection('reproducciones')
+            const reproducciones = database.collection('reproducciones')
 
 
-        const aggregateResult = await reproducciones.aggregate(
-            [
-                {
-                  $project:
+            const aggregateResult = await reproducciones.aggregate(
+                [
                     {
-                      _id: "$cancion",
-                      region: "$usuario.pais",
-                      tiempo_reproducido: "$tiempo_reproducido",
-                    },
-                },
-                {
-                  $sort:
-                    {
-                      tiempo_reproducido: -1,
-                    },
-                },
-                {
-                  $group:
-                    {
-                      _id: "$region",
-                      canciones: {
-                        $push: {
-                          cancion: "$_id",
-                          tiempo: {
-                            $sum: "$tiempo_reproducido",
-                          },
+                    $project:
+                        {
+                        _id: "$cancion",
+                        region: "$usuario.pais",
+                        continente: "$usuario.continente",
+                        tiempo_reproducido: "$tiempo_reproducido",
                         },
-                      },
                     },
-                },
-                {
-                  $project:
                     {
-                      _id: "$_id",
-                      canciones: {
-                        $slice: ["$canciones", 10],
-                      },
+                    $sort:
+                        {
+                        tiempo_reproducido: -1,
+                        },
                     },
-                },
-            ]
-        )
-        aggregateResult.toArray((err, data) => {
-            if (err) {
-                console.error(err)
-                res.status(500).send(err)
-            } else {
-                console.log(data)
-                res.send(data)
-            }
-            client.close()
-          })
+                    {
+                    $group:
+                        {
+                        _id: {region : "$region", continente: "$continente"},
+                        canciones: {
+                            $push: {
+                            cancion: "$_id",
+                            tiempo: {
+                                $sum: "$tiempo_reproducido",
+                            },
+                            },
+                        },
+                        },
+                    },
+                    {
+                    $project:
+                        {
+                        _id: "$_id",
+                        canciones: {
+                            $slice: ["$canciones", 10],
+                        },
+                        },
+                    },
+                ]
+            )
+            aggregateResult.toArray((err, data) => {
+                if (err) {
+                    console.error(err)
+                    res.status(500).send(err)
+                } else {
+                    console.log(data)
+                    res.send(data)
+                }
+                client.close()
+            })
 
+
+
+        })
     }
     catch (e) {
         console.log("ERROR")

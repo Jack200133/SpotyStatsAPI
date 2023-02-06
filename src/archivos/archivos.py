@@ -3,702 +3,1162 @@ import json
 
 usuarios = [
 	{
-		"nombre": "Todd Byers",
-		"edad": 17,
-		"pais": "Ireland",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Emery Cohen",
-		"edad": 65,
-		"pais": "Belgium",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Martha Jensen",
-		"edad": 64,
-		"pais": "United Kingdom",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Willow Thompson",
-		"edad": 42,
-		"pais": "Chile",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Lareina Patton",
-		"edad": 14,
-		"pais": "Nigeria",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Amethyst Fernandez",
-		"edad": 50,
-		"pais": "Indonesia",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Xenos Daugherty",
-		"edad": 51,
-		"pais": "Nigeria",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Wallace Turner",
-		"edad": 26,
-		"pais": "China",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Chase Goodman",
-		"edad": 54,
-		"pais": "Canada",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Colorado Quinn",
-		"edad": 25,
-		"pais": "India",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Rahim Jordan",
-		"edad": 45,
-		"pais": "Poland",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Ursa Wallace",
-		"edad": 46,
-		"pais": "Germany",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Rashad Yates",
-		"edad": 29,
-		"pais": "Singapore",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Moses Parsons",
-		"edad": 0,
-		"pais": "Indonesia",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Maxwell Soto",
-		"edad": 35,
-		"pais": "Ireland",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Buffy Warren",
-		"edad": 18,
-		"pais": "Pakistan",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Yen Whitfield",
-		"edad": 46,
-		"pais": "Indonesia",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Yoshio Dickson",
-		"edad": 22,
-		"pais": "Indonesia",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Fritz Langley",
-		"edad": 45,
-		"pais": "Belgium",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Kareem Mclean",
-		"edad": 16,
-		"pais": "Vietnam",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Cairo Perry",
-		"edad": 12,
-		"pais": "Sweden",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Ramona Mcpherson",
-		"edad": 65,
-		"pais": "New Zealand",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Fritz Pena",
-		"edad": 40,
-		"pais": "India",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Amena Neal",
-		"edad": 41,
-		"pais": "Philippines",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Hiram Quinn",
-		"edad": 41,
-		"pais": "South Korea",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Reese Cherry",
-		"edad": 35,
-		"pais": "Chile",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Darrel Velasquez",
-		"edad": 42,
-		"pais": "Nigeria",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Penelope Nieves",
-		"edad": 51,
-		"pais": "United States",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Noel Duncan",
-		"edad": 15,
-		"pais": "Austria",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Cade Hurley",
-		"edad": 62,
-		"pais": "Costa Rica",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Allen Cross",
-		"edad": 27,
-		"pais": "Costa Rica",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Aileen Salazar",
-		"edad": 32,
-		"pais": "Indonesia",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Nolan Crane",
-		"edad": 30,
-		"pais": "Poland",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Hakeem Brennan",
-		"edad": 57,
-		"pais": "Vietnam",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Hector Curtis",
-		"edad": 60,
-		"pais": "Peru",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Tobias Buckner",
-		"edad": 27,
-		"pais": "China",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Ferris Calderon",
-		"edad": 33,
-		"pais": "Germany",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Tyler Pate",
-		"edad": 24,
-		"pais": "Norway",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Meghan Russell",
-		"edad": 6,
-		"pais": "Norway",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Bert Giles",
-		"edad": 43,
-		"pais": "Sweden",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Anika Underwood",
-		"edad": 51,
-		"pais": "Ukraine",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Gavin Buck",
-		"edad": 4,
-		"pais": "United Kingdom",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Fuller Ellison",
-		"edad": 0,
-		"pais": "France",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Dai Frost",
-		"edad": 4,
-		"pais": "Ukraine",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Ali Alexander",
-		"edad": 36,
-		"pais": "Poland",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Justin Finley",
-		"edad": 43,
-		"pais": "Mexico",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Phyllis Emerson",
-		"edad": 22,
-		"pais": "New Zealand",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Felicia Ayers",
-		"edad": 30,
-		"pais": "Indonesia",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Maryam Weber",
-		"edad": 63,
-		"pais": "Norway",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Linus Nichols",
-		"edad": 27,
-		"pais": "Pakistan",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Raphael Mayer",
-		"edad": 1,
-		"pais": "Costa Rica",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Chastity Mcdaniel",
+		"nombre": "Shaeleigh Langley",
 		"edad": 37,
-		"pais": "Canada",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Raven Gibbs",
-		"edad": 29,
-		"pais": "South Korea",
+		"region": "Europa",
+		"pais": "Francia",
 		"suscripcion": 0,
 		"genero": "Masculino"
 	},
 	{
-		"nombre": "Hyacinth Atkinson",
-		"edad": 41,
-		"pais": "France",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Brendan Justice",
-		"edad": 2,
-		"pais": "New Zealand",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Bruno Weaver",
-		"edad": 21,
-		"pais": "South Africa",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Matthew Dickerson",
-		"edad": 49,
-		"pais": "Mexico",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Lester Drake",
-		"edad": 50,
-		"pais": "Norway",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Mark Vincent",
-		"edad": 37,
-		"pais": "United Kingdom",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Howard Avery",
-		"edad": 11,
-		"pais": "Austria",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Calista Rios",
-		"edad": 9,
-		"pais": "Netherlands",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Arden Stafford",
-		"edad": 3,
-		"pais": "Spain",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Mallory Robertson",
-		"edad": 9,
-		"pais": "Ireland",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Emery Barron",
-		"edad": 9,
-		"pais": "Ukraine",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Wing Stephenson",
-		"edad": 30,
-		"pais": "Austria",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Sonia Riggs",
-		"edad": 67,
-		"pais": "Italy",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Otto Sandoval",
-		"edad": 48,
-		"pais": "Indonesia",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Todd Aguirre",
-		"edad": 11,
-		"pais": "United Kingdom",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Jade Salas",
-		"edad": 59,
-		"pais": "India",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Hayes Kim",
-		"edad": 24,
-		"pais": "Norway",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Vera Dillard",
-		"edad": 22,
-		"pais": "Germany",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Price Mckinney",
-		"edad": 45,
-		"pais": "Netherlands",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Tanner Gilbert",
-		"edad": 4,
-		"pais": "Ireland",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Urielle Valentine",
-		"edad": 43,
-		"pais": "Austria",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Brock Beach",
-		"edad": 43,
-		"pais": "United Kingdom",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Lareina Hines",
-		"edad": 3,
-		"pais": "Australia",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Wanda Holman",
-		"edad": 54,
-		"pais": "Pakistan",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Mary Ruiz",
-		"edad": 69,
-		"pais": "Colombia",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Jonah Gould",
-		"edad": 15,
-		"pais": "Ukraine",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Noble Lamb",
-		"edad": 27,
-		"pais": "Ireland",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Demetrius Le",
-		"edad": 8,
-		"pais": "Costa Rica",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Steel Rasmussen",
-		"edad": 54,
-		"pais": "Belgium",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Hunter Robertson",
-		"edad": 51,
-		"pais": "Netherlands",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Blythe Browning",
-		"edad": 50,
-		"pais": "Austria",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Kelly Rivera",
-		"edad": 8,
-		"pais": "Singapore",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Ruby Saunders",
-		"edad": 17,
-		"pais": "Belgium",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Martena Melendez",
-		"edad": 25,
-		"pais": "Costa Rica",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Yoshio Ward",
-		"edad": 41,
-		"pais": "Costa Rica",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Channing Leon",
-		"edad": 14,
-		"pais": "Belgium",
-		"suscripcion": 0,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Lionel Cole",
-		"edad": 35,
-		"pais": "France",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Hillary Barton",
-		"edad": 30,
-		"pais": "Pakistan",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Kasper Edwards",
-		"edad": 55,
-		"pais": "United Kingdom",
-		"suscripcion": 1,
-		"genero": "Femenino"
-	},
-	{
-		"nombre": "Veronica Nash",
-		"edad": 3,
-		"pais": "Ukraine",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Kareem Peterson",
-		"edad": 20,
-		"pais": "Ireland",
-		"suscripcion": 1,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Macey Knowles",
-		"edad": 42,
-		"pais": "Poland",
-		"suscripcion": 0,
-		"genero": "Masculino"
-	},
-	{
-		"nombre": "Harrison Mcintosh",
+		"nombre": "Chandler Mooney",
 		"edad": 6,
-		"pais": "Australia",
+		"region": "Europa",
+		"pais": "España",
 		"suscripcion": 1,
 		"genero": "Femenino"
 	},
 	{
-		"nombre": "Hedda Barber",
-		"edad": 30,
-		"pais": "Germany",
+		"nombre": "Alexander Sellers",
+		"edad": 23,
+		"region": "Europa",
+		"pais": "Italia",
 		"suscripcion": 1,
-		"genero": "Femenino"
+		"genero": "Masculino"
 	},
 	{
-		"nombre": "Carter Buckley",
+		"nombre": "Yuli Skinner",
+		"edad": 77,
+		"region": "Europa",
+		"pais": "Italia",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Jerry Cochran",
+		"edad": 13,
+		"region": "Europa",
+		"pais": "Portugal",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Maryam Reid",
 		"edad": 19,
-		"pais": "South Africa",
+		"region": "Europa",
+		"pais": "Inglaterra",
 		"suscripcion": 0,
 		"genero": "Masculino"
 	},
 	{
-		"nombre": "India Hopkins",
-		"edad": 60,
-		"pais": "Ukraine",
+		"nombre": "Halee Paul",
+		"edad": 22,
+		"region": "Europa",
+		"pais": "Francia",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Denton Mccarty",
+		"edad": 50,
+		"region": "Europa",
+		"pais": "Italia",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Wyatt Mayer",
+		"edad": 35,
+		"region": "Europa",
+		"pais": "Francia",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Jada Coleman",
+		"edad": 42,
+		"region": "Europa",
+		"pais": "Portugal",
 		"suscripcion": 1,
 		"genero": "Masculino"
 	},
 	{
-		"nombre": "Grant Horton",
-		"edad": 37,
-		"pais": "Ireland",
+		"nombre": "Macy Cantu",
+		"edad": 39,
+		"region": "Europa",
+		"pais": "Francia",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Sebastian Cooke",
+		"edad": 54,
+		"region": "Europa",
+		"pais": "Francia",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Kim Perry",
+		"edad": 21,
+		"region": "Europa",
+		"pais": "Inglaterra",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Kenneth Vinson",
+		"edad": 29,
+		"region": "Europa",
+		"pais": "Portugal",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Jonah Byrd",
+		"edad": 35,
+		"region": "Europa",
+		"pais": "Italia",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Boris Dickson",
+		"edad": 27,
+		"region": "Europa",
+		"pais": "Francia",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Ria Waters",
+		"edad": 7,
+		"region": "Europa",
+		"pais": "Italia",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Riley Bean",
+		"edad": 24,
+		"region": "Europa",
+		"pais": "Portugal",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Kenyon Gallegos",
+		"edad": 26,
+		"region": "Europa",
+		"pais": "Inglaterra",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Steven Orr",
+		"edad": 46,
+		"region": "Europa",
+		"pais": "Francia",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Keith Dixon",
+		"edad": 33,
+		"region": "Europa",
+		"pais": "Francia",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Nash Terrell",
+		"edad": 7,
+		"region": "Europa",
+		"pais": "Italia",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Berk Todd",
+		"edad": 53,
+		"region": "Europa",
+		"pais": "Francia",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Cassidy Bryant",
+		"edad": 55,
+		"region": "Europa",
+		"pais": "Inglaterra",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Vanna Powell",
+		"edad": 72,
+		"region": "Europa",
+		"pais": "Francia",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Cain Wells",
+		"edad": 57,
+		"region": "Europa",
+		"pais": "España",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Boris Christian",
+		"edad": 51,
+		"region": "Europa",
+		"pais": "Inglaterra",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Kibo Diaz",
+		"edad": 47,
+		"region": "Europa",
+		"pais": "Inglaterra",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Nigel Brewer",
+		"edad": 1,
+		"region": "Europa",
+		"pais": "España",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Ryder Sargent",
+		"edad": 31,
+		"region": "Europa",
+		"pais": "Francia",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Walker Contreras",
+		"edad": 50,
+		"region": "Europa",
+		"pais": "Portugal",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Andrew Hogan",
+		"edad": 76,
+		"region": "Europa",
+		"pais": "Francia",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Vincent Mendoza",
+		"edad": 59,
+		"region": "Europa",
+		"pais": "Francia",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Quamar Powell",
+		"edad": 3,
+		"region": "Europa",
+		"pais": "Portugal",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Kristen Orr",
+		"edad": 79,
+		"region": "Europa",
+		"pais": "Portugal",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Gabriel Cook",
+		"edad": 72,
+		"region": "Centro América",
+		"pais": "El-Salvador",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Stewart Faulkner",
+		"edad": 62,
+		"region": "Centro América",
+		"pais": "Honduras",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Camille Taylor",
+		"edad": 17,
+		"region": "Centro América",
+		"pais": "Panamá",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Tad O'Neill",
+		"edad": 30,
+		"region": "Centro América",
+		"pais": "Panamá",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Zoe Calderon",
+		"edad": 10,
+		"region": "Centro América",
+		"pais": "El-Salvador",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Orlando Serrano",
+		"edad": 48,
+		"region": "Centro América",
+		"pais": "El-Salvador",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Xanthus Woods",
+		"edad": 56,
+		"region": "Centro América",
+		"pais": "Panamá",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Beatrice Pitts",
+		"edad": 25,
+		"region": "Centro América",
+		"pais": "Panamá",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Stewart Dunn",
+		"edad": 17,
+		"region": "Centro América",
+		"pais": "El-Salvador",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Harding Huff",
+		"edad": 7,
+		"region": "Centro América",
+		"pais": "Nicaragua",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Chiquita Duke",
+		"edad": 57,
+		"region": "Centro América",
+		"pais": "Guatemala",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Uta Goff",
+		"edad": 36,
+		"region": "Centro América",
+		"pais": "Panamá",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "August Waller",
+		"edad": 70,
+		"region": "Centro América",
+		"pais": "El-Salvador",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Fulton Elliott",
+		"edad": 76,
+		"region": "Centro América",
+		"pais": "Honduras",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Aquila Snider",
+		"edad": 67,
+		"region": "Centro América",
+		"pais": "Honduras",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Constance Rocha",
+		"edad": 56,
+		"region": "Centro América",
+		"pais": "Honduras",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Charlotte Larson",
+		"edad": 26,
+		"region": "Centro América",
+		"pais": "El-Salvador",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Kiara Parks",
+		"edad": 34,
+		"region": "Centro América",
+		"pais": "Nicaragua",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Leroy Nash",
+		"edad": 67,
+		"region": "Centro América",
+		"pais": "Nicaragua",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Hu Dudley",
+		"edad": 75,
+		"region": "Centro América",
+		"pais": "El-Salvador",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Leilani Hahn",
+		"edad": 38,
+		"region": "Centro América",
+		"pais": "Guatemala",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Christian Pratt",
+		"edad": 10,
+		"region": "Centro América",
+		"pais": "Honduras",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Genevieve Russo",
+		"edad": 28,
+		"region": "Centro América",
+		"pais": "Nicaragua",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Dane Gamble",
+		"edad": 12,
+		"region": "Centro América",
+		"pais": "Honduras",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Jared Coffey",
+		"edad": 45,
+		"region": "Centro América",
+		"pais": "Nicaragua",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Pamela Noel",
+		"edad": 31,
+		"region": "Centro América",
+		"pais": "Panamá",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Gray Stanton",
+		"edad": 65,
+		"region": "Centro América",
+		"pais": "Guatemala",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Eaton Burton",
+		"edad": 65,
+		"region": "Centro América",
+		"pais": "Nicaragua",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Gwendolyn Reid",
+		"edad": 8,
+		"region": "Centro América",
+		"pais": "Nicaragua",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "MacKensie Webb",
+		"edad": 21,
+		"region": "Centro América",
+		"pais": "Honduras",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Bree Martin",
+		"edad": 30,
+		"region": "Centro América",
+		"pais": "Guatemala",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Chastity Glass",
+		"edad": 59,
+		"region": "Centro América",
+		"pais": "Nicaragua",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Lillith Combs",
+		"edad": 76,
+		"region": "Centro América",
+		"pais": "Panamá",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Hillary Waters",
+		"edad": 15,
+		"region": "Centro América",
+		"pais": "Honduras",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Octavius Wynn",
+		"edad": 59,
+		"region": "Centro América",
+		"pais": "Honduras",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Ahmed Pacheco",
+		"edad": 80,
+		"region": "Centro América",
+		"pais": "Honduras",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Paul Langley",
+		"edad": 18,
+		"region": "Centro América",
+		"pais": "El-Salvador",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Chancellor Dunlap",
+		"edad": 77,
+		"region": "Centro América",
+		"pais": "Honduras",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Kenyon Atkinson",
+		"edad": 71,
+		"region": "Centro América",
+		"pais": "Guatemala",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Madison Cook",
+		"edad": 25,
+		"region": "Centro América",
+		"pais": "Panamá",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Vera Gonzalez",
+		"edad": 50,
+		"region": "Norte América",
+		"pais": "Mexico",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Moses Franklin",
+		"edad": 39,
+		"region": "Norte América",
+		"pais": "USA",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Miranda Duke",
+		"edad": 75,
+		"region": "Norte América",
+		"pais": "USA",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Eugenia Tyler",
+		"edad": 22,
+		"region": "Norte América",
+		"pais": "Mexico",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Madonna Mayo",
+		"edad": 51,
+		"region": "Norte América",
+		"pais": "Mexico",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Darrel Suarez",
+		"edad": 30,
+		"region": "Norte América",
+		"pais": "USA",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Tashya Burns",
+		"edad": 27,
+		"region": "Norte América",
+		"pais": "USA",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Eugenia Holden",
+		"edad": 64,
+		"region": "Norte América",
+		"pais": "USA",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Xavier Harper",
+		"edad": 26,
+		"region": "Norte América",
+		"pais": "USA",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Wendy Herring",
+		"edad": 30,
+		"region": "Norte América",
+		"pais": "USA",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Shelly Mcdowell",
+		"edad": 24,
+		"region": "Norte América",
+		"pais": "USA",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Allen Terrell",
+		"edad": 41,
+		"region": "Norte América",
+		"pais": "USA",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Jeremy Brewer",
+		"edad": 35,
+		"region": "Norte América",
+		"pais": "USA",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Dara Dudley",
+		"edad": 60,
+		"region": "Norte América",
+		"pais": "USA",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Luke Barnes",
+		"edad": 49,
+		"region": "Norte América",
+		"pais": "Mexico",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Kameko Parker",
+		"edad": 45,
+		"region": "Asia",
+		"pais": "Korea",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Maisie Sullivan",
+		"edad": 70,
+		"region": "Asia",
+		"pais": "Korea",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Drew Moran",
+		"edad": 69,
+		"region": "Asia",
+		"pais": "Korea",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Serena Warner",
+		"edad": 3,
+		"region": "Asia",
+		"pais": "Japón",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Carson Juarez",
+		"edad": 71,
+		"region": "Asia",
+		"pais": "Korea",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Alvin Vega",
+		"edad": 14,
+		"region": "Asia",
+		"pais": "Japón",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Alfonso Carlson",
+		"edad": 72,
+		"region": "Asia",
+		"pais": "China",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Nora Fitzpatrick",
+		"edad": 73,
+		"region": "Asia",
+		"pais": "Japón",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Bernard Williams",
+		"edad": 47,
+		"region": "Asia",
+		"pais": "Taiwan",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "MacKenzie Delacruz",
+		"edad": 31,
+		"region": "Asia",
+		"pais": "Korea",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Hamilton Santos",
+		"edad": 31,
+		"region": "Asia",
+		"pais": "China",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Amethyst Valenzuela",
+		"edad": 47,
+		"region": "Asia",
+		"pais": "Japón",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Xaviera Harrington",
+		"edad": 68,
+		"region": "Asia",
+		"pais": "Taiwan",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Lee Mercado",
+		"edad": 63,
+		"region": "Asia",
+		"pais": "Japón",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Daryl Burns",
+		"edad": 42,
+		"region": "Asia",
+		"pais": "Japón",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Adara Eaton",
+		"edad": 57,
+		"region": "Asia",
+		"pais": "Korea",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Lane Wynn",
+		"edad": 59,
+		"region": "Asia",
+		"pais": "Japón",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Connor Hebert",
+		"edad": 9,
+		"region": "Asia",
+		"pais": "Japón",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Castor West",
+		"edad": 3,
+		"region": "Asia",
+		"pais": "Japón",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Rigel Rose",
+		"edad": 4,
+		"region": "Asia",
+		"pais": "Taiwan",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Justin Cash",
+		"edad": 30,
+		"region": "Asia",
+		"pais": "Japón",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Alfreda Collins",
+		"edad": 41,
+		"region": "Asia",
+		"pais": "China",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Brent Brooks",
+		"edad": 76,
+		"region": "Asia",
+		"pais": "Japón",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Dai Burch",
+		"edad": 39,
+		"region": "Asia",
+		"pais": "Korea",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Karyn Sims",
+		"edad": 53,
+		"region": "Asia",
+		"pais": "Japón",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Basia Tyson",
+		"edad": 65,
+		"region": "Asia",
+		"pais": "Taiwan",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Fuller Savage",
+		"edad": 51,
+		"region": "Asia",
+		"pais": "Korea",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Riley Gomez",
+		"edad": 8,
+		"region": "Asia",
+		"pais": "Japón",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Melanie Ward",
+		"edad": 64,
+		"region": "Asia",
+		"pais": "Japón",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Ursa Becker",
+		"edad": 17,
+		"region": "Asia",
+		"pais": "Korea",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Neville Jones",
+		"edad": 29,
+		"region": "Sur América",
+		"pais": "Argentina",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Preston Foreman",
+		"edad": 65,
+		"region": "Sur América",
+		"pais": "Perú",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Jeanette Larson",
+		"edad": 80,
+		"region": "Sur América",
+		"pais": "Perú",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Declan Kirby",
+		"edad": 3,
+		"region": "Sur América",
+		"pais": "Perú",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Wing Garza",
+		"edad": 51,
+		"region": "Sur América",
+		"pais": "Perú",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Ivor Greene",
+		"edad": 67,
+		"region": "Sur América",
+		"pais": "Brazil",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Hayley Holland",
+		"edad": 64,
+		"region": "Sur América",
+		"pais": "Brazil",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Mason Carlson",
+		"edad": 2,
+		"region": "Sur América",
+		"pais": "Argentina",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Ivana Morris",
+		"edad": 62,
+		"region": "Sur América",
+		"pais": "Brazil",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Tatum Burks",
+		"edad": 77,
+		"region": "Sur América",
+		"pais": "Argentina",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Guy Crane",
+		"edad": 38,
+		"region": "Sur América",
+		"pais": "Argentina",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Sonya Woodward",
+		"edad": 33,
+		"region": "Sur América",
+		"pais": "Argentina",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Elmo Bell",
+		"edad": 46,
+		"region": "Sur América",
+		"pais": "Perú",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Kylynn Harrell",
+		"edad": 1,
+		"region": "Sur América",
+		"pais": "Perú",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Maris Reed",
+		"edad": 20,
+		"region": "Sur América",
+		"pais": "Brazil",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Glenna Reeves",
+		"edad": 31,
+		"region": "Sur América",
+		"pais": "Perú",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Chantale Kinney",
+		"edad": 15,
+		"region": "Sur América",
+		"pais": "Perú",
+		"suscripcion": 0,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Peter Rodgers",
+		"edad": 19,
+		"region": "Sur América",
+		"pais": "Argentina",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Teegan Webster",
+		"edad": 78,
+		"region": "Sur América",
+		"pais": "Argentina",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Phillip David",
+		"edad": 76,
+		"region": "Sur América",
+		"pais": "Perú",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Kevyn Munoz",
+		"edad": 21,
+		"region": "África",
+		"pais": "Nigeria",
+		"suscripcion": 0,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Kiona Ayers",
+		"edad": 48,
+		"region": "África",
+		"pais": "Camerún",
+		"suscripcion": 1,
+		"genero": "Masculino"
+	},
+	{
+		"nombre": "Charde Castro",
+		"edad": 15,
+		"region": "África",
+		"pais": "Nigeria",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Martin Castro",
+		"edad": 21,
+		"region": "África",
+		"pais": "Nigeria",
+		"suscripcion": 1,
+		"genero": "Femenino"
+	},
+	{
+		"nombre": "Justin Blankenship",
+		"edad": 15,
+		"region": "África",
+		"pais": "Nigeria",
 		"suscripcion": 0,
 		"genero": "Femenino"
 	}
@@ -3710,4004 +4170,4004 @@ reproducciones = [
 
 canciones = [
 	{
-		"nombre": "non, egestas a,",
-		"duracion": 61,
-		"autor": "Vincent Witt",
-		"generos": "Raeguetton Hip-Hop Salsa R&B K-pop",
+		"nombre": "lacinia at,",
+		"duracion": 24,
+		"autor": "Patricia Bowers",
+		"generos": "Clásica Jazz",
 		"popularidad": 4,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "mollis lectus pede",
-		"duracion": 50,
-		"autor": "Jessamine Nicholson",
-		"generos": "Hip-Hop",
-		"popularidad": 0,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "sem. Pellentesque ut",
-		"duracion": 175,
-		"autor": "Cara Page",
-		"generos": "Góspel Blues Country",
-		"popularidad": 8,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "ultricies sem magna",
-		"duracion": 34,
-		"autor": "Rebekah Lindsey",
-		"generos": "Rock Pop Clásica Bachata",
-		"popularidad": 2,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "enim non nisi.",
-		"duracion": 115,
-		"autor": "Colorado Sykes",
-		"generos": "Rock Pop",
-		"popularidad": 5,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "vitae semper egestas,",
-		"duracion": 33,
-		"autor": "Reese Pacheco",
-		"generos": "Pop Clásica Bachata Raeguetton",
-		"popularidad": 7,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "Vivamus rhoncus. Donec",
-		"duracion": 17,
-		"autor": "Brynne Conrad",
-		"generos": "Country Disco Techno",
-		"popularidad": 8,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "urna. Nullam lobortis",
-		"duracion": 33,
-		"autor": "Darius Baker",
-		"generos": "Blues Country Disco",
-		"popularidad": 7,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "massa. Integer vitae",
-		"duracion": 6,
-		"autor": "Rhiannon Chase",
-		"generos": "K-pop Metal",
-		"popularidad": 3,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "sed, facilisis vitae,",
-		"duracion": 162,
-		"autor": "Melanie Holt",
-		"generos": "R&B K-pop Metal Jazz",
-		"popularidad": 8,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "sed turpis nec",
-		"duracion": 106,
-		"autor": "Maryam Peters",
-		"generos": "Góspel Blues Country",
-		"popularidad": 1,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "Mauris vestibulum, neque",
-		"duracion": 25,
-		"autor": "Moana Hale",
-		"generos": "Clásica Bachata Raeguetton",
-		"popularidad": 10,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "pede. Cum sociis",
-		"duracion": 156,
-		"autor": "Imelda Cantu",
-		"generos": "Bachata Raeguetton Hip-Hop",
-		"popularidad": 4,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "fames ac turpis",
-		"duracion": 158,
-		"autor": "Ryder England",
-		"generos": "Hip-Hop Salsa",
-		"popularidad": 6,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "auctor. Mauris vel",
-		"duracion": 48,
-		"autor": "Helen Thomas",
-		"generos": "Bachata Raeguetton",
-		"popularidad": 8,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "sit amet ante.",
-		"duracion": 16,
-		"autor": "Maris Curtis",
-		"generos": "R&B K-pop Metal Jazz Góspel",
-		"popularidad": 10,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "rutrum. Fusce dolor",
-		"duracion": 40,
-		"autor": "Ahmed Simmons",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 7,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "lacinia orci, consectetuer",
-		"duracion": 169,
-		"autor": "Conan Lancaster",
-		"generos": "Country Disco",
-		"popularidad": 7,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "a felis ullamcorper",
-		"duracion": 14,
-		"autor": "Yasir Underwood",
-		"generos": "Country",
-		"popularidad": 6,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "eget laoreet posuere,",
-		"duracion": 124,
-		"autor": "Kenneth Aguilar",
-		"generos": "Clásica Bachata Raeguetton",
-		"popularidad": 4,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "at pretium aliquet,",
-		"duracion": 173,
-		"autor": "Mia Smith",
-		"generos": "Salsa R&B",
-		"popularidad": 5,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "tincidunt orci quis",
-		"duracion": 58,
-		"autor": "Zelda Walls",
-		"generos": "Rock Pop Clásica",
-		"popularidad": 9,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "Vivamus euismod urna.",
-		"duracion": 56,
-		"autor": "Zena Sharp",
-		"generos": "Salsa R&B K-pop",
-		"popularidad": 0,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "arcu eu odio",
-		"duracion": 6,
-		"autor": "Ivor Chandler",
-		"generos": "Góspel Blues Country Disco",
-		"popularidad": 0,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "Praesent eu nulla",
-		"duracion": 172,
-		"autor": "Martha Anderson",
-		"generos": "Clásica Bachata Raeguetton",
-		"popularidad": 4,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "molestie sodales. Mauris",
-		"duracion": 166,
-		"autor": "Hashim Mason",
-		"generos": "Hip-Hop Salsa",
-		"popularidad": 0,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "dui lectus rutrum",
-		"duracion": 154,
-		"autor": "Eliana Nguyen",
-		"generos": "Góspel",
-		"popularidad": 9,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "est tempor bibendum.",
-		"duracion": 82,
-		"autor": "Marsden Wall",
-		"generos": "Metal Jazz",
-		"popularidad": 5,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "Nunc sed orci",
-		"duracion": 161,
-		"autor": "Ria Burton",
-		"generos": "R&B K-pop Metal",
-		"popularidad": 5,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "turpis. Nulla aliquet.",
-		"duracion": 167,
-		"autor": "Serina Myers",
-		"generos": "R&B K-pop Metal",
-		"popularidad": 4,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "nec, diam. Duis",
-		"duracion": 41,
-		"autor": "Brady Huber",
-		"generos": "Góspel Blues",
-		"popularidad": 9,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "justo nec ante.",
-		"duracion": 76,
-		"autor": "Karen Frazier",
-		"generos": "Hip-Hop Salsa",
-		"popularidad": 2,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "morbi tristique senectus",
-		"duracion": 86,
-		"autor": "Karina Paul",
-		"generos": "Metal Jazz",
-		"popularidad": 9,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "Quisque libero lacus,",
-		"duracion": 117,
-		"autor": "Kennedy Pratt",
-		"generos": "R&B K-pop Metal Jazz",
-		"popularidad": 2,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "et ultrices posuere",
-		"duracion": 178,
-		"autor": "Shelley Fleming",
-		"generos": "Bachata Raeguetton Hip-Hop Salsa",
-		"popularidad": 8,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "nulla at sem",
-		"duracion": 75,
-		"autor": "Yvonne Mclean",
-		"generos": "K-pop Metal",
-		"popularidad": 2,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "lacinia vitae, sodales",
-		"duracion": 113,
-		"autor": "Ulysses Blair",
-		"generos": "Pop Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 4,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "penatibus et magnis",
-		"duracion": 115,
-		"autor": "Drew Underwood",
-		"generos": "Metal Jazz",
-		"popularidad": 10,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "at risus. Nunc",
-		"duracion": 51,
-		"autor": "Brody Haynes",
-		"generos": "Techno Flamenco",
-		"popularidad": 8,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "Proin vel arcu",
-		"duracion": 27,
-		"autor": "Yvonne Rivera",
-		"generos": "Bachata Raeguetton",
-		"popularidad": 0,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "mus. Aenean eget",
-		"duracion": 138,
-		"autor": "Leigh Stanley",
-		"generos": "Salsa",
-		"popularidad": 1,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "egestas. Sed pharetra,",
-		"duracion": 28,
-		"autor": "Chiquita Lee",
-		"generos": "Jazz Góspel",
-		"popularidad": 2,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "tristique ac, eleifend",
-		"duracion": 65,
-		"autor": "Rogan Bryan",
-		"generos": "Blues Country Disco Techno",
-		"popularidad": 9,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "eu odio tristique",
-		"duracion": 147,
-		"autor": "Keane Webster",
-		"generos": "Flamenco",
-		"popularidad": 10,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "magna. Lorem ipsum",
-		"duracion": 33,
-		"autor": "Noelle Hawkins",
-		"generos": "Country Disco",
-		"popularidad": 2,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "augue id ante",
-		"duracion": 57,
-		"autor": "Hadassah Phillips",
-		"generos": "Raeguetton Hip-Hop Salsa R&B K-pop",
-		"popularidad": 6,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "egestas blandit. Nam",
-		"duracion": 169,
-		"autor": "Imogene Kidd",
-		"generos": "K-pop Metal Jazz Góspel",
-		"popularidad": 9,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "orci sem eget",
-		"duracion": 120,
-		"autor": "Harlan Nolan",
-		"generos": "Blues",
-		"popularidad": 8,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "lorem vitae odio",
-		"duracion": 66,
-		"autor": "Herman Ayers",
-		"generos": "Rock Pop Clásica",
-		"popularidad": 4,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "quis lectus. Nullam",
-		"duracion": 174,
-		"autor": "Rigel Hunt",
-		"generos": "Hip-Hop Salsa R&B",
-		"popularidad": 8,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "vel quam dignissim",
-		"duracion": 22,
-		"autor": "Ulric Kaufman",
-		"generos": "Hip-Hop Salsa",
-		"popularidad": 9,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "nostra, per inceptos",
-		"duracion": 159,
-		"autor": "Rogan Vance",
-		"generos": "Raeguetton Hip-Hop Salsa R&B K-pop",
-		"popularidad": 8,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "eu erat semper",
-		"duracion": 45,
-		"autor": "Chaim Contreras",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 9,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "odio. Nam interdum",
-		"duracion": 179,
-		"autor": "Cameron Randall",
-		"generos": "Jazz Góspel Blues",
-		"popularidad": 6,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "Quisque fringilla euismod",
-		"duracion": 150,
-		"autor": "Octavia Hamilton",
-		"generos": "Pop Clásica",
-		"popularidad": 4,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "convallis erat, eget",
-		"duracion": 103,
-		"autor": "Sandra Middleton",
-		"generos": "R&B K-pop",
-		"popularidad": 5,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "elit. Curabitur sed",
-		"duracion": 127,
-		"autor": "Francis Alvarado",
-		"generos": "Metal Jazz Góspel Blues",
-		"popularidad": 4,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "Vivamus sit amet",
-		"duracion": 135,
-		"autor": "Luke Collins",
-		"generos": "Country Disco",
-		"popularidad": 8,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "velit. Pellentesque ultricies",
-		"duracion": 33,
-		"autor": "Natalie Fulton",
-		"generos": "Disco Techno",
-		"popularidad": 4,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "eleifend non, dapibus",
-		"duracion": 78,
-		"autor": "Melyssa O'Neill",
-		"generos": "Pop Clásica",
-		"popularidad": 10,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "cursus non, egestas",
-		"duracion": 116,
-		"autor": "Hilary Little",
-		"generos": "Clásica Bachata",
-		"popularidad": 0,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "tortor nibh sit",
-		"duracion": 39,
-		"autor": "Ivory Macdonald",
-		"generos": "K-pop",
-		"popularidad": 8,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "euismod mauris eu",
-		"duracion": 116,
-		"autor": "Bell Dawson",
-		"generos": "Metal Jazz Góspel Blues Country",
-		"popularidad": 6,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "Nulla tempor augue",
-		"duracion": 38,
-		"autor": "Finn Parker",
-		"generos": "Hip-Hop Salsa R&B K-pop Metal",
-		"popularidad": 5,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "tincidunt orci quis",
-		"duracion": 28,
-		"autor": "Ishmael Montgomery",
-		"generos": "K-pop Metal Jazz Góspel",
-		"popularidad": 3,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "Integer vulputate, risus",
-		"duracion": 155,
-		"autor": "Amity Dickerson",
-		"generos": "Raeguetton Hip-Hop Salsa R&B K-pop",
-		"popularidad": 9,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "erat. Sed nunc",
-		"duracion": 100,
-		"autor": "Byron Noble",
-		"generos": "Hip-Hop Salsa",
-		"popularidad": 6,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "Duis mi enim,",
-		"duracion": 85,
-		"autor": "Paul Burris",
-		"generos": "Clásica Bachata Raeguetton",
-		"popularidad": 4,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "felis, adipiscing fringilla,",
-		"duracion": 124,
-		"autor": "Charles Vance",
-		"generos": "Jazz",
-		"popularidad": 9,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "Quisque libero lacus,",
-		"duracion": 172,
-		"autor": "Rigel Chang",
-		"generos": "Metal Jazz Góspel Blues",
-		"popularidad": 10,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "justo sit amet",
-		"duracion": 5,
-		"autor": "Duncan Vincent",
-		"generos": "Raeguetton Hip-Hop Salsa R&B K-pop",
-		"popularidad": 6,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "Sed auctor odio",
-		"duracion": 170,
-		"autor": "Yardley Frye",
-		"generos": "Salsa",
-		"popularidad": 10,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "metus facilisis lorem",
-		"duracion": 54,
-		"autor": "Malachi Garrett",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 3,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "neque tellus, imperdiet",
-		"duracion": 28,
-		"autor": "Demetrius Mckee",
-		"generos": "R&B K-pop",
-		"popularidad": 9,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "nonummy ipsum non",
-		"duracion": 52,
-		"autor": "Jorden Henry",
-		"generos": "Hip-Hop Salsa R&B",
-		"popularidad": 8,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "lorem eu metus.",
-		"duracion": 18,
-		"autor": "Fitzgerald Talley",
-		"generos": "Raeguetton Hip-Hop Salsa R&B",
-		"popularidad": 9,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "in faucibus orci",
-		"duracion": 109,
-		"autor": "Ora Owen",
-		"generos": "Metal",
-		"popularidad": 5,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "ligula elit, pretium",
-		"duracion": 22,
-		"autor": "Nevada Contreras",
-		"generos": "R&B K-pop",
-		"popularidad": 9,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "et, commodo at,",
-		"duracion": 135,
-		"autor": "Levi Blankenship",
-		"generos": "Metal Jazz Góspel Blues Country",
-		"popularidad": 7,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "massa. Quisque porttitor",
-		"duracion": 86,
-		"autor": "Iris Houston",
-		"generos": "Hip-Hop Salsa",
-		"popularidad": 9,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "eros. Nam consequat",
-		"duracion": 135,
-		"autor": "Ciaran Torres",
-		"generos": "Bachata Raeguetton Hip-Hop",
-		"popularidad": 10,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "nec, eleifend non,",
-		"duracion": 158,
-		"autor": "Beau Roman",
-		"generos": "Salsa R&B K-pop",
-		"popularidad": 2,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "eros nec tellus.",
-		"duracion": 87,
-		"autor": "Brennan Dyer",
-		"generos": "Góspel Blues",
-		"popularidad": 7,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "libero nec ligula",
-		"duracion": 56,
-		"autor": "Carla Gordon",
-		"generos": "K-pop Metal Jazz Góspel",
-		"popularidad": 8,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "Mauris ut quam",
-		"duracion": 37,
-		"autor": "Abigail Witt",
-		"generos": "Country Disco",
-		"popularidad": 6,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "scelerisque dui. Suspendisse",
-		"duracion": 4,
-		"autor": "Orla Short",
-		"generos": "Pop Clásica Bachata",
-		"popularidad": 3,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "velit eget laoreet",
-		"duracion": 113,
-		"autor": "Ishmael Graves",
-		"generos": "Hip-Hop Salsa R&B K-pop",
-		"popularidad": 1,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "erat eget ipsum.",
-		"duracion": 145,
-		"autor": "Winter Farrell",
-		"generos": "Salsa R&B",
-		"popularidad": 6,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "orci quis lectus.",
-		"duracion": 95,
-		"autor": "Neville Meyers",
-		"generos": "Hip-Hop Salsa R&B K-pop",
-		"popularidad": 7,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "vel sapien imperdiet",
-		"duracion": 116,
-		"autor": "Sarah Martinez",
-		"generos": "Hip-Hop Salsa R&B K-pop",
-		"popularidad": 6,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "et netus et",
-		"duracion": 168,
-		"autor": "Zenaida Mcleod",
-		"generos": "R&B K-pop Metal Jazz Góspel",
-		"popularidad": 8,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "aliquet odio. Etiam",
-		"duracion": 49,
-		"autor": "William Mcmahon",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 2,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "Morbi quis urna.",
-		"duracion": 69,
-		"autor": "Price Kemp",
-		"generos": "Hip-Hop Salsa R&B K-pop Metal",
-		"popularidad": 10,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "cursus. Integer mollis.",
-		"duracion": 108,
-		"autor": "Gregory Stone",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 8,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "fringilla, porttitor vulputate,",
-		"duracion": 88,
-		"autor": "Quynn Munoz",
-		"generos": "Góspel Blues",
-		"popularidad": 7,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "diam nunc, ullamcorper",
-		"duracion": 123,
-		"autor": "Leo Kirkland",
-		"generos": "Blues Country Disco",
-		"popularidad": 2,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "eu tellus eu",
-		"duracion": 37,
-		"autor": "Leandra Dominguez",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 7,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "hendrerit id, ante.",
-		"duracion": 105,
-		"autor": "Kieran Brewer",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop Salsa",
-		"popularidad": 5,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "risus a ultricies",
-		"duracion": 118,
-		"autor": "Calvin Ramos",
-		"generos": "Rock Pop Clásica",
-		"popularidad": 3,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "arcu imperdiet ullamcorper.",
-		"duracion": 101,
-		"autor": "Xena Sears",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 8,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "purus mauris a",
-		"duracion": 103,
-		"autor": "Rafael Olsen",
-		"generos": "Country Disco Techno Flamenco",
-		"popularidad": 3,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "nonummy ultricies ornare,",
-		"duracion": 33,
-		"autor": "Rhona Hyde",
-		"generos": "Pop Clásica Bachata",
-		"popularidad": 5,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "ac turpis egestas.",
-		"duracion": 115,
-		"autor": "Phoebe Wolfe",
-		"generos": "Jazz",
-		"popularidad": 6,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "vel, vulputate eu,",
-		"duracion": 91,
-		"autor": "Lamar Moore",
-		"generos": "Jazz Góspel",
-		"popularidad": 1,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "et magnis dis",
-		"duracion": 87,
-		"autor": "Shoshana Norris",
-		"generos": "Pop Clásica Bachata Raeguetton",
-		"popularidad": 5,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "imperdiet ornare. In",
-		"duracion": 50,
-		"autor": "Calista Kirkland",
-		"generos": "Salsa R&B K-pop Metal Jazz",
-		"popularidad": 1,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "Duis sit amet",
-		"duracion": 34,
-		"autor": "Yardley Vaughan",
-		"generos": "K-pop Metal",
-		"popularidad": 2,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "diam. Pellentesque habitant",
-		"duracion": 53,
-		"autor": "Orlando Joyner",
-		"generos": "Jazz Góspel Blues Country Disco",
-		"popularidad": 1,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "rutrum magna. Cras",
-		"duracion": 98,
-		"autor": "Knox Pace",
-		"generos": "Rock Pop Clásica Bachata Raeguetton",
-		"popularidad": 7,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "et libero. Proin",
-		"duracion": 66,
-		"autor": "Ferdinand Brady",
-		"generos": "Raeguetton Hip-Hop Salsa R&B K-pop",
-		"popularidad": 9,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "inceptos hymenaeos. Mauris",
-		"duracion": 46,
-		"autor": "Celeste Barron",
-		"generos": "Pop Clásica",
-		"popularidad": 1,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "quis, pede. Suspendisse",
-		"duracion": 114,
-		"autor": "Leonard Maddox",
-		"generos": "Metal Jazz Góspel Blues",
-		"popularidad": 7,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "primis in faucibus",
-		"duracion": 106,
-		"autor": "Melodie Tyler",
-		"generos": "Clásica",
-		"popularidad": 6,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "imperdiet, erat nonummy",
-		"duracion": 61,
-		"autor": "Fletcher Hinton",
-		"generos": "Raeguetton Hip-Hop Salsa R&B K-pop",
-		"popularidad": 4,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "Curabitur sed tortor.",
-		"duracion": 36,
-		"autor": "Ross Mcdowell",
-		"generos": "Raeguetton Hip-Hop Salsa",
-		"popularidad": 3,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "mollis dui, in",
-		"duracion": 86,
-		"autor": "Logan Manning",
-		"generos": "Blues Country Disco Techno",
-		"popularidad": 7,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "Etiam vestibulum massa",
-		"duracion": 1,
-		"autor": "Mari Sweeney",
-		"generos": "Pop Clásica",
-		"popularidad": 7,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "feugiat. Lorem ipsum",
-		"duracion": 133,
-		"autor": "Akeem Mayer",
-		"generos": "Góspel",
-		"popularidad": 5,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "sociis natoque penatibus",
-		"duracion": 30,
-		"autor": "Anthony Small",
-		"generos": "Salsa R&B K-pop Metal",
-		"popularidad": 5,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "nascetur ridiculus mus.",
-		"duracion": 12,
-		"autor": "Sage Doyle",
-		"generos": "Bachata Raeguetton Hip-Hop Salsa",
-		"popularidad": 5,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "nibh enim, gravida",
-		"duracion": 59,
-		"autor": "Kiara Wilkinson",
-		"generos": "K-pop Metal",
-		"popularidad": 4,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "quis massa. Mauris",
-		"duracion": 171,
-		"autor": "Valentine Morris",
-		"generos": "Country Disco Techno",
-		"popularidad": 9,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "Donec vitae erat",
-		"duracion": 2,
-		"autor": "Shannon Cantu",
-		"generos": "Metal Jazz",
-		"popularidad": 9,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "tristique aliquet. Phasellus",
-		"duracion": 162,
-		"autor": "Ferris Zimmerman",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 5,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "vel arcu eu",
-		"duracion": 48,
-		"autor": "Uta Hahn",
-		"generos": "Country Disco Techno",
-		"popularidad": 3,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "et risus. Quisque",
-		"duracion": 40,
-		"autor": "Buckminster Stewart",
-		"generos": "Blues Country",
-		"popularidad": 10,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "orci lacus vestibulum",
-		"duracion": 35,
-		"autor": "Cassandra Wilkins",
-		"generos": "Country Disco",
-		"popularidad": 9,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "mi, ac mattis",
-		"duracion": 108,
-		"autor": "Abbot Keller",
-		"generos": "Blues Country",
-		"popularidad": 5,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "magna. Nam ligula",
-		"duracion": 112,
-		"autor": "Roth Saunders",
-		"generos": "Clásica Bachata",
-		"popularidad": 5,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "purus ac tellus.",
-		"duracion": 85,
-		"autor": "Keaton Prince",
-		"generos": "Blues",
-		"popularidad": 5,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "scelerisque neque sed",
-		"duracion": 156,
-		"autor": "Winifred Robinson",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 4,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "auctor quis, tristique",
-		"duracion": 166,
-		"autor": "Alan Kramer",
-		"generos": "Disco Techno",
-		"popularidad": 9,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "nulla. Cras eu",
-		"duracion": 81,
-		"autor": "Josiah Rowe",
-		"generos": "K-pop Metal Jazz Góspel",
-		"popularidad": 4,
-		"danzabilidad": 4
+		"rating": "5, 7, 1, 17, 3, 19, 11, 15"
 	},
 	{
 		"nombre": "eget, venenatis a,",
-		"duracion": 167,
-		"autor": "Nathaniel Sullivan",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 5,
-		"danzabilidad": 4
+		"duracion": 125,
+		"autor": "Kiayada Cortez",
+		"generos": "Techno",
+		"popularidad": 9,
+		"rating": "5, 15, 11, 13, 3, 9, 1, 19, 17"
 	},
 	{
-		"nombre": "Aliquam fringilla cursus",
-		"duracion": 83,
-		"autor": "Serena Wheeler",
-		"generos": "K-pop Metal Jazz Góspel",
-		"popularidad": 1,
-		"danzabilidad": 2
+		"nombre": "Aliquam",
+		"duracion": 146,
+		"autor": "Jillian Rice",
+		"generos": "Góspel Soul",
+		"popularidad": 3,
+		"rating": "11, 5, 7, 15, 19, 3, 17, 13, 9, 1"
 	},
 	{
-		"nombre": "at risus. Nunc",
-		"duracion": 121,
-		"autor": "Tallulah Avery",
-		"generos": "Salsa R&B",
-		"popularidad": 4,
-		"danzabilidad": 0
+		"nombre": "Phasellus ornare.",
+		"duracion": 120,
+		"autor": "Tad Gilmore",
+		"generos": "Rock Country",
+		"popularidad": 6,
+		"rating": "17, 3, 11, 9, 1, 5, 15, 7"
 	},
 	{
-		"nombre": "diam nunc, ullamcorper",
-		"duracion": 34,
-		"autor": "Ann Anderson",
-		"generos": "Jazz Góspel Blues",
-		"popularidad": 10,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "Aliquam rutrum lorem",
-		"duracion": 124,
-		"autor": "Emmanuel Bullock",
-		"generos": "R&B K-pop",
-		"popularidad": 1,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "non, cursus non,",
-		"duracion": 175,
-		"autor": "Constance Glover",
-		"generos": "Metal Jazz Góspel Blues",
-		"popularidad": 1,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "urna suscipit nonummy.",
-		"duracion": 22,
-		"autor": "Melvin Mcneil",
-		"generos": "R&B K-pop Metal Jazz",
-		"popularidad": 10,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "posuere at, velit.",
-		"duracion": 165,
-		"autor": "Cassidy Tucker",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 7,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "eu dui. Cum",
-		"duracion": 140,
-		"autor": "Germane Suarez",
-		"generos": "Metal",
-		"popularidad": 8,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "fermentum fermentum arcu.",
-		"duracion": 142,
-		"autor": "Kessie Whitehead",
+		"nombre": "egestas. Sed",
+		"duracion": 115,
+		"autor": "Adria Newton",
 		"generos": "Techno",
 		"popularidad": 5,
-		"danzabilidad": 6
+		"rating": "1, 5, 9, 3, 17"
 	},
 	{
-		"nombre": "turpis. Aliquam adipiscing",
-		"duracion": 138,
-		"autor": "Colt King",
-		"generos": "Country",
-		"popularidad": 9,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "blandit congue. In",
-		"duracion": 133,
-		"autor": "Fritz Schroeder",
-		"generos": "Metal Jazz",
-		"popularidad": 4,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "diam. Sed diam",
-		"duracion": 86,
-		"autor": "Steel Carver",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 1,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "Mauris ut quam",
-		"duracion": 84,
-		"autor": "Kyra Daniel",
-		"generos": "R&B K-pop Metal",
-		"popularidad": 5,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "ac risus. Morbi",
-		"duracion": 45,
-		"autor": "Kyla Mcdaniel",
-		"generos": "Bachata Raeguetton Hip-Hop Salsa R&B",
-		"popularidad": 3,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "malesuada fringilla est.",
-		"duracion": 101,
-		"autor": "Zoe Hunt",
-		"generos": "Clásica Bachata",
-		"popularidad": 2,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "arcu vel quam",
-		"duracion": 19,
-		"autor": "Alexander Wilder",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 2,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "magna. Lorem ipsum",
-		"duracion": 149,
-		"autor": "John Vance",
-		"generos": "Jazz",
-		"popularidad": 3,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "lacus. Nulla tincidunt,",
-		"duracion": 60,
-		"autor": "Rana Heath",
-		"generos": "Pop Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 5,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "orci sem eget",
-		"duracion": 69,
-		"autor": "Arden Faulkner",
-		"generos": "K-pop",
-		"popularidad": 10,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "a purus. Duis",
-		"duracion": 150,
-		"autor": "Uta Brewer",
-		"generos": "Hip-Hop Salsa",
-		"popularidad": 6,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "dis parturient montes,",
-		"duracion": 42,
-		"autor": "Gavin Lott",
-		"generos": "Blues Country Disco Techno Flamenco",
-		"popularidad": 1,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "scelerisque neque. Nullam",
-		"duracion": 45,
-		"autor": "Doris Moss",
-		"generos": "Blues Country Disco",
-		"popularidad": 3,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "Nam nulla magna,",
-		"duracion": 134,
-		"autor": "Lane Sawyer",
-		"generos": "Blues Country",
-		"popularidad": 7,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "cursus luctus, ipsum",
-		"duracion": 29,
-		"autor": "Ezekiel Conrad",
-		"generos": "Pop Clásica Bachata Raeguetton",
-		"popularidad": 4,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "nulla. Integer vulputate,",
-		"duracion": 36,
-		"autor": "Iris Sweet",
-		"generos": "Metal Jazz Góspel",
+		"nombre": "convallis ligula. Donec",
+		"duracion": 25,
+		"autor": "Imogene Foreman",
+		"generos": "Soul Pop",
 		"popularidad": 8,
-		"danzabilidad": 6
+		"rating": "17, 13, 7, 5, 1, 19, 9, 15, 3"
 	},
 	{
-		"nombre": "a, facilisis non,",
-		"duracion": 112,
-		"autor": "Thor Garrett",
-		"generos": "Clásica Bachata Raeguetton",
-		"popularidad": 1,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "dolor sit amet,",
-		"duracion": 77,
-		"autor": "Tatiana Good",
-		"generos": "Rock Pop Clásica Bachata",
-		"popularidad": 7,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "Maecenas ornare egestas",
-		"duracion": 165,
-		"autor": "Caesar Fitzgerald",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 4,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "Nunc sed orci",
-		"duracion": 22,
-		"autor": "Isaac Perez",
-		"generos": "K-pop Metal Jazz Góspel",
-		"popularidad": 9,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "risus. Donec nibh",
-		"duracion": 128,
-		"autor": "Carissa Brewer",
-		"generos": "Techno Flamenco",
-		"popularidad": 1,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "aliquet molestie tellus.",
-		"duracion": 78,
-		"autor": "Declan Cruz",
-		"generos": "Disco Techno",
-		"popularidad": 3,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "arcu. Aliquam ultrices",
-		"duracion": 55,
-		"autor": "Evangeline Tate",
-		"generos": "Raeguetton Hip-Hop Salsa R&B",
+		"nombre": "magnis",
+		"duracion": 131,
+		"autor": "Travis Cardenas",
+		"generos": "Blues",
 		"popularidad": 5,
-		"danzabilidad": 1
+		"rating": "9, 3, 15, 17, 19, 7"
 	},
 	{
-		"nombre": "feugiat nec, diam.",
-		"duracion": 109,
-		"autor": "Lillian Mccray",
-		"generos": "Salsa R&B K-pop Metal",
-		"popularidad": 0,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "mollis vitae, posuere",
-		"duracion": 13,
-		"autor": "Clio Ochoa",
-		"generos": "Pop Clásica",
+		"nombre": "tincidunt,",
+		"duracion": 52,
+		"autor": "Moana Barnett",
+		"generos": "Blues Góspel Soul",
 		"popularidad": 10,
-		"danzabilidad": 8
+		"rating": "3, 1, 7"
 	},
 	{
-		"nombre": "ullamcorper. Duis at",
-		"duracion": 48,
-		"autor": "Garrett Park",
-		"generos": "Góspel Blues",
-		"popularidad": 4,
-		"danzabilidad": 7
+		"nombre": "mauris eu",
+		"duracion": 5,
+		"autor": "Gemma Blankenship",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 0,
+		"rating": "11, 19, 3, 13, 5, 7, 9, 15"
 	},
 	{
-		"nombre": "luctus et ultrices",
-		"duracion": 74,
-		"autor": "Fuller Craig",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop Salsa",
+		"nombre": "penatibus",
+		"duracion": 164,
+		"autor": "Yuri Sparks",
+		"generos": "Blues Góspel",
+		"popularidad": 5,
+		"rating": "3, 1, 19, 7, 15, 13, 9, 17, 11"
+	},
+	{
+		"nombre": "molestie. Sed",
+		"duracion": 53,
+		"autor": "Hanae Alford",
+		"generos": "Jazz Blues",
+		"popularidad": 2,
+		"rating": "13, 3, 7, 11, 17, 1, 19, 9, 15"
+	},
+	{
+		"nombre": "libero",
+		"duracion": 89,
+		"autor": "Herrod Terry",
+		"generos": "Jazz Blues",
+		"popularidad": 5,
+		"rating": "3, 9"
+	},
+	{
+		"nombre": "a sollicitudin",
+		"duracion": 31,
+		"autor": "Axel Berry",
+		"generos": "Disco Techno",
 		"popularidad": 1,
-		"danzabilidad": 9
+		"rating": 5
 	},
 	{
-		"nombre": "mus. Aenean eget",
-		"duracion": 15,
-		"autor": "Cullen Kirk",
-		"generos": "Flamenco",
+		"nombre": "dui. Suspendisse",
+		"duracion": 111,
+		"autor": "Jemima Lamb",
+		"generos": "Disco Techno",
 		"popularidad": 9,
-		"danzabilidad": 4
+		"rating": "17, 9, 11, 13, 19, 3"
+	},
+	{
+		"nombre": "tristique",
+		"duracion": 178,
+		"autor": "Arden Bentley",
+		"generos": "Blues Góspel",
+		"popularidad": 3,
+		"rating": "1, 15, 7, 19, 13, 9"
+	},
+	{
+		"nombre": "tincidunt",
+		"duracion": 104,
+		"autor": "Fritz Mitchell",
+		"generos": "Techno",
+		"popularidad": 2,
+		"rating": "5, 13, 9, 1"
+	},
+	{
+		"nombre": "eget, volutpat",
+		"duracion": 98,
+		"autor": "Jin Fischer",
+		"generos": "Clásica",
+		"popularidad": 9,
+		"rating": "3, 13, 5, 7, 9, 17, 1, 15, 19"
+	},
+	{
+		"nombre": "semper egestas,",
+		"duracion": 20,
+		"autor": "Bevis Wade",
+		"generos": "Jazz Blues",
+		"popularidad": 8,
+		"rating": "3, 11, 5, 9, 19, 7, 13"
+	},
+	{
+		"nombre": "Ut",
+		"duracion": 51,
+		"autor": "Lillian Armstrong",
+		"generos": "Disco",
+		"popularidad": 8,
+		"rating": "5, 11, 7, 13, 15, 17"
+	},
+	{
+		"nombre": "Phasellus nulla.",
+		"duracion": 59,
+		"autor": "Zenia Richards",
+		"generos": "Country",
+		"popularidad": 7,
+		"rating": "9, 15, 13, 1, 19, 17"
+	},
+	{
+		"nombre": "dis parturient",
+		"duracion": 44,
+		"autor": "Mariam Cantu",
+		"generos": "Soul Pop",
+		"popularidad": 1,
+		"rating": "1, 11, 7, 9, 5, 15, 19"
+	},
+	{
+		"nombre": "vel pede blandit",
+		"duracion": 120,
+		"autor": "Orlando Zamora",
+		"generos": "Soul Pop",
+		"popularidad": 6,
+		"rating": "9, 19, 15, 17, 5, 7, 11, 3"
+	},
+	{
+		"nombre": "mi, ac",
+		"duracion": 77,
+		"autor": "Tate Bowen",
+		"generos": "Rock Country Disco",
+		"popularidad": 2,
+		"rating": "7, 3, 1, 13, 19, 9, 15, 17"
+	},
+	{
+		"nombre": "Nulla dignissim. Maecenas",
+		"duracion": 40,
+		"autor": "Kameko Mcmahon",
+		"generos": "Hip-Hop Metal",
+		"popularidad": 3,
+		"rating": "19, 11, 9, 3, 17"
+	},
+	{
+		"nombre": "lobortis",
+		"duracion": 167,
+		"autor": "Sawyer England",
+		"generos": "Rock Country",
+		"popularidad": 9,
+		"rating": "15, 13"
+	},
+	{
+		"nombre": "ultricies",
+		"duracion": 118,
+		"autor": "Ignacia Velez",
+		"generos": "Jazz Blues",
+		"popularidad": 4,
+		"rating": "5, 17, 1, 7, 3, 19, 13, 11, 9, 15"
+	},
+	{
+		"nombre": "orci lacus",
+		"duracion": 8,
+		"autor": "Morgan Whitley",
+		"generos": "Pop",
+		"popularidad": 0,
+		"rating": "15, 1, 7, 13, 19, 17, 11"
+	},
+	{
+		"nombre": "habitant",
+		"duracion": 50,
+		"autor": "Yuli Kinney",
+		"generos": "Soul",
+		"popularidad": 4,
+		"rating": "9, 3, 1"
+	},
+	{
+		"nombre": "consectetuer",
+		"duracion": 28,
+		"autor": "Kennedy Watkins",
+		"generos": "Jazz",
+		"popularidad": 2,
+		"rating": "7, 13, 17, 3"
+	},
+	{
+		"nombre": "vulputate",
+		"duracion": 112,
+		"autor": "Brody Ewing",
+		"generos": "Country Disco",
+		"popularidad": 8,
+		"rating": "7, 17, 19, 15, 5, 1, 3"
+	},
+	{
+		"nombre": "dui. Cum",
+		"duracion": 88,
+		"autor": "Rhona Herman",
+		"generos": "Clásica Jazz",
+		"popularidad": 5,
+		"rating": "13, 5, 19, 11, 1"
+	},
+	{
+		"nombre": "tellus",
+		"duracion": 165,
+		"autor": "Garth Serrano",
+		"generos": "Rock Country Disco",
+		"popularidad": 7,
+		"rating": "15, 1, 9, 5, 17"
+	},
+	{
+		"nombre": "malesuada augue",
+		"duracion": 176,
+		"autor": "Christopher Guy",
+		"generos": "Jazz Blues",
+		"popularidad": 10,
+		"rating": "9, 1, 13, 3, 7, 17, 11"
+	},
+	{
+		"nombre": "Nullam feugiat placerat",
+		"duracion": 69,
+		"autor": "Samson Reese",
+		"generos": "Disco Techno",
+		"popularidad": 6,
+		"rating": "17, 11, 7, 15, 13, 3, 1, 19"
+	},
+	{
+		"nombre": "libero. Proin",
+		"duracion": 70,
+		"autor": "Arsenio May",
+		"generos": "Pop Rock",
+		"popularidad": 10,
+		"rating": "3, 15, 1, 19, 7, 17, 5"
+	},
+	{
+		"nombre": "tempor, est",
+		"duracion": 10,
+		"autor": "Judah Giles",
+		"generos": "Blues Góspel Soul",
+		"popularidad": 5,
+		"rating": "15, 19, 17, 9"
+	},
+	{
+		"nombre": "sem.",
+		"duracion": 169,
+		"autor": "Declan Schwartz",
+		"generos": "Country Disco Techno",
+		"popularidad": 9,
+		"rating": "3, 13, 1, 5, 17, 15, 9, 7, 11"
+	},
+	{
+		"nombre": "rhoncus. Nullam velit",
+		"duracion": 81,
+		"autor": "Brenda Avila",
+		"generos": "Soul Pop",
+		"popularidad": 4,
+		"rating": 15
+	},
+	{
+		"nombre": "blandit at,",
+		"duracion": 48,
+		"autor": "Craig Rose",
+		"generos": "Techno Hip-Hop Metal",
+		"popularidad": 5,
+		"rating": "17, 3, 15, 19, 5, 9, 13, 7"
+	},
+	{
+		"nombre": "sit",
+		"duracion": 69,
+		"autor": "Dennis Adams",
+		"generos": "Pop",
+		"popularidad": 1,
+		"rating": "1, 7, 5, 17"
+	},
+	{
+		"nombre": "tortor,",
+		"duracion": 66,
+		"autor": "Ivana Skinner",
+		"generos": "Soul Pop",
+		"popularidad": 6,
+		"rating": "11, 13, 15, 9, 19"
+	},
+	{
+		"nombre": "Donec",
+		"duracion": 49,
+		"autor": "Logan Hampton",
+		"generos": "Rock Country",
+		"popularidad": 8,
+		"rating": "5, 17, 1, 7, 3, 19, 9"
+	},
+	{
+		"nombre": "Pellentesque habitant morbi",
+		"duracion": 166,
+		"autor": "Chadwick Dunlap",
+		"generos": "Soul",
+		"popularidad": 4,
+		"rating": 1
+	},
+	{
+		"nombre": "tincidunt",
+		"duracion": 100,
+		"autor": "Kaitlin Humphrey",
+		"generos": "Disco Techno Hip-Hop",
+		"popularidad": 8,
+		"rating": "9, 5, 7, 15, 19, 13"
+	},
+	{
+		"nombre": "pede. Nunc sed",
+		"duracion": 86,
+		"autor": "Nathan Roberson",
+		"generos": "Pop Rock Country",
+		"popularidad": 1,
+		"rating": "15, 5, 9, 17, 7"
+	},
+	{
+		"nombre": "primis in faucibus",
+		"duracion": 123,
+		"autor": "Dorothy Mclean",
+		"generos": "Góspel Soul Pop",
+		"popularidad": 6,
+		"rating": "15, 7"
+	},
+	{
+		"nombre": "eget massa.",
+		"duracion": 102,
+		"autor": "Hayley Black",
+		"generos": "Soul Pop",
+		"popularidad": 3,
+		"rating": "19, 17, 9, 15"
+	},
+	{
+		"nombre": "auctor, velit",
+		"duracion": 143,
+		"autor": "Piper Sloan",
+		"generos": "Techno Hip-Hop Metal",
+		"popularidad": 1,
+		"rating": "3, 13, 15, 17, 1, 9, 7, 11"
+	},
+	{
+		"nombre": "ipsum",
+		"duracion": 28,
+		"autor": "Callum Humphrey",
+		"generos": "Soul Pop",
+		"popularidad": 4,
+		"rating": "19, 9, 15, 17"
+	},
+	{
+		"nombre": "egestas. Duis",
+		"duracion": 130,
+		"autor": "Rahim Bush",
+		"generos": "Hip-Hop Metal",
+		"popularidad": 3,
+		"rating": "13, 19, 5, 1, 11"
+	},
+	{
+		"nombre": "neque",
+		"duracion": 156,
+		"autor": "Tobias Bennett",
+		"generos": "Metal",
+		"popularidad": 1,
+		"rating": "7, 3"
+	},
+	{
+		"nombre": "Etiam",
+		"duracion": 11,
+		"autor": "Leonard Schwartz",
+		"generos": "Country Disco Techno",
+		"popularidad": 1,
+		"rating": "7, 1, 3"
+	},
+	{
+		"nombre": "natoque penatibus",
+		"duracion": 137,
+		"autor": "Beverly Fulton",
+		"generos": "Soul",
+		"popularidad": 6,
+		"rating": "17, 15, 5, 13, 1"
+	},
+	{
+		"nombre": "lobortis ultrices. Vivamus",
+		"duracion": 147,
+		"autor": "Dawn Cervantes",
+		"generos": "Jazz Blues",
+		"popularidad": 4,
+		"rating": "1, 19, 15, 17, 13, 11, 9"
+	},
+	{
+		"nombre": "tristique ac,",
+		"duracion": 90,
+		"autor": "Kristen Prince",
+		"generos": "Blues Góspel",
+		"popularidad": 8,
+		"rating": "13, 3, 17, 7, 15, 5, 11, 1, 9, 19"
+	},
+	{
+		"nombre": "at auctor",
+		"duracion": 53,
+		"autor": "Keane Bryant",
+		"generos": "Disco",
+		"popularidad": 5,
+		"rating": "1, 3, 17, 11, 15, 5, 13, 19"
 	},
 	{
 		"nombre": "tempus eu, ligula.",
-		"duracion": 73,
-		"autor": "Naida Barton",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop Salsa",
-		"popularidad": 8,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "Maecenas libero est,",
-		"duracion": 58,
-		"autor": "Kelsie Mccarthy",
-		"generos": "Rock Pop Clásica Bachata",
-		"popularidad": 8,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "ante bibendum ullamcorper.",
-		"duracion": 81,
-		"autor": "Lucy Sullivan",
-		"generos": "K-pop Metal",
-		"popularidad": 6,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "dolor sit amet,",
-		"duracion": 169,
-		"autor": "Zahir Gamble",
-		"generos": "Disco Techno",
-		"popularidad": 6,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "semper egestas, urna",
-		"duracion": 65,
-		"autor": "Patrick Moon",
-		"generos": "R&B K-pop",
-		"popularidad": 10,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "lectus pede et",
-		"duracion": 82,
-		"autor": "Warren Mccray",
-		"generos": "Metal Jazz Góspel Blues",
-		"popularidad": 2,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "Donec sollicitudin adipiscing",
-		"duracion": 145,
-		"autor": "Fulton Mcclure",
-		"generos": "Metal Jazz Góspel Blues",
-		"popularidad": 2,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "libero. Donec consectetuer",
-		"duracion": 167,
-		"autor": "Driscoll Cameron",
-		"generos": "R&B K-pop Metal",
-		"popularidad": 6,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "non quam. Pellentesque",
-		"duracion": 144,
-		"autor": "Finn Howe",
-		"generos": "Blues Country Disco Techno Flamenco",
-		"popularidad": 0,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "orci, in consequat",
-		"duracion": 161,
-		"autor": "Virginia Mcfadden",
-		"generos": "Pop Clásica",
-		"popularidad": 10,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "Nunc laoreet lectus",
-		"duracion": 175,
-		"autor": "Leandra Morris",
-		"generos": "Hip-Hop Salsa R&B K-pop",
-		"popularidad": 7,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "sit amet ornare",
-		"duracion": 178,
-		"autor": "Jin Estrada",
-		"generos": "Hip-Hop Salsa",
-		"popularidad": 7,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "ut mi. Duis",
-		"duracion": 43,
-		"autor": "Keaton Stone",
-		"generos": "Country Disco Techno",
-		"popularidad": 3,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "risus. Nunc ac",
-		"duracion": 23,
-		"autor": "Jasmine Bowman",
-		"generos": "Pop Clásica",
-		"popularidad": 4,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "urna. Ut tincidunt",
-		"duracion": 10,
-		"autor": "Reuben Herman",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 8,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "nec, mollis vitae,",
-		"duracion": 5,
-		"autor": "Denise Black",
-		"generos": "Metal Jazz Góspel",
-		"popularidad": 5,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "mollis. Phasellus libero",
-		"duracion": 119,
-		"autor": "Sharon Bishop",
-		"generos": "Salsa R&B K-pop Metal Jazz",
-		"popularidad": 8,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "quis turpis vitae",
-		"duracion": 55,
-		"autor": "Deborah Rosario",
-		"generos": "Raeguetton",
-		"popularidad": 2,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "dis parturient montes,",
-		"duracion": 87,
-		"autor": "Armand Pratt",
-		"generos": "Bachata Raeguetton Hip-Hop Salsa",
-		"popularidad": 0,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "facilisi. Sed neque.",
-		"duracion": 165,
-		"autor": "Colin Mcdowell",
-		"generos": "Pop",
-		"popularidad": 5,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "arcu. Curabitur ut",
-		"duracion": 132,
-		"autor": "Dominique Casey",
-		"generos": "Country Disco",
-		"popularidad": 0,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "nunc interdum feugiat.",
-		"duracion": 114,
-		"autor": "Dai Cote",
-		"generos": "Pop Clásica Bachata Raeguetton",
-		"popularidad": 3,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "purus. Duis elementum,",
-		"duracion": 73,
-		"autor": "Zachary Lynn",
-		"generos": "Metal Jazz",
-		"popularidad": 4,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "et ultrices posuere",
-		"duracion": 106,
-		"autor": "Uriel Cruz",
-		"generos": "Salsa R&B K-pop Metal",
-		"popularidad": 5,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "Sed auctor odio",
-		"duracion": 137,
-		"autor": "Kadeem Zamora",
-		"generos": "Flamenco",
-		"popularidad": 7,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "semper tellus id",
-		"duracion": 81,
-		"autor": "Xanthus Little",
-		"generos": "K-pop Metal Jazz Góspel",
-		"popularidad": 4,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "Donec luctus aliquet",
-		"duracion": 20,
-		"autor": "Emerald Kinney",
-		"generos": "Jazz Góspel Blues",
-		"popularidad": 8,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "semper erat, in",
-		"duracion": 178,
-		"autor": "Sasha Hewitt",
-		"generos": "Rock Pop Clásica",
-		"popularidad": 7,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "scelerisque scelerisque dui.",
-		"duracion": 117,
-		"autor": "Emery Booth",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop Salsa",
-		"popularidad": 4,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "Morbi quis urna.",
-		"duracion": 152,
-		"autor": "Winifred Lamb",
-		"generos": "Salsa R&B",
-		"popularidad": 4,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "in molestie tortor",
-		"duracion": 131,
-		"autor": "Brenden Cross",
-		"generos": "R&B K-pop Metal",
-		"popularidad": 4,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "ornare sagittis felis.",
-		"duracion": 172,
-		"autor": "Daryl Donaldson",
-		"generos": "Góspel Blues Country",
-		"popularidad": 8,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "rutrum magna. Cras",
-		"duracion": 158,
-		"autor": "Mannix Alvarado",
-		"generos": "Bachata Raeguetton",
-		"popularidad": 7,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "quam. Pellentesque habitant",
-		"duracion": 61,
-		"autor": "Juliet Dunlap",
-		"generos": "Hip-Hop Salsa R&B K-pop Metal",
-		"popularidad": 3,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "Ut tincidunt orci",
-		"duracion": 140,
-		"autor": "Tobias Kelley",
-		"generos": "Góspel",
-		"popularidad": 1,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "tincidunt dui augue",
-		"duracion": 84,
-		"autor": "Deacon Mckinney",
-		"generos": "Raeguetton Hip-Hop Salsa",
-		"popularidad": 8,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "at sem molestie",
-		"duracion": 14,
-		"autor": "Lesley Franks",
-		"generos": "Pop Clásica",
-		"popularidad": 5,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "Donec vitae erat",
-		"duracion": 91,
-		"autor": "Clark Dixon",
-		"generos": "Raeguetton Hip-Hop Salsa R&B",
-		"popularidad": 3,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "non, dapibus rutrum,",
-		"duracion": 46,
-		"autor": "Dalton Harvey",
-		"generos": "Salsa R&B K-pop",
-		"popularidad": 8,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "justo. Praesent luctus.",
-		"duracion": 114,
-		"autor": "Scott Washington",
-		"generos": "Góspel Blues Country Disco",
-		"popularidad": 10,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "felis orci, adipiscing",
-		"duracion": 116,
-		"autor": "Marvin Sweet",
-		"generos": "Hip-Hop Salsa R&B K-pop",
-		"popularidad": 7,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "eget laoreet posuere,",
-		"duracion": 32,
-		"autor": "Summer Sawyer",
-		"generos": "Disco",
-		"popularidad": 10,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "litora torquent per",
 		"duracion": 13,
-		"autor": "Felix Blake",
+		"autor": "Daryl Welch",
+		"generos": "Blues",
+		"popularidad": 2,
+		"rating": "1, 11, 3, 13, 15"
+	},
+	{
+		"nombre": "nulla. Integer urna.",
+		"duracion": 29,
+		"autor": "Christine Rollins",
+		"generos": "Jazz",
+		"popularidad": 9,
+		"rating": 1
+	},
+	{
+		"nombre": "tempor, est",
+		"duracion": 68,
+		"autor": "Cairo Talley",
 		"generos": "Country Disco Techno",
-		"popularidad": 4,
-		"danzabilidad": 1
+		"popularidad": 0,
+		"rating": "17, 11, 1, 13"
 	},
 	{
-		"nombre": "ac mattis semper,",
-		"duracion": 20,
-		"autor": "Raja Calhoun",
-		"generos": "Salsa R&B K-pop Metal",
-		"popularidad": 7,
-		"danzabilidad": 7
+		"nombre": "iaculis aliquet",
+		"duracion": 13,
+		"autor": "Elton Tran",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 9,
+		"rating": "7, 13, 19, 1, 3, 5, 17, 11"
 	},
 	{
-		"nombre": "nec, mollis vitae,",
-		"duracion": 92,
-		"autor": "Brody Pate",
-		"generos": "Metal Jazz",
+		"nombre": "id, mollis",
+		"duracion": 96,
+		"autor": "Lamar Cotton",
+		"generos": "Soul",
+		"popularidad": 8,
+		"rating": "15, 1, 3"
+	},
+	{
+		"nombre": "arcu. Curabitur",
+		"duracion": 108,
+		"autor": "Emi Fulton",
+		"generos": "Góspel Soul",
+		"popularidad": 1,
+		"rating": "3, 7, 5, 19, 9, 1, 13, 11"
+	},
+	{
+		"nombre": "facilisis",
+		"duracion": 125,
+		"autor": "Clarke Holden",
+		"generos": "Blues",
+		"popularidad": 0,
+		"rating": "9, 15, 17, 11, 5, 7"
+	},
+	{
+		"nombre": "varius et,",
+		"duracion": 29,
+		"autor": "Damon Barrera",
+		"generos": "Jazz Blues",
 		"popularidad": 5,
-		"danzabilidad": 5
+		"rating": "15, 7, 13, 17, 5, 9, 1, 11"
 	},
 	{
-		"nombre": "mauris. Suspendisse aliquet",
-		"duracion": 175,
-		"autor": "Charlotte Ruiz",
-		"generos": "R&B K-pop Metal",
+		"nombre": "morbi tristique",
+		"duracion": 122,
+		"autor": "Gisela Peters",
+		"generos": "Country Disco",
+		"popularidad": 4,
+		"rating": 17
+	},
+	{
+		"nombre": "Morbi vehicula. Pellentesque",
+		"duracion": 95,
+		"autor": "Garrett Calderon",
+		"generos": "Blues Góspel Soul",
 		"popularidad": 10,
-		"danzabilidad": 5
+		"rating": "3, 5, 17, 7, 13, 15, 1, 19"
 	},
 	{
-		"nombre": "justo. Praesent luctus.",
-		"duracion": 69,
-		"autor": "Raven Waller",
-		"generos": "Góspel",
-		"popularidad": 7,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "arcu et pede.",
-		"duracion": 4,
-		"autor": "Hayes Sandoval",
-		"generos": "Salsa R&B K-pop Metal",
+		"nombre": "vehicula.",
+		"duracion": 173,
+		"autor": "Devin Hutchinson",
+		"generos": "Clásica Jazz",
 		"popularidad": 9,
-		"danzabilidad": 6
+		"rating": "3, 7, 15, 17, 9, 19, 5, 1"
 	},
 	{
-		"nombre": "eget ipsum. Suspendisse",
-		"duracion": 81,
-		"autor": "Natalie Bolton",
-		"generos": "Raeguetton Hip-Hop Salsa R&B",
-		"popularidad": 2,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "lacus. Mauris non",
-		"duracion": 71,
-		"autor": "Griffin Spence",
-		"generos": "R&B K-pop Metal",
-		"popularidad": 2,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "placerat. Cras dictum",
-		"duracion": 36,
-		"autor": "Portia Chaney",
-		"generos": "Clásica Bachata Raeguetton",
-		"popularidad": 7,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "sagittis placerat. Cras",
-		"duracion": 171,
-		"autor": "Akeem Black",
-		"generos": "Bachata Raeguetton Hip-Hop Salsa R&B",
-		"popularidad": 9,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "sed libero. Proin",
-		"duracion": 129,
-		"autor": "Xaviera Hopkins",
-		"generos": "K-pop Metal Jazz Góspel",
-		"popularidad": 2,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "enim consequat purus.",
-		"duracion": 124,
-		"autor": "Shannon Bowman",
-		"generos": "K-pop Metal",
-		"popularidad": 1,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "mus. Proin vel",
-		"duracion": 74,
-		"autor": "Cassandra Schneider",
-		"generos": "Rock Pop Clásica Bachata Raeguetton",
+		"nombre": "pharetra nibh.",
+		"duracion": 47,
+		"autor": "Herrod Alvarez",
+		"generos": "Rock Country Disco",
 		"popularidad": 6,
-		"danzabilidad": 8
+		"rating": "17, 15, 1, 5, 19"
 	},
 	{
-		"nombre": "amet massa. Quisque",
-		"duracion": 92,
-		"autor": "Imogene Compton",
-		"generos": "K-pop Metal Jazz Góspel",
-		"popularidad": 3,
-		"danzabilidad": 1
+		"nombre": "Pellentesque habitant morbi",
+		"duracion": 125,
+		"autor": "Charles Burke",
+		"generos": "Disco Techno Hip-Hop",
+		"popularidad": 9,
+		"rating": "15, 7, 9, 13, 17"
 	},
 	{
-		"nombre": "Lorem ipsum dolor",
-		"duracion": 89,
-		"autor": "Ivy Terry",
-		"generos": "Metal Jazz Góspel Blues",
-		"popularidad": 2,
-		"danzabilidad": 4
+		"nombre": "adipiscing non,",
+		"duracion": 54,
+		"autor": "Damian Moody",
+		"generos": "Pop Rock",
+		"popularidad": 7,
+		"rating": "1, 5, 7, 11, 15, 9, 19, 3, 13"
 	},
 	{
-		"nombre": "libero est, congue",
-		"duracion": 100,
-		"autor": "Kirestin Herrera",
+		"nombre": "ridiculus",
+		"duracion": 137,
+		"autor": "Vaughan Vinson",
+		"generos": "Blues",
+		"popularidad": 5,
+		"rating": "15, 9, 1, 17, 19, 11"
+	},
+	{
+		"nombre": "vel",
+		"duracion": 8,
+		"autor": "Dominique Caldwell",
 		"generos": "Disco Techno",
-		"popularidad": 10,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "nunc, ullamcorper eu,",
-		"duracion": 11,
-		"autor": "Barry Alexander",
-		"generos": "Raeguetton Hip-Hop Salsa R&B",
 		"popularidad": 6,
-		"danzabilidad": 4
+		"rating": "1, 9"
 	},
 	{
-		"nombre": "faucibus leo, in",
-		"duracion": 126,
-		"autor": "Fatima Wyatt",
-		"generos": "Hip-Hop Salsa",
+		"nombre": "Cras vulputate velit",
+		"duracion": 33,
+		"autor": "Uriah Hunter",
+		"generos": "Techno Hip-Hop",
 		"popularidad": 8,
-		"danzabilidad": 6
+		"rating": "19, 9, 11, 17, 7, 15, 13"
 	},
 	{
-		"nombre": "Suspendisse sed dolor.",
-		"duracion": 64,
-		"autor": "Paul Owens",
-		"generos": "Metal Jazz Góspel",
-		"popularidad": 4,
-		"danzabilidad": 2
+		"nombre": "nibh.",
+		"duracion": 94,
+		"autor": "Amelia Hickman",
+		"generos": "Clásica",
+		"popularidad": 8,
+		"rating": "15, 13"
 	},
 	{
-		"nombre": "molestie in, tempus",
-		"duracion": 75,
-		"autor": "Patricia Caldwell",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 2,
-		"danzabilidad": 8
+		"nombre": "at pretium aliquet,",
+		"duracion": 24,
+		"autor": "Quamar Sweeney",
+		"generos": "Techno",
+		"popularidad": 0,
+		"rating": 11
 	},
 	{
-		"nombre": "amet lorem semper",
+		"nombre": "luctus et",
+		"duracion": 57,
+		"autor": "Micah Cobb",
+		"generos": "Jazz",
+		"popularidad": 3,
+		"rating": "7, 17, 1"
+	},
+	{
+		"nombre": "amet luctus",
+		"duracion": 130,
+		"autor": "Zelenia Todd",
+		"generos": "Disco",
+		"popularidad": 8,
+		"rating": "7, 15, 11"
+	},
+	{
+		"nombre": "imperdiet nec, leo.",
+		"duracion": 98,
+		"autor": "Kylee Raymond",
+		"generos": "Pop Rock",
+		"popularidad": 3,
+		"rating": "1, 3, 7, 13"
+	},
+	{
+		"nombre": "eu,",
+		"duracion": 151,
+		"autor": "Brent Rojas",
+		"generos": "Góspel Soul",
+		"popularidad": 6,
+		"rating": "1, 5, 13, 7, 17"
+	},
+	{
+		"nombre": "lectus",
+		"duracion": 147,
+		"autor": "Ann Sweeney",
+		"generos": "Rock Country Disco",
+		"popularidad": 6,
+		"rating": "9, 11, 5, 1, 7, 13, 17, 15, 19, 3"
+	},
+	{
+		"nombre": "nunc est,",
+		"duracion": 165,
+		"autor": "Timon Franklin",
+		"generos": "Rock Country",
+		"popularidad": 6,
+		"rating": "3, 11, 9, 5, 1, 17, 13, 7"
+	},
+	{
+		"nombre": "Cras vulputate",
+		"duracion": 20,
+		"autor": "Drake Key",
+		"generos": "Soul Pop Rock",
+		"popularidad": 3,
+		"rating": "17, 7, 11, 3, 13"
+	},
+	{
+		"nombre": "nec, leo.",
 		"duracion": 67,
-		"autor": "Simone Harding",
-		"generos": "Góspel Blues Country Disco",
+		"autor": "Barbara Daniel",
+		"generos": "Góspel",
 		"popularidad": 8,
-		"danzabilidad": 5
+		"rating": 9
 	},
 	{
-		"nombre": "egestas hendrerit neque.",
-		"duracion": 36,
-		"autor": "Dahlia Houston",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop",
+		"nombre": "egestas. Fusce aliquet",
+		"duracion": 140,
+		"autor": "Breanna Ward",
+		"generos": "Pop Rock",
+		"popularidad": 5,
+		"rating": "11, 3, 5, 15, 19, 17, 7, 1"
+	},
+	{
+		"nombre": "et magnis",
+		"duracion": 179,
+		"autor": "Maia Padilla",
+		"generos": "Soul",
+		"popularidad": 3,
+		"rating": "1, 7, 9, 19, 15, 17, 13"
+	},
+	{
+		"nombre": "vitae nibh.",
+		"duracion": 88,
+		"autor": "Suki Tate",
+		"generos": "Country Disco",
+		"popularidad": 7,
+		"rating": "17, 7, 11, 13, 9, 19"
+	},
+	{
+		"nombre": "tincidunt congue turpis.",
+		"duracion": 52,
+		"autor": "Diana Ramos",
+		"generos": "Jazz",
+		"popularidad": 10,
+		"rating": "5, 1, 9"
+	},
+	{
+		"nombre": "tincidunt, neque vitae",
+		"duracion": 23,
+		"autor": "Petra Harding",
+		"generos": "Góspel Soul",
+		"popularidad": 6,
+		"rating": "5, 15, 3, 13, 1, 7, 9, 19, 11"
+	},
+	{
+		"nombre": "ipsum primis",
+		"duracion": 142,
+		"autor": "Hope Valdez",
+		"generos": "Hip-Hop",
 		"popularidad": 4,
-		"danzabilidad": 7
+		"rating": "5, 11, 19, 13, 9, 15, 7"
 	},
 	{
-		"nombre": "dis parturient montes,",
-		"duracion": 78,
-		"autor": "Caesar Grant",
-		"generos": "Góspel Blues Country Disco",
-		"popularidad": 8,
-		"danzabilidad": 9
+		"nombre": "malesuada",
+		"duracion": 13,
+		"autor": "Stewart Blackburn",
+		"generos": "Pop Rock",
+		"popularidad": 10,
+		"rating": "7, 9, 5, 3, 19"
 	},
 	{
-		"nombre": "Integer vitae nibh.",
-		"duracion": 79,
-		"autor": "Amity Estrada",
-		"generos": "R&B K-pop",
-		"popularidad": 9,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "mattis. Cras eget",
-		"duracion": 115,
-		"autor": "Samuel Leon",
-		"generos": "Blues Country",
+		"nombre": "neque. Nullam",
+		"duracion": 123,
+		"autor": "Chloe Oneil",
+		"generos": "Blues Góspel",
 		"popularidad": 1,
-		"danzabilidad": 4
+		"rating": "5, 19, 11"
+	},
+	{
+		"nombre": "tincidunt",
+		"duracion": 30,
+		"autor": "Mary Berg",
+		"generos": "Metal",
+		"popularidad": 10,
+		"rating": "5, 19, 3, 7, 9, 11, 13, 1"
+	},
+	{
+		"nombre": "Nunc ullamcorper,",
+		"duracion": 24,
+		"autor": "Alvin Hurst",
+		"generos": "Clásica Jazz Blues",
+		"popularidad": 5,
+		"rating": "7, 17, 19, 11, 5"
 	},
 	{
 		"nombre": "metus. Aenean sed",
-		"duracion": 119,
-		"autor": "Tad Cleveland",
-		"generos": "Góspel Blues Country",
-		"popularidad": 9,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "orci quis lectus.",
-		"duracion": 110,
-		"autor": "Indira Johnson",
-		"generos": "Góspel Blues",
-		"popularidad": 5,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "Donec nibh. Quisque",
-		"duracion": 61,
-		"autor": "Andrew Owen",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 1,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "vitae dolor. Donec",
-		"duracion": 52,
-		"autor": "Katelyn Duke",
-		"generos": "Clásica Bachata Raeguetton",
+		"duracion": 90,
+		"autor": "Damian Bernard",
+		"generos": "Pop",
 		"popularidad": 8,
-		"danzabilidad": 8
+		"rating": "13, 9, 1, 7, 11, 15, 5"
 	},
 	{
-		"nombre": "arcu. Curabitur ut",
-		"duracion": 143,
-		"autor": "Maxine Wilson",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop",
+		"nombre": "neque",
+		"duracion": 86,
+		"autor": "Odessa Beasley",
+		"generos": "Blues Góspel",
 		"popularidad": 6,
-		"danzabilidad": 6
+		"rating": "1, 11, 3"
 	},
 	{
-		"nombre": "nostra, per inceptos",
-		"duracion": 167,
-		"autor": "Joseph Watts",
-		"generos": "Disco",
-		"popularidad": 10,
-		"danzabilidad": 6
+		"nombre": "Fusce feugiat.",
+		"duracion": 76,
+		"autor": "Hammett Albert",
+		"generos": "Disco Techno Hip-Hop",
+		"popularidad": 1,
+		"rating": "7, 11, 3, 17, 13, 9, 15, 5, 19"
 	},
 	{
-		"nombre": "Vivamus euismod urna.",
-		"duracion": 37,
-		"autor": "Bell Mercer",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 9,
-		"danzabilidad": 8
+		"nombre": "ut, nulla. Cras",
+		"duracion": 126,
+		"autor": "Cynthia Beard",
+		"generos": "Hip-Hop",
+		"popularidad": 2,
+		"rating": "11, 7, 9, 19"
 	},
 	{
-		"nombre": "aliquam iaculis, lacus",
-		"duracion": 27,
-		"autor": "Jasmine Kemp",
-		"generos": "Blues Country Disco Techno",
-		"popularidad": 7,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "vel, venenatis vel,",
-		"duracion": 37,
-		"autor": "Lev Frederick",
-		"generos": "Raeguetton Hip-Hop Salsa R&B",
-		"popularidad": 4,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "enim non nisi.",
+		"nombre": "eu",
 		"duracion": 19,
-		"autor": "Fuller Francis",
-		"generos": "Hip-Hop Salsa R&B K-pop Metal",
+		"autor": "Vera Ellison",
+		"generos": "Hip-Hop Metal",
+		"popularidad": 10,
+		"rating": 1
+	},
+	{
+		"nombre": "non, egestas",
+		"duracion": 35,
+		"autor": "Beau Sutton",
+		"generos": "Disco",
+		"popularidad": 3,
+		"rating": 17
+	},
+	{
+		"nombre": "dignissim",
+		"duracion": 4,
+		"autor": "Carissa Ayala",
+		"generos": "Rock Country",
+		"popularidad": 2,
+		"rating": "17, 7, 11, 9, 3, 5, 1, 19, 13"
+	},
+	{
+		"nombre": "velit.",
+		"duracion": 2,
+		"autor": "Jana Ortega",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 7,
+		"rating": "19, 7, 1, 5, 9, 13, 17, 11"
+	},
+	{
+		"nombre": "pede. Praesent",
+		"duracion": 173,
+		"autor": "Stephanie Phelps",
+		"generos": "Pop Rock",
+		"popularidad": 5,
+		"rating": "15, 19, 5, 1, 11, 9, 3, 13, 17"
+	},
+	{
+		"nombre": "lacus.",
+		"duracion": 150,
+		"autor": "Deborah Dawson",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 7,
+		"rating": "3, 7, 19, 17, 5"
+	},
+	{
+		"nombre": "Nulla",
+		"duracion": 70,
+		"autor": "Patricia Gilmore",
+		"generos": "Blues Góspel Soul",
+		"popularidad": 5,
+		"rating": 15
+	},
+	{
+		"nombre": "Etiam ligula tortor,",
+		"duracion": 161,
+		"autor": "Aidan Weiss",
+		"generos": "Soul Pop",
+		"popularidad": 4,
+		"rating": "3, 17, 5, 7, 15, 9, 13, 19"
+	},
+	{
+		"nombre": "adipiscing elit.",
+		"duracion": 122,
+		"autor": "Deacon Lawrence",
+		"generos": "Disco Techno",
+		"popularidad": 0,
+		"rating": "5, 9"
+	},
+	{
+		"nombre": "quis, pede.",
+		"duracion": 8,
+		"autor": "Darryl Livingston",
+		"generos": "Hip-Hop Metal",
+		"popularidad": 6,
+		"rating": "3, 7, 19, 9, 11, 5"
+	},
+	{
+		"nombre": "velit. Quisque varius.",
+		"duracion": 104,
+		"autor": "Rebekah Vazquez",
+		"generos": "Góspel Soul",
 		"popularidad": 8,
-		"danzabilidad": 1
+		"rating": "19, 17, 1, 5"
+	},
+	{
+		"nombre": "eget",
+		"duracion": 58,
+		"autor": "Audrey Cleveland",
+		"generos": "Blues Góspel",
+		"popularidad": 10,
+		"rating": "5, 13, 7"
+	},
+	{
+		"nombre": "ut,",
+		"duracion": 13,
+		"autor": "Plato Holt",
+		"generos": "Clásica",
+		"popularidad": 10,
+		"rating": "5, 7, 19, 9, 3, 1, 17, 15, 11"
+	},
+	{
+		"nombre": "viverra. Donec",
+		"duracion": 30,
+		"autor": "Blythe Contreras",
+		"generos": "Techno Hip-Hop Metal",
+		"popularidad": 9,
+		"rating": "19, 11, 7, 17, 9, 5"
+	},
+	{
+		"nombre": "ac, eleifend",
+		"duracion": 173,
+		"autor": "Buckminster Farley",
+		"generos": "Jazz",
+		"popularidad": 9,
+		"rating": "11, 17, 9, 13"
+	},
+	{
+		"nombre": "Maecenas",
+		"duracion": 156,
+		"autor": "Amos Lancaster",
+		"generos": "Góspel Soul",
+		"popularidad": 2,
+		"rating": "1, 11"
+	},
+	{
+		"nombre": "eu, accumsan",
+		"duracion": 90,
+		"autor": "Serina James",
+		"generos": "Pop Rock Country",
+		"popularidad": 1,
+		"rating": "13, 15, 3, 7, 11, 19, 9, 5, 1"
+	},
+	{
+		"nombre": "Cum sociis natoque",
+		"duracion": 33,
+		"autor": "Naida Dixon",
+		"generos": "Rock Country",
+		"popularidad": 2,
+		"rating": "9, 1, 3, 17, 19, 15"
+	},
+	{
+		"nombre": "iaculis,",
+		"duracion": 12,
+		"autor": "Cleo Giles",
+		"generos": "Disco Techno",
+		"popularidad": 3,
+		"rating": "15, 19, 11, 7, 9, 17"
+	},
+	{
+		"nombre": "id",
+		"duracion": 27,
+		"autor": "Joseph Bridges",
+		"generos": "Pop Rock",
+		"popularidad": 2,
+		"rating": "13, 17"
+	},
+	{
+		"nombre": "nec metus",
+		"duracion": 128,
+		"autor": "Kay Lambert",
+		"generos": "Soul Pop Rock",
+		"popularidad": 5,
+		"rating": "5, 7"
+	},
+	{
+		"nombre": "pharetra nibh.",
+		"duracion": 129,
+		"autor": "Dale Sutton",
+		"generos": "Hip-Hop",
+		"popularidad": 6,
+		"rating": "3, 1, 11, 9, 7, 5, 17, 15, 19, 13"
+	},
+	{
+		"nombre": "molestie orci",
+		"duracion": 99,
+		"autor": "Kimberley Valdez",
+		"generos": "Blues Góspel",
+		"popularidad": 9,
+		"rating": "9, 19"
+	},
+	{
+		"nombre": "dolor.",
+		"duracion": 85,
+		"autor": "Idona Goodwin",
+		"generos": "Pop",
+		"popularidad": 7,
+		"rating": "5, 9, 7, 15, 11, 19"
+	},
+	{
+		"nombre": "ac, fermentum",
+		"duracion": 102,
+		"autor": "Diana Wilcox",
+		"generos": "Blues Góspel",
+		"popularidad": 1,
+		"rating": "5, 17, 15, 1, 11, 13, 3"
+	},
+	{
+		"nombre": "eu tempor",
+		"duracion": 138,
+		"autor": "Regan O'brien",
+		"generos": "Pop Rock",
+		"popularidad": 7,
+		"rating": "5, 7, 1, 3, 17"
 	},
 	{
 		"nombre": "sociis natoque penatibus",
-		"duracion": 95,
-		"autor": "Jonah Gregory",
-		"generos": "K-pop Metal",
-		"popularidad": 3,
-		"danzabilidad": 1
+		"duracion": 169,
+		"autor": "Portia Holcomb",
+		"generos": "Hip-Hop",
+		"popularidad": 4,
+		"rating": "15, 11"
 	},
 	{
-		"nombre": "vestibulum lorem, sit",
-		"duracion": 9,
-		"autor": "Christine Craig",
+		"nombre": "sed dictum",
+		"duracion": 8,
+		"autor": "Charity Huffman",
+		"generos": "Rock",
+		"popularidad": 3,
+		"rating": "17, 7"
+	},
+	{
+		"nombre": "nec urna",
+		"duracion": 39,
+		"autor": "Alice Cook",
+		"generos": "Pop Rock",
+		"popularidad": 9,
+		"rating": "15, 7, 9, 19, 13, 5, 3, 17, 11, 1"
+	},
+	{
+		"nombre": "sit amet",
+		"duracion": 101,
+		"autor": "Maile Ferguson",
+		"generos": "Rock",
+		"popularidad": 9,
+		"rating": "1, 3, 15, 5, 13, 19, 17, 9, 7, 11"
+	},
+	{
+		"nombre": "nonummy ut,",
+		"duracion": 127,
+		"autor": "Driscoll Vinson",
+		"generos": "Country",
+		"popularidad": 5,
+		"rating": 15
+	},
+	{
+		"nombre": "sapien. Nunc",
+		"duracion": 69,
+		"autor": "Michael Spence",
+		"generos": "Blues Góspel",
+		"popularidad": 3,
+		"rating": "11, 9, 7"
+	},
+	{
+		"nombre": "hendrerit consectetuer,",
+		"duracion": 175,
+		"autor": "Tara Grimes",
+		"generos": "Country Disco",
+		"popularidad": 1,
+		"rating": "1, 17, 7, 3, 15"
+	},
+	{
+		"nombre": "at risus.",
+		"duracion": 2,
+		"autor": "Lucy Townsend",
+		"generos": "Blues Góspel Soul",
+		"popularidad": 3,
+		"rating": "7, 9, 17, 11, 3, 13, 15, 1, 5, 19"
+	},
+	{
+		"nombre": "et libero.",
+		"duracion": 11,
+		"autor": "Catherine Hayden",
+		"generos": "Techno",
+		"popularidad": 8,
+		"rating": "7, 13, 15, 3, 1, 11, 9, 19"
+	},
+	{
+		"nombre": "eget, dictum placerat,",
+		"duracion": 39,
+		"autor": "Brielle Hahn",
+		"generos": "Techno",
+		"popularidad": 3,
+		"rating": "9, 3"
+	},
+	{
+		"nombre": "dignissim",
+		"duracion": 54,
+		"autor": "Roth Yates",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 4,
+		"rating": "1, 11, 17, 3, 7"
+	},
+	{
+		"nombre": "ipsum",
+		"duracion": 157,
+		"autor": "Jameson Anthony",
+		"generos": "Country Disco",
+		"popularidad": 3,
+		"rating": "3, 15, 11, 9, 1, 17, 13, 5, 7"
+	},
+	{
+		"nombre": "ligula.",
+		"duracion": 78,
+		"autor": "Drew Goff",
+		"generos": "Country",
+		"popularidad": 3,
+		"rating": "15, 17, 19, 9"
+	},
+	{
+		"nombre": "tincidunt congue",
+		"duracion": 60,
+		"autor": "Ila Britt",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 7,
+		"rating": "7, 3, 13, 5, 15, 17"
+	},
+	{
+		"nombre": "euismod",
+		"duracion": 106,
+		"autor": "Caldwell Holloway",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 6,
+		"rating": "19, 15, 13, 7, 11, 3, 5"
+	},
+	{
+		"nombre": "eget, venenatis a,",
+		"duracion": 66,
+		"autor": "Nicole Gomez",
+		"generos": "Soul",
+		"popularidad": 8,
+		"rating": "7, 5"
+	},
+	{
+		"nombre": "velit",
+		"duracion": 146,
+		"autor": "Winter Ford",
+		"generos": "Blues",
+		"popularidad": 5,
+		"rating": "15, 13, 19, 11, 3"
+	},
+	{
+		"nombre": "eget laoreet",
+		"duracion": 19,
+		"autor": "Vivien Orr",
+		"generos": "Rock Country",
+		"popularidad": 7,
+		"rating": "1, 13, 19, 17, 9, 3, 11, 7, 5"
+	},
+	{
+		"nombre": "fringilla. Donec feugiat",
+		"duracion": 11,
+		"autor": "Thor Harmon",
+		"generos": "Disco",
+		"popularidad": 9,
+		"rating": "15, 5, 11, 19"
+	},
+	{
+		"nombre": "mi lorem,",
+		"duracion": 137,
+		"autor": "Lani Shaw",
+		"generos": "Blues Góspel",
+		"popularidad": 9,
+		"rating": "1, 13, 19, 9, 3, 15, 7, 17, 5, 11"
+	},
+	{
+		"nombre": "pede ac",
+		"duracion": 175,
+		"autor": "Delilah Hopkins",
+		"generos": "Pop Rock",
+		"popularidad": 7,
+		"rating": "15, 3, 1, 9, 7, 11, 19"
+	},
+	{
+		"nombre": "adipiscing non, luctus",
+		"duracion": 19,
+		"autor": "Hedda Hernandez",
+		"generos": "Clásica",
+		"popularidad": 1,
+		"rating": "3, 1, 7"
+	},
+	{
+		"nombre": "luctus",
+		"duracion": 171,
+		"autor": "Jason Wilkerson",
+		"generos": "Pop Rock Country",
+		"popularidad": 5,
+		"rating": "15, 17, 7, 9, 3, 19, 13"
+	},
+	{
+		"nombre": "adipiscing non, luctus",
+		"duracion": 165,
+		"autor": "Fiona Kerr",
+		"generos": "Pop Rock Country",
+		"popularidad": 3,
+		"rating": "11, 7, 17"
+	},
+	{
+		"nombre": "convallis erat,",
+		"duracion": 5,
+		"autor": "Nathaniel Hendrix",
+		"generos": "Soul",
+		"popularidad": 6,
+		"rating": "15, 11"
+	},
+	{
+		"nombre": "egestas ligula. Nullam",
+		"duracion": 152,
+		"autor": "Louis Collier",
+		"generos": "Jazz Blues Góspel",
+		"popularidad": 6,
+		"rating": "17, 13, 9, 19, 3, 7"
+	},
+	{
+		"nombre": "Mauris vestibulum,",
+		"duracion": 175,
+		"autor": "Lionel Rhodes",
+		"generos": "Jazz Blues",
+		"popularidad": 8,
+		"rating": "7, 19"
+	},
+	{
+		"nombre": "massa.",
+		"duracion": 89,
+		"autor": "Callum Price",
+		"generos": "Pop Rock Country",
+		"popularidad": 2,
+		"rating": "11, 15, 13, 1"
+	},
+	{
+		"nombre": "sit",
+		"duracion": 34,
+		"autor": "Daquan Medina",
+		"generos": "Blues Góspel Soul",
+		"popularidad": 0,
+		"rating": "3, 11"
+	},
+	{
+		"nombre": "Nunc",
+		"duracion": 170,
+		"autor": "Yoshio Solis",
+		"generos": "Blues",
+		"popularidad": 0,
+		"rating": "9, 17"
+	},
+	{
+		"nombre": "risus. Duis",
+		"duracion": 154,
+		"autor": "Aladdin Bullock",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 3,
+		"rating": "9, 3, 5"
+	},
+	{
+		"nombre": "feugiat",
+		"duracion": 50,
+		"autor": "Maris King",
+		"generos": "Metal",
+		"popularidad": 2,
+		"rating": "13, 17, 1, 7, 15, 3, 9, 19"
+	},
+	{
+		"nombre": "consectetuer, cursus et,",
+		"duracion": 83,
+		"autor": "Tanner Eaton",
+		"generos": "Country Disco Techno",
+		"popularidad": 3,
+		"rating": "15, 13, 7, 3, 17, 5, 11, 1, 9"
+	},
+	{
+		"nombre": "mollis. Duis",
+		"duracion": 119,
+		"autor": "Armand Payne",
+		"generos": "Soul Pop",
+		"popularidad": 0,
+		"rating": "9, 7, 19, 11, 17, 1, 15, 3"
+	},
+	{
+		"nombre": "risus,",
+		"duracion": 136,
+		"autor": "Macon Tate",
+		"generos": "Disco Techno",
+		"popularidad": 10,
+		"rating": "15, 13, 7"
+	},
+	{
+		"nombre": "tortor, dictum",
+		"duracion": 59,
+		"autor": "Anika Mccarty",
+		"generos": "Jazz Blues",
+		"popularidad": 9,
+		"rating": "15, 7, 11, 9, 13, 3, 17, 5, 19, 1"
+	},
+	{
+		"nombre": "non sapien molestie",
+		"duracion": 110,
+		"autor": "Portia Lott",
+		"generos": "Rock",
+		"popularidad": 3,
+		"rating": "19, 13, 11, 1, 17, 5, 9, 3, 15, 7"
+	},
+	{
+		"nombre": "sem. Pellentesque",
+		"duracion": 138,
+		"autor": "Ray Dillard",
+		"generos": "Blues Góspel",
+		"popularidad": 0,
+		"rating": "11, 5, 17, 7, 1"
+	},
+	{
+		"nombre": "primis in",
+		"duracion": 25,
+		"autor": "Isabelle Clark",
+		"generos": "Hip-Hop",
+		"popularidad": 8,
+		"rating": "7, 13"
+	},
+	{
+		"nombre": "tellus non",
+		"duracion": 89,
+		"autor": "Lilah Reyes",
+		"generos": "Disco Techno",
+		"popularidad": 8,
+		"rating": "19, 7, 1"
+	},
+	{
+		"nombre": "Suspendisse",
+		"duracion": 130,
+		"autor": "Selma Zamora",
+		"generos": "Country Disco",
+		"popularidad": 10,
+		"rating": "13, 5, 3, 7, 1, 15, 11, 17, 9"
+	},
+	{
+		"nombre": "elit sed",
+		"duracion": 136,
+		"autor": "Martena Huber",
+		"generos": "Rock Country Disco",
+		"popularidad": 3,
+		"rating": "11, 7, 13, 5, 15, 3, 19, 9, 17"
+	},
+	{
+		"nombre": "Cras",
+		"duracion": 95,
+		"autor": "Marny White",
+		"generos": "Blues Góspel Soul",
+		"popularidad": 3,
+		"rating": "7, 11"
+	},
+	{
+		"nombre": "tellus sem",
+		"duracion": 39,
+		"autor": "Odysseus Vega",
+		"generos": "Pop Rock",
+		"popularidad": 6,
+		"rating": "19, 1, 15, 17, 7, 11, 3, 9, 13"
+	},
+	{
+		"nombre": "Suspendisse",
+		"duracion": 42,
+		"autor": "Audrey Velasquez",
+		"generos": "Blues Góspel",
+		"popularidad": 9,
+		"rating": "11, 15, 9, 19, 13, 5, 1, 7, 17"
+	},
+	{
+		"nombre": "magna nec",
+		"duracion": 111,
+		"autor": "Lance Kaufman",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 4,
+		"rating": "13, 7, 11, 19"
+	},
+	{
+		"nombre": "adipiscing elit.",
+		"duracion": 1,
+		"autor": "Aimee Slater",
 		"generos": "Country Disco",
 		"popularidad": 6,
-		"danzabilidad": 8
+		"rating": "17, 15, 3, 13, 9, 7, 1, 11"
 	},
 	{
-		"nombre": "Praesent interdum ligula",
-		"duracion": 136,
-		"autor": "Melinda Bryant",
-		"generos": "R&B K-pop Metal Jazz Góspel",
-		"popularidad": 3,
-		"danzabilidad": 0
+		"nombre": "Aliquam rutrum",
+		"duracion": 8,
+		"autor": "Britanni Christian",
+		"generos": "Blues Góspel Soul",
+		"popularidad": 10,
+		"rating": "5, 3, 11, 17, 19, 15, 13, 9, 1, 7"
 	},
 	{
-		"nombre": "Donec felis orci,",
-		"duracion": 91,
-		"autor": "Kiara Richardson",
-		"generos": "Raeguetton Hip-Hop Salsa R&B",
+		"nombre": "ac",
+		"duracion": 167,
+		"autor": "Kevyn Hooper",
+		"generos": "Rock Country",
 		"popularidad": 6,
-		"danzabilidad": 9
+		"rating": "13, 7"
 	},
 	{
-		"nombre": "purus gravida sagittis.",
-		"duracion": 42,
-		"autor": "Aurora Adkins",
-		"generos": "Jazz Góspel",
+		"nombre": "Aliquam auctor,",
+		"duracion": 153,
+		"autor": "Madison Cooper",
+		"generos": "Góspel Soul Pop",
+		"popularidad": 2,
+		"rating": "11, 1"
+	},
+	{
+		"nombre": "mauris ut",
+		"duracion": 28,
+		"autor": "Yasir Weaver",
+		"generos": "Soul",
+		"popularidad": 1,
+		"rating": "15, 9, 5, 3, 19, 1"
+	},
+	{
+		"nombre": "orci, in",
+		"duracion": 144,
+		"autor": "Lev Hughes",
+		"generos": "Country Disco",
+		"popularidad": 10,
+		"rating": "17, 15, 19, 1, 9, 7, 5, 13, 3, 11"
+	},
+	{
+		"nombre": "Praesent",
+		"duracion": 80,
+		"autor": "Gil Owens",
+		"generos": "Góspel Soul",
+		"popularidad": 2,
+		"rating": "9, 19, 1, 11, 15"
+	},
+	{
+		"nombre": "Nunc lectus",
+		"duracion": 110,
+		"autor": "Salvador Moses",
+		"generos": "Hip-Hop Metal",
+		"popularidad": 4,
+		"rating": "19, 5, 7, 15"
+	},
+	{
+		"nombre": "libero est,",
+		"duracion": 175,
+		"autor": "Ayanna Lindsey",
+		"generos": "Disco",
+		"popularidad": 9,
+		"rating": "11, 17, 3, 13, 19, 1"
+	},
+	{
+		"nombre": "dolor",
+		"duracion": 57,
+		"autor": "Stacy Franco",
+		"generos": "Disco Techno Hip-Hop",
+		"popularidad": 5,
+		"rating": "15, 17"
+	},
+	{
+		"nombre": "velit.",
+		"duracion": 169,
+		"autor": "Jana Mathis",
+		"generos": "Rock Country",
 		"popularidad": 6,
-		"danzabilidad": 7
+		"rating": "15, 13, 3, 17, 5, 1"
 	},
 	{
-		"nombre": "Morbi quis urna.",
+		"nombre": "sollicitudin",
+		"duracion": 74,
+		"autor": "Barrett Mckay",
+		"generos": "Disco",
+		"popularidad": 5,
+		"rating": "17, 11"
+	},
+	{
+		"nombre": "eget, venenatis a,",
+		"duracion": 66,
+		"autor": "Winter Hamilton",
+		"generos": "Clásica",
+		"popularidad": 9,
+		"rating": "5, 15, 19, 7, 1, 9, 13"
+	},
+	{
+		"nombre": "Fusce",
+		"duracion": 127,
+		"autor": "Acton Bowen",
+		"generos": "Country Disco Techno",
+		"popularidad": 1,
+		"rating": "17, 3, 1, 15, 9"
+	},
+	{
+		"nombre": "mattis. Cras",
+		"duracion": 76,
+		"autor": "Jordan Lloyd",
+		"generos": "Jazz Blues Góspel",
+		"popularidad": 6,
+		"rating": "7, 11, 5, 17, 15, 3, 9, 13, 1"
+	},
+	{
+		"nombre": "Quisque imperdiet, erat",
+		"duracion": 161,
+		"autor": "Elizabeth Sexton",
+		"generos": "Soul",
+		"popularidad": 8,
+		"rating": "9, 15, 7, 11, 13, 19, 5, 3, 1, 17"
+	},
+	{
+		"nombre": "elementum, dui quis",
+		"duracion": 36,
+		"autor": "Madeson Hancock",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 9,
+		"rating": "13, 11, 3, 15, 9, 1, 7, 5"
+	},
+	{
+		"nombre": "bibendum. Donec felis",
+		"duracion": 118,
+		"autor": "Ciaran Lambert",
+		"generos": "Soul Pop Rock",
+		"popularidad": 1,
+		"rating": "9, 17, 5, 19"
+	},
+	{
+		"nombre": "convallis convallis",
+		"duracion": 80,
+		"autor": "Nina Horne",
+		"generos": "Soul Pop",
+		"popularidad": 5,
+		"rating": "15, 9, 17"
+	},
+	{
+		"nombre": "dolor, tempus non,",
+		"duracion": 12,
+		"autor": "Kasimir Mason",
+		"generos": "Jazz Blues",
+		"popularidad": 8,
+		"rating": "19, 7, 5"
+	},
+	{
+		"nombre": "amet,",
 		"duracion": 163,
-		"autor": "Ivor Cox",
+		"autor": "Hall Burton",
+		"generos": "Góspel Soul",
+		"popularidad": 2,
+		"rating": "7, 11, 1, 17"
+	},
+	{
+		"nombre": "est",
+		"duracion": 38,
+		"autor": "Lillian Everett",
+		"generos": "Góspel",
+		"popularidad": 4,
+		"rating": "7, 19, 1, 3, 13, 11"
+	},
+	{
+		"nombre": "lacus vestibulum",
+		"duracion": 126,
+		"autor": "Damian Morales",
+		"generos": "Hip-Hop",
+		"popularidad": 8,
+		"rating": "7, 3, 15, 13, 5, 9, 19, 11"
+	},
+	{
+		"nombre": "dictum augue",
+		"duracion": 85,
+		"autor": "Conan Durham",
 		"generos": "Disco Techno",
-		"popularidad": 7,
-		"danzabilidad": 5
+		"popularidad": 2,
+		"rating": "19, 3, 11"
 	},
 	{
-		"nombre": "at sem molestie",
-		"duracion": 122,
-		"autor": "Amal Stewart",
-		"generos": "Salsa R&B K-pop",
-		"popularidad": 9,
-		"danzabilidad": 8
+		"nombre": "blandit",
+		"duracion": 77,
+		"autor": "Price Albert",
+		"generos": "Soul Pop",
+		"popularidad": 2,
+		"rating": "11, 9, 13, 1, 5, 3, 15"
 	},
 	{
-		"nombre": "ultrices. Vivamus rhoncus.",
-		"duracion": 13,
-		"autor": "Cheyenne Haney",
-		"generos": "Jazz Góspel Blues Country",
-		"popularidad": 9,
-		"danzabilidad": 0
+		"nombre": "non, feugiat nec,",
+		"duracion": 104,
+		"autor": "Kessie Leon",
+		"generos": "Disco Techno",
+		"popularidad": 2,
+		"rating": "17, 5, 19, 15, 3, 13"
 	},
 	{
-		"nombre": "convallis erat, eget",
-		"duracion": 168,
-		"autor": "Callum Barron",
-		"generos": "K-pop Metal",
+		"nombre": "semper pretium",
+		"duracion": 85,
+		"autor": "Geoffrey Barry",
+		"generos": "Soul",
 		"popularidad": 3,
-		"danzabilidad": 8
+		"rating": "5, 7"
+	},
+	{
+		"nombre": "Fusce fermentum fermentum",
+		"duracion": 125,
+		"autor": "Jael Herring",
+		"generos": "Jazz Blues Góspel",
+		"popularidad": 4,
+		"rating": "11, 5, 19, 1, 9, 17, 13, 7, 15"
+	},
+	{
+		"nombre": "Mauris molestie",
+		"duracion": 170,
+		"autor": "Galvin Roberson",
+		"generos": "Disco Techno",
+		"popularidad": 4,
+		"rating": "5, 11"
+	},
+	{
+		"nombre": "magna nec quam.",
+		"duracion": 39,
+		"autor": "Zeus Sanford",
+		"generos": "Disco Techno",
+		"popularidad": 9,
+		"rating": "13, 17, 9, 5, 11"
+	},
+	{
+		"nombre": "euismod urna. Nullam",
+		"duracion": 17,
+		"autor": "Ciara Anthony",
+		"generos": "Pop Rock",
+		"popularidad": 4,
+		"rating": "3, 17, 19, 7, 9, 5, 15, 13, 1"
+	},
+	{
+		"nombre": "porttitor",
+		"duracion": 171,
+		"autor": "Hedley Flynn",
+		"generos": "Pop Rock",
+		"popularidad": 3,
+		"rating": "1, 15, 19"
+	},
+	{
+		"nombre": "ridiculus mus.",
+		"duracion": 151,
+		"autor": "Colt Green",
+		"generos": "Country Disco Techno",
+		"popularidad": 9,
+		"rating": "9, 5, 11, 19, 13"
 	},
 	{
 		"nombre": "commodo ipsum. Suspendisse",
-		"duracion": 82,
-		"autor": "Levi Velez",
-		"generos": "Pop Clásica Bachata Raeguetton",
-		"popularidad": 8,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "et, euismod et,",
-		"duracion": 51,
-		"autor": "Hammett Chen",
-		"generos": "Salsa R&B K-pop",
-		"popularidad": 1,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "nec, eleifend non,",
-		"duracion": 13,
-		"autor": "Hop Bray",
-		"generos": "Pop Clásica",
-		"popularidad": 2,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "scelerisque scelerisque dui.",
-		"duracion": 131,
-		"autor": "Logan Rose",
-		"generos": "Metal Jazz Góspel Blues",
-		"popularidad": 8,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "in, tempus eu,",
-		"duracion": 134,
-		"autor": "Jasper Kelly",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 7,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "tellus justo sit",
-		"duracion": 118,
-		"autor": "Sonia Logan",
-		"generos": "Blues Country Disco Techno",
-		"popularidad": 1,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "lectus rutrum urna,",
-		"duracion": 85,
-		"autor": "Tana Sosa",
-		"generos": "Bachata Raeguetton",
-		"popularidad": 5,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "id, ante. Nunc",
-		"duracion": 86,
-		"autor": "Grady Crane",
-		"generos": "Raeguetton Hip-Hop",
+		"duracion": 137,
+		"autor": "Oprah Herrera",
+		"generos": "Disco Techno",
 		"popularidad": 6,
-		"danzabilidad": 3
+		"rating": "13, 3, 1, 15, 7"
 	},
 	{
-		"nombre": "pede. Cras vulputate",
-		"duracion": 106,
-		"autor": "Roth Marquez",
-		"generos": "K-pop Metal",
-		"popularidad": 3,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "mollis. Integer tincidunt",
-		"duracion": 25,
-		"autor": "Amber Downs",
-		"generos": "Góspel Blues Country Disco",
-		"popularidad": 7,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "aliquet diam. Sed",
-		"duracion": 105,
-		"autor": "Yuli Beach",
-		"generos": "Blues Country Disco",
-		"popularidad": 1,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "nec ante. Maecenas",
-		"duracion": 7,
-		"autor": "Travis Rosa",
-		"generos": "Góspel Blues Country Disco",
-		"popularidad": 3,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "metus eu erat",
-		"duracion": 52,
-		"autor": "Hayden Santiago",
-		"generos": "R&B K-pop",
-		"popularidad": 1,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "eu turpis. Nulla",
-		"duracion": 78,
-		"autor": "Marvin Moon",
-		"generos": "Jazz Góspel Blues Country",
-		"popularidad": 2,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "Nullam suscipit, est",
-		"duracion": 30,
-		"autor": "Xyla Mcfadden",
-		"generos": "Metal Jazz Góspel Blues Country",
+		"nombre": "magna nec",
+		"duracion": 155,
+		"autor": "Lyle Woodard",
+		"generos": "Blues Góspel Soul",
 		"popularidad": 5,
-		"danzabilidad": 2
+		"rating": "19, 17, 1, 11, 13, 9, 7, 15, 3"
 	},
 	{
-		"nombre": "ipsum porta elit,",
-		"duracion": 171,
-		"autor": "Summer Duffy",
-		"generos": "R&B K-pop Metal Jazz Góspel",
-		"popularidad": 8,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "amet, risus. Donec",
-		"duracion": 143,
-		"autor": "Maggie Parsons",
-		"generos": "Blues Country",
-		"popularidad": 6,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "mi. Duis risus",
-		"duracion": 7,
-		"autor": "Leonard Vinson",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 1,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "eu tellus. Phasellus",
+		"nombre": "sit",
 		"duracion": 112,
-		"autor": "Sandra Weaver",
-		"generos": "Clásica Bachata Raeguetton",
-		"popularidad": 6,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "auctor quis, tristique",
-		"duracion": 179,
-		"autor": "Xyla Gross",
-		"generos": "Bachata Raeguetton Hip-Hop Salsa",
-		"popularidad": 2,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "amet, consectetuer adipiscing",
-		"duracion": 77,
-		"autor": "Yvonne Adams",
-		"generos": "Bachata Raeguetton Hip-Hop Salsa R&B",
-		"popularidad": 3,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "nonummy ultricies ornare,",
-		"duracion": 159,
-		"autor": "Derek Mckenzie",
-		"generos": "Raeguetton Hip-Hop Salsa R&B",
-		"popularidad": 0,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "non, egestas a,",
-		"duracion": 120,
-		"autor": "Tarik Zamora",
-		"generos": "Disco",
-		"popularidad": 3,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "turpis egestas. Fusce",
-		"duracion": 121,
-		"autor": "Nicholas Farrell",
-		"generos": "Hip-Hop Salsa R&B K-pop Metal",
-		"popularidad": 10,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "sem ut cursus",
-		"duracion": 61,
-		"autor": "Norman Blake",
-		"generos": "Disco Techno",
-		"popularidad": 7,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "Proin mi. Aliquam",
-		"duracion": 12,
-		"autor": "Adrian Mitchell",
-		"generos": "Pop Clásica",
-		"popularidad": 10,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "taciti sociosqu ad",
-		"duracion": 128,
-		"autor": "Merritt Carrillo",
-		"generos": "Disco Techno",
-		"popularidad": 9,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "sed sem egestas",
-		"duracion": 112,
-		"autor": "Gavin Yates",
-		"generos": "K-pop Metal Jazz Góspel",
-		"popularidad": 7,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "amet, dapibus id,",
-		"duracion": 69,
-		"autor": "Larissa Dejesus",
-		"generos": "Metal Jazz Góspel Blues",
-		"popularidad": 7,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "rutrum urna, nec",
-		"duracion": 16,
-		"autor": "Simon Wiggins",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 4,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "velit. Aliquam nisl.",
-		"duracion": 68,
-		"autor": "Hyatt Barlow",
-		"generos": "Góspel Blues",
-		"popularidad": 5,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "auctor odio a",
-		"duracion": 81,
-		"autor": "Jaden Wilkerson",
-		"generos": "Pop Clásica Bachata",
-		"popularidad": 8,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "Duis at lacus.",
-		"duracion": 45,
-		"autor": "Wendy Burke",
-		"generos": "Disco",
+		"autor": "Scarlett Ferrell",
+		"generos": "Pop Rock",
 		"popularidad": 1,
-		"danzabilidad": 5
+		"rating": "13, 17, 11, 7, 3, 5, 1, 9, 19"
 	},
 	{
-		"nombre": "ut nisi a",
-		"duracion": 95,
-		"autor": "Kuame Nielsen",
-		"generos": "Bachata Raeguetton Hip-Hop Salsa",
-		"popularidad": 6,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "ultrices. Duis volutpat",
-		"duracion": 40,
-		"autor": "Coby Barry",
-		"generos": "Country Disco Techno Flamenco",
-		"popularidad": 2,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "a nunc. In",
-		"duracion": 130,
-		"autor": "Wallace Sanchez",
-		"generos": "Góspel Blues Country Disco",
+		"nombre": "neque sed",
+		"duracion": 55,
+		"autor": "Kay Nieves",
+		"generos": "Techno Hip-Hop",
 		"popularidad": 9,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "augue ac ipsum.",
-		"duracion": 101,
-		"autor": "Wynter Rice",
-		"generos": "Bachata Raeguetton Hip-Hop Salsa",
-		"popularidad": 7,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "non ante bibendum",
-		"duracion": 172,
-		"autor": "Mikayla Lewis",
-		"generos": "K-pop Metal Jazz Góspel",
-		"popularidad": 5,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "Proin dolor. Nulla",
-		"duracion": 4,
-		"autor": "Paul O'donnell",
-		"generos": "Pop Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 1,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "libero. Morbi accumsan",
-		"duracion": 151,
-		"autor": "Arden Barrett",
-		"generos": "Metal Jazz Góspel Blues Country",
-		"popularidad": 7,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "mauris id sapien.",
-		"duracion": 100,
-		"autor": "Asher Figueroa",
-		"generos": "Techno",
-		"popularidad": 8,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "id enim. Curabitur",
-		"duracion": 68,
-		"autor": "Dacey Petty",
-		"generos": "Jazz Góspel Blues",
-		"popularidad": 4,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "massa rutrum magna.",
-		"duracion": 125,
-		"autor": "Joseph Vance",
-		"generos": "Rock Pop Clásica Bachata",
-		"popularidad": 1,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "Suspendisse ac metus",
-		"duracion": 94,
-		"autor": "Sara Burton",
-		"generos": "Clásica Bachata Raeguetton",
-		"popularidad": 9,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "mauris a nunc.",
-		"duracion": 6,
-		"autor": "John Savage",
-		"generos": "R&B K-pop",
-		"popularidad": 1,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "ultrices iaculis odio.",
-		"duracion": 169,
-		"autor": "Jermaine Bentley",
-		"generos": "K-pop Metal Jazz Góspel",
-		"popularidad": 2,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "dis parturient montes,",
-		"duracion": 81,
-		"autor": "Debra Gregory",
-		"generos": "Metal Jazz Góspel Blues",
-		"popularidad": 4,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "sed dictum eleifend,",
-		"duracion": 134,
-		"autor": "Cole Dennis",
-		"generos": "Pop Clásica",
-		"popularidad": 5,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "tellus. Phasellus elit",
-		"duracion": 62,
-		"autor": "Virginia Garcia",
-		"generos": "Góspel",
-		"popularidad": 5,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "Nulla tempor augue",
-		"duracion": 7,
-		"autor": "Fuller Gomez",
-		"generos": "R&B K-pop Metal Jazz Góspel",
-		"popularidad": 6,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "Nunc lectus pede,",
-		"duracion": 129,
-		"autor": "Denise Trevino",
-		"generos": "Pop Clásica Bachata",
-		"popularidad": 8,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "Morbi quis urna.",
-		"duracion": 153,
-		"autor": "Lamar Mcgee",
-		"generos": "Jazz Góspel",
-		"popularidad": 9,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "Nam nulla magna,",
-		"duracion": 73,
-		"autor": "Rhona Cortez",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 3,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "nulla. Cras eu",
-		"duracion": 36,
-		"autor": "Lavinia Cain",
-		"generos": "Raeguetton Hip-Hop Salsa R&B",
-		"popularidad": 7,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "blandit at, nisi.",
-		"duracion": 159,
-		"autor": "Shannon Ware",
-		"generos": "R&B K-pop Metal Jazz",
-		"popularidad": 8,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "amet diam eu",
-		"duracion": 2,
-		"autor": "Chanda Howell",
-		"generos": "Jazz Góspel Blues",
-		"popularidad": 2,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "pharetra ut, pharetra",
-		"duracion": 92,
-		"autor": "Dustin Cooper",
-		"generos": "K-pop Metal",
-		"popularidad": 4,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "sed orci lobortis",
-		"duracion": 71,
-		"autor": "Zenaida Mayer",
-		"generos": "Bachata Raeguetton Hip-Hop Salsa",
-		"popularidad": 3,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "faucibus ut, nulla.",
-		"duracion": 132,
-		"autor": "Lucy Medina",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 10,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "molestie orci tincidunt",
-		"duracion": 163,
-		"autor": "Judith Salinas",
-		"generos": "Techno Flamenco",
-		"popularidad": 6,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "diam vel arcu.",
-		"duracion": 102,
-		"autor": "Aphrodite Johnson",
-		"generos": "R&B K-pop Metal Jazz",
-		"popularidad": 7,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "libero mauris, aliquam",
-		"duracion": 91,
-		"autor": "Idona Mcfadden",
-		"generos": "Pop Clásica Bachata",
-		"popularidad": 8,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "malesuada fames ac",
-		"duracion": 103,
-		"autor": "Felix Gibbs",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop Salsa",
-		"popularidad": 4,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "metus. In nec",
-		"duracion": 92,
-		"autor": "Aurora Shaw",
-		"generos": "Pop Clásica Bachata Raeguetton",
-		"popularidad": 2,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "sed pede. Cum",
-		"duracion": 13,
-		"autor": "Vance Calderon",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 7,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "eu dui. Cum",
-		"duracion": 78,
-		"autor": "Carl Little",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 10,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "orci, consectetuer euismod",
-		"duracion": 162,
-		"autor": "Halla Glenn",
-		"generos": "Disco",
-		"popularidad": 5,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "ultrices a, auctor",
-		"duracion": 3,
-		"autor": "Bernard Mullen",
-		"generos": "Metal Jazz Góspel Blues",
-		"popularidad": 0,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "ligula. Aenean gravida",
-		"duracion": 180,
-		"autor": "Stephen Lee",
-		"generos": "Hip-Hop",
-		"popularidad": 4,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "eleifend non, dapibus",
-		"duracion": 146,
-		"autor": "Gary Juarez",
-		"generos": "Raeguetton Hip-Hop Salsa R&B",
-		"popularidad": 1,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "malesuada ut, sem.",
-		"duracion": 43,
-		"autor": "Erich Knight",
-		"generos": "Country Disco Techno",
-		"popularidad": 9,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "risus. In mi",
-		"duracion": 106,
-		"autor": "Fitzgerald Chaney",
-		"generos": "R&B K-pop Metal Jazz Góspel",
-		"popularidad": 10,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "sapien, cursus in,",
-		"duracion": 65,
-		"autor": "Rhona Romero",
-		"generos": "Jazz Góspel",
-		"popularidad": 5,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "Suspendisse dui. Fusce",
-		"duracion": 8,
-		"autor": "Elijah Patel",
-		"generos": "K-pop",
-		"popularidad": 2,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "scelerisque dui. Suspendisse",
-		"duracion": 176,
-		"autor": "Dai Hurley",
-		"generos": "Clásica Bachata Raeguetton",
-		"popularidad": 5,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "venenatis a, magna.",
-		"duracion": 165,
-		"autor": "Uma Moon",
-		"generos": "Jazz",
-		"popularidad": 6,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "magna et ipsum",
-		"duracion": 171,
-		"autor": "Dai Santos",
-		"generos": "Hip-Hop Salsa R&B K-pop Metal",
-		"popularidad": 9,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "nulla vulputate dui,",
-		"duracion": 71,
-		"autor": "Dora Day",
-		"generos": "Disco Techno",
-		"popularidad": 3,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "Sed nec metus",
-		"duracion": 81,
-		"autor": "Nevada Gentry",
-		"generos": "Blues Country",
-		"popularidad": 7,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "Integer in magna.",
-		"duracion": 85,
-		"autor": "Justina Crosby",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 4,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "sapien, gravida non,",
-		"duracion": 95,
-		"autor": "Maya Berry",
-		"generos": "Góspel Blues",
-		"popularidad": 9,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "sapien molestie orci",
-		"duracion": 51,
-		"autor": "Sawyer Petty",
-		"generos": "Salsa R&B K-pop",
-		"popularidad": 1,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "enim commodo hendrerit.",
-		"duracion": 160,
-		"autor": "Cailin Suarez",
-		"generos": "Metal Jazz",
-		"popularidad": 1,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "ultrices posuere cubilia",
-		"duracion": 112,
-		"autor": "Deborah Boyd",
-		"generos": "Blues Country Disco Techno",
-		"popularidad": 1,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "Suspendisse non leo.",
-		"duracion": 108,
-		"autor": "Leah Deleon",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 8,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "semper. Nam tempor",
-		"duracion": 52,
-		"autor": "Nadine Gould",
-		"generos": "Bachata Raeguetton Hip-Hop Salsa R&B",
-		"popularidad": 2,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "nulla at sem",
-		"duracion": 102,
-		"autor": "Raymond Marks",
-		"generos": "Salsa R&B",
-		"popularidad": 2,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "Aenean gravida nunc",
-		"duracion": 1,
-		"autor": "Cairo Buck",
-		"generos": "R&B K-pop Metal Jazz Góspel",
-		"popularidad": 1,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "at auctor ullamcorper,",
-		"duracion": 134,
-		"autor": "Kylie Velez",
-		"generos": "R&B K-pop Metal Jazz",
-		"popularidad": 4,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "orci quis lectus.",
-		"duracion": 134,
-		"autor": "Nehru Casey",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop Salsa",
-		"popularidad": 0,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "tellus, imperdiet non,",
-		"duracion": 111,
-		"autor": "Ocean Rocha",
-		"generos": "Jazz Góspel",
-		"popularidad": 6,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "Vivamus euismod urna.",
-		"duracion": 140,
-		"autor": "Keaton Rutledge",
-		"generos": "R&B K-pop Metal",
-		"popularidad": 6,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "felis orci, adipiscing",
-		"duracion": 168,
-		"autor": "Mira Carter",
-		"generos": "Pop Clásica Bachata Raeguetton",
-		"popularidad": 3,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "cursus luctus, ipsum",
-		"duracion": 19,
-		"autor": "Griffin Mcgowan",
-		"generos": "Pop Clásica Bachata",
-		"popularidad": 0,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "eu nibh vulputate",
-		"duracion": 51,
-		"autor": "Devin Sherman",
-		"generos": "Disco Techno Flamenco",
-		"popularidad": 5,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "quam dignissim pharetra.",
-		"duracion": 169,
-		"autor": "Knox Emerson",
-		"generos": "Pop Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 4,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "facilisis eget, ipsum.",
-		"duracion": 109,
-		"autor": "Dorian Wolfe",
-		"generos": "Country Disco Techno",
-		"popularidad": 9,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "fringilla purus mauris",
-		"duracion": 41,
-		"autor": "Hilel Delacruz",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 3,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "arcu. Sed et",
-		"duracion": 23,
-		"autor": "Sybill Moon",
-		"generos": "K-pop Metal",
-		"popularidad": 5,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "non, sollicitudin a,",
-		"duracion": 18,
-		"autor": "Boris Kelley",
-		"generos": "Pop Clásica Bachata",
-		"popularidad": 5,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "mauris blandit mattis.",
-		"duracion": 96,
-		"autor": "Irma Dennis",
-		"generos": "R&B K-pop Metal",
-		"popularidad": 4,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "non magna. Nam",
-		"duracion": 83,
-		"autor": "Catherine Richards",
-		"generos": "Country Disco Techno Flamenco",
-		"popularidad": 9,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "nec urna suscipit",
-		"duracion": 100,
-		"autor": "Olga Parker",
-		"generos": "Metal",
-		"popularidad": 7,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "tincidunt vehicula risus.",
-		"duracion": 94,
-		"autor": "Gil Carey",
-		"generos": "Metal Jazz Góspel Blues",
-		"popularidad": 7,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "Donec non justo.",
-		"duracion": 16,
-		"autor": "Mariko Horton",
-		"generos": "Jazz Góspel Blues",
-		"popularidad": 2,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "tristique senectus et",
-		"duracion": 138,
-		"autor": "Venus Oneil",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 3,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "tincidunt tempus risus.",
-		"duracion": 149,
-		"autor": "Ralph Bates",
-		"generos": "Bachata Raeguetton Hip-Hop Salsa R&B",
-		"popularidad": 9,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "urna, nec luctus",
-		"duracion": 39,
-		"autor": "Idona Robles",
-		"generos": "Hip-Hop",
-		"popularidad": 3,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "ullamcorper, velit in",
-		"duracion": 164,
-		"autor": "Liberty Walters",
-		"generos": "Pop Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 1,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "et magnis dis",
-		"duracion": 178,
-		"autor": "Rhoda Powers",
-		"generos": "Góspel Blues Country Disco",
-		"popularidad": 3,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "adipiscing lobortis risus.",
-		"duracion": 100,
-		"autor": "Kirk Harris",
-		"generos": "Bachata Raeguetton",
-		"popularidad": 2,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "Mauris vel turpis.",
-		"duracion": 178,
-		"autor": "Joshua Kim",
-		"generos": "Clásica",
-		"popularidad": 7,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "sem ut dolor",
-		"duracion": 109,
-		"autor": "Ashely Donovan",
-		"generos": "Blues Country",
-		"popularidad": 6,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "quam dignissim pharetra.",
-		"duracion": 133,
-		"autor": "Neil Lee",
-		"generos": "Pop Clásica Bachata Raeguetton",
-		"popularidad": 8,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "Cras lorem lorem,",
-		"duracion": 97,
-		"autor": "Athena Ramirez",
-		"generos": "Clásica Bachata",
-		"popularidad": 7,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "lacus. Ut nec",
-		"duracion": 56,
-		"autor": "Rama Aguilar",
-		"generos": "Metal Jazz",
-		"popularidad": 4,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "adipiscing elit. Curabitur",
-		"duracion": 110,
-		"autor": "Kenneth Pugh",
-		"generos": "Pop Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 9,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "ligula. Nullam feugiat",
-		"duracion": 148,
-		"autor": "Anjolie Mcfarland",
-		"generos": "Country Disco Techno",
-		"popularidad": 10,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "Phasellus ornare. Fusce",
-		"duracion": 5,
-		"autor": "Damian Davenport",
-		"generos": "Clásica Bachata Raeguetton",
-		"popularidad": 1,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "euismod in, dolor.",
-		"duracion": 154,
-		"autor": "Richard Stone",
-		"generos": "Góspel Blues",
-		"popularidad": 3,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "mauris elit, dictum",
-		"duracion": 73,
-		"autor": "Wing Calderon",
-		"generos": "Disco Techno Flamenco",
-		"popularidad": 7,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "quis turpis vitae",
-		"duracion": 48,
-		"autor": "Colt Perez",
-		"generos": "Disco Techno",
-		"popularidad": 9,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "Sed molestie. Sed",
-		"duracion": 47,
-		"autor": "Dolan Cole",
-		"generos": "Pop Clásica",
-		"popularidad": 5,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "urna convallis erat,",
-		"duracion": 79,
-		"autor": "Mark Delaney",
-		"generos": "Bachata Raeguetton",
-		"popularidad": 10,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "Etiam laoreet, libero",
-		"duracion": 96,
-		"autor": "Laith Marquez",
-		"generos": "Bachata Raeguetton",
-		"popularidad": 3,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "Quisque ac libero",
-		"duracion": 74,
-		"autor": "Winifred Hebert",
-		"generos": "Góspel Blues",
-		"popularidad": 6,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "nec, cursus a,",
-		"duracion": 119,
-		"autor": "Omar Green",
-		"generos": "Blues Country Disco",
-		"popularidad": 3,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "sem mollis dui,",
-		"duracion": 90,
-		"autor": "Dai Reese",
-		"generos": "Clásica Bachata",
-		"popularidad": 9,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "id, mollis nec,",
-		"duracion": 156,
-		"autor": "Helen Kline",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 0,
-		"danzabilidad": 1
+		"rating": "17, 5, 19, 13, 3, 1, 9, 15, 7"
 	},
 	{
 		"nombre": "hymenaeos. Mauris ut",
-		"duracion": 154,
-		"autor": "Ingrid Benton",
-		"generos": "Salsa R&B K-pop Metal",
-		"popularidad": 7,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "magna. Ut tincidunt",
-		"duracion": 40,
-		"autor": "Thor Potts",
-		"generos": "Bachata",
-		"popularidad": 7,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "quam a felis",
-		"duracion": 14,
-		"autor": "Knox Macdonald",
-		"generos": "Techno Flamenco",
-		"popularidad": 3,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "Suspendisse non leo.",
-		"duracion": 130,
-		"autor": "Hop Alvarado",
-		"generos": "Techno Flamenco",
-		"popularidad": 4,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "pede. Cras vulputate",
-		"duracion": 30,
-		"autor": "Devin Meadows",
-		"generos": "Techno",
-		"popularidad": 3,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "eu, ultrices sit",
-		"duracion": 101,
-		"autor": "Iona Walters",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 5,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "Proin non massa",
 		"duracion": 168,
-		"autor": "Scarlett Gay",
-		"generos": "Metal Jazz",
-		"popularidad": 8,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "ultrices posuere cubilia",
-		"duracion": 41,
-		"autor": "Lisandra Cardenas",
-		"generos": "Salsa R&B K-pop Metal Jazz",
-		"popularidad": 5,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "felis. Nulla tempor",
-		"duracion": 169,
-		"autor": "Hilda Kline",
-		"generos": "Raeguetton Hip-Hop Salsa",
-		"popularidad": 3,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "dictum placerat, augue.",
-		"duracion": 9,
-		"autor": "Kiara Cobb",
-		"generos": "Clásica Bachata Raeguetton",
-		"popularidad": 8,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "ridiculus mus. Aenean",
-		"duracion": 177,
-		"autor": "Fiona Delacruz",
-		"generos": "Country Disco Techno",
-		"popularidad": 4,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "commodo ipsum. Suspendisse",
-		"duracion": 177,
-		"autor": "Yetta Ortega",
-		"generos": "K-pop Metal",
-		"popularidad": 10,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "est, congue a,",
-		"duracion": 119,
-		"autor": "Chastity Mcclain",
-		"generos": "Jazz Góspel Blues",
-		"popularidad": 4,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "elit, pretium et,",
-		"duracion": 154,
-		"autor": "Neville Burke",
-		"generos": "Blues Country Disco",
-		"popularidad": 7,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "varius et, euismod",
-		"duracion": 124,
-		"autor": "Leah Neal",
-		"generos": "Blues Country Disco",
+		"autor": "Mufutau Blankenship",
+		"generos": "Clásica Jazz",
 		"popularidad": 2,
-		"danzabilidad": 8
+		"rating": "9, 19, 17, 15"
 	},
 	{
-		"nombre": "Mauris vestibulum, neque",
-		"duracion": 131,
-		"autor": "Allegra Crane",
-		"generos": "Metal Jazz",
-		"popularidad": 6,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "Morbi non sapien",
-		"duracion": 7,
-		"autor": "Clayton Larson",
-		"generos": "Hip-Hop Salsa",
-		"popularidad": 2,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "In at pede.",
-		"duracion": 169,
-		"autor": "Chelsea Christensen",
-		"generos": "Salsa R&B K-pop Metal",
-		"popularidad": 7,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "Quisque fringilla euismod",
-		"duracion": 89,
-		"autor": "Amal Hines",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 1,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "et malesuada fames",
-		"duracion": 103,
-		"autor": "Emerson Shepherd",
-		"generos": "Góspel Blues Country Disco",
-		"popularidad": 4,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "dolor quam, elementum",
-		"duracion": 110,
-		"autor": "Palmer Middleton",
-		"generos": "K-pop",
-		"popularidad": 2,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "turpis. In condimentum.",
-		"duracion": 18,
-		"autor": "Louis Roy",
-		"generos": "Salsa",
+		"nombre": "tempor",
+		"duracion": 113,
+		"autor": "Adrienne Lewis",
+		"generos": "Rock Country",
 		"popularidad": 9,
-		"danzabilidad": 6
+		"rating": "9, 3, 5"
 	},
 	{
-		"nombre": "ut nisi a",
-		"duracion": 169,
-		"autor": "Damon Gonzales",
-		"generos": "Country",
-		"popularidad": 5,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "tortor nibh sit",
-		"duracion": 77,
-		"autor": "Samantha Dale",
-		"generos": "Salsa R&B K-pop Metal",
-		"popularidad": 4,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "faucibus leo, in",
-		"duracion": 45,
-		"autor": "Cherokee Whitfield",
-		"generos": "Jazz Góspel Blues Country",
-		"popularidad": 5,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "sodales nisi magna",
-		"duracion": 166,
-		"autor": "Ann Huffman",
-		"generos": "Hip-Hop Salsa R&B K-pop Metal",
-		"popularidad": 7,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "lorem, luctus ut,",
-		"duracion": 118,
-		"autor": "Samson Stuart",
-		"generos": "Góspel Blues Country",
-		"popularidad": 8,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "lobortis tellus justo",
-		"duracion": 29,
-		"autor": "Whitney Willis",
-		"generos": "Góspel Blues Country",
-		"popularidad": 7,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "Proin eget odio.",
-		"duracion": 88,
-		"autor": "Demetrius Sanford",
-		"generos": "Disco Techno",
-		"popularidad": 7,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "a, dui. Cras",
-		"duracion": 27,
-		"autor": "Shad Lott",
-		"generos": "Metal",
-		"popularidad": 6,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "ridiculus mus. Aenean",
-		"duracion": 170,
-		"autor": "Colin Mccall",
-		"generos": "R&B",
-		"popularidad": 2,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "at augue id",
-		"duracion": 18,
-		"autor": "Hannah Barry",
-		"generos": "Disco Techno",
-		"popularidad": 4,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "volutpat. Nulla dignissim.",
-		"duracion": 169,
-		"autor": "Kellie Wyatt",
-		"generos": "Hip-Hop Salsa R&B K-pop",
-		"popularidad": 3,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "pharetra ut, pharetra",
-		"duracion": 3,
-		"autor": "Brendan Pugh",
-		"generos": "Jazz Góspel Blues",
+		"nombre": "ut",
+		"duracion": 149,
+		"autor": "Tobias Barber",
+		"generos": "Techno Hip-Hop",
 		"popularidad": 1,
-		"danzabilidad": 9
+		"rating": "1, 15"
 	},
 	{
-		"nombre": "odio sagittis semper.",
-		"duracion": 79,
-		"autor": "Cadman Burks",
-		"generos": "Pop Clásica",
+		"nombre": "placerat velit.",
+		"duracion": 174,
+		"autor": "Uta Savage",
+		"generos": "Soul Pop Rock",
 		"popularidad": 9,
-		"danzabilidad": 3
+		"rating": "19, 9, 11, 17"
 	},
 	{
-		"nombre": "justo. Praesent luctus.",
-		"duracion": 29,
-		"autor": "Rosalyn Bean",
-		"generos": "Raeguetton Hip-Hop Salsa R&B",
-		"popularidad": 2,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "Nullam lobortis quam",
-		"duracion": 30,
-		"autor": "Kenyon Webb",
-		"generos": "Raeguetton Hip-Hop Salsa",
-		"popularidad": 4,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "Proin velit. Sed",
-		"duracion": 67,
-		"autor": "Zane Bailey",
-		"generos": "Raeguetton Hip-Hop Salsa R&B",
-		"popularidad": 1,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "nisi. Aenean eget",
-		"duracion": 8,
-		"autor": "Wyoming Reeves",
-		"generos": "Blues Country",
-		"popularidad": 4,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "Integer in magna.",
-		"duracion": 164,
-		"autor": "Damian Pierce",
-		"generos": "Disco Techno",
-		"popularidad": 3,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "accumsan neque et",
-		"duracion": 65,
-		"autor": "Ivory Hull",
-		"generos": "Salsa R&B K-pop",
-		"popularidad": 1,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "Morbi accumsan laoreet",
-		"duracion": 10,
-		"autor": "Kylynn Jackson",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 10,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "nibh lacinia orci,",
-		"duracion": 163,
-		"autor": "Odessa Weiss",
-		"generos": "Bachata Raeguetton Hip-Hop",
-		"popularidad": 1,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "vitae, orci. Phasellus",
-		"duracion": 21,
-		"autor": "Leonard Russell",
-		"generos": "Salsa R&B K-pop Metal",
-		"popularidad": 8,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "est. Nunc ullamcorper,",
-		"duracion": 119,
-		"autor": "Fuller Gilmore",
-		"generos": "Pop Clásica",
-		"popularidad": 0,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "elit. Curabitur sed",
-		"duracion": 46,
-		"autor": "Moses Schwartz",
-		"generos": "Raeguetton",
-		"popularidad": 7,
-		"danzabilidad": 0
-	},
-	{
-		"nombre": "scelerisque, lorem ipsum",
-		"duracion": 98,
-		"autor": "Mason Bowman",
-		"generos": "R&B K-pop Metal",
-		"popularidad": 9,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "ipsum. Donec sollicitudin",
-		"duracion": 173,
-		"autor": "Tiger Parks",
-		"generos": "Clásica Bachata Raeguetton",
-		"popularidad": 10,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "elementum sem, vitae",
-		"duracion": 74,
-		"autor": "Rudyard Weaver",
-		"generos": "R&B K-pop Metal Jazz",
-		"popularidad": 9,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "et nunc. Quisque",
-		"duracion": 151,
-		"autor": "Pandora Meyers",
-		"generos": "R&B K-pop Metal Jazz",
-		"popularidad": 9,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "lobortis, nisi nibh",
-		"duracion": 64,
-		"autor": "Andrew Madden",
-		"generos": "Disco Techno",
-		"popularidad": 1,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "erat semper rutrum.",
-		"duracion": 100,
-		"autor": "Aspen Kinney",
-		"generos": "Pop Clásica Bachata",
-		"popularidad": 10,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "senectus et netus",
-		"duracion": 97,
-		"autor": "Kennedy Bean",
-		"generos": "Jazz",
-		"popularidad": 5,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "a ultricies adipiscing,",
-		"duracion": 75,
-		"autor": "Wynter Mckee",
-		"generos": "Bachata Raeguetton Hip-Hop Salsa",
-		"popularidad": 2,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "felis orci, adipiscing",
-		"duracion": 61,
-		"autor": "Xander Dominguez",
-		"generos": "Jazz",
-		"popularidad": 9,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "Nulla facilisi. Sed",
-		"duracion": 104,
-		"autor": "Lael Gallagher",
-		"generos": "K-pop Metal",
-		"popularidad": 10,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "odio tristique pharetra.",
-		"duracion": 88,
-		"autor": "Hyatt Marsh",
-		"generos": "Góspel Blues Country Disco Techno",
-		"popularidad": 3,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "vitae, posuere at,",
-		"duracion": 120,
-		"autor": "Rahim Hampton",
-		"generos": "Jazz Góspel Blues Country",
-		"popularidad": 4,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "metus. Aliquam erat",
-		"duracion": 75,
-		"autor": "Warren Ratliff",
-		"generos": "Góspel Blues Country Disco",
-		"popularidad": 4,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "in aliquet lobortis,",
-		"duracion": 151,
-		"autor": "Sylvia Matthews",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 5,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "Aenean eget magna.",
+		"nombre": "enim nisl",
 		"duracion": 12,
-		"autor": "Nolan Snider",
+		"autor": "Alden Wolfe",
+		"generos": "Pop Rock",
+		"popularidad": 1,
+		"rating": 17
+	},
+	{
+		"nombre": "metus urna",
+		"duracion": 77,
+		"autor": "Denton Jacobson",
+		"generos": "Pop Rock",
+		"popularidad": 5,
+		"rating": "19, 7, 13, 15, 9"
+	},
+	{
+		"nombre": "ipsum.",
+		"duracion": 99,
+		"autor": "Shad Hunt",
+		"generos": "Blues Góspel Soul",
+		"popularidad": 7,
+		"rating": "9, 13, 19"
+	},
+	{
+		"nombre": "leo. Vivamus nibh",
+		"duracion": 139,
+		"autor": "Britanni Boone",
+		"generos": "Jazz Blues Góspel",
+		"popularidad": 10,
+		"rating": "13, 3, 19, 15, 11, 5, 7, 9, 1"
+	},
+	{
+		"nombre": "massa. Quisque",
+		"duracion": 63,
+		"autor": "Dillon Hughes",
+		"generos": "Pop Rock",
+		"popularidad": 0,
+		"rating": "17, 15, 11, 1"
+	},
+	{
+		"nombre": "turpis nec",
+		"duracion": 151,
+		"autor": "Maxwell Wilson",
+		"generos": "Rock Country",
+		"popularidad": 6,
+		"rating": "9, 3, 5, 17, 19, 11, 1, 15, 7, 13"
+	},
+	{
+		"nombre": "Cras",
+		"duracion": 99,
+		"autor": "Lareina Solomon",
+		"generos": "Soul Pop Rock",
+		"popularidad": 10,
+		"rating": "1, 5, 7, 9"
+	},
+	{
+		"nombre": "non, bibendum",
+		"duracion": 117,
+		"autor": "Cameron Allison",
+		"generos": "Country Disco Techno",
+		"popularidad": 8,
+		"rating": "15, 1, 9, 11"
+	},
+	{
+		"nombre": "malesuada. Integer",
+		"duracion": 174,
+		"autor": "Brody Compton",
+		"generos": "Clásica",
+		"popularidad": 7,
+		"rating": "11, 3, 17"
+	},
+	{
+		"nombre": "malesuada fames",
+		"duracion": 110,
+		"autor": "Hedda Miranda",
 		"generos": "Country Disco",
 		"popularidad": 4,
-		"danzabilidad": 7
+		"rating": "5, 17"
 	},
 	{
-		"nombre": "cursus in, hendrerit",
-		"duracion": 28,
-		"autor": "Megan Blanchard",
-		"generos": "Clásica",
-		"popularidad": 5,
-		"danzabilidad": 1
+		"nombre": "at, velit.",
+		"duracion": 172,
+		"autor": "Piper Mejia",
+		"generos": "Soul Pop Rock",
+		"popularidad": 6,
+		"rating": "1, 15, 7, 13, 17, 5, 9, 3, 19"
 	},
 	{
-		"nombre": "libero nec ligula",
-		"duracion": 154,
-		"autor": "Christen Casey",
-		"generos": "Pop Clásica Bachata Raeguetton",
-		"popularidad": 4,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "Suspendisse aliquet molestie",
-		"duracion": 113,
-		"autor": "Priscilla Riggs",
-		"generos": "Disco",
-		"popularidad": 0,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "sed, sapien. Nunc",
-		"duracion": 38,
-		"autor": "Hoyt Benson",
-		"generos": "Country Disco Techno",
+		"nombre": "metus urna",
+		"duracion": 115,
+		"autor": "Aquila Slater",
+		"generos": "Blues Góspel",
 		"popularidad": 1,
-		"danzabilidad": 0
+		"rating": "7, 17, 13"
 	},
 	{
-		"nombre": "odio a purus.",
-		"duracion": 27,
-		"autor": "Chastity Berger",
-		"generos": "Blues Country Disco",
+		"nombre": "ipsum. Donec",
+		"duracion": 161,
+		"autor": "Teagan Serrano",
+		"generos": "Blues Góspel",
 		"popularidad": 0,
-		"danzabilidad": 4
+		"rating": "13, 19, 5, 11, 1, 3, 9"
 	},
 	{
-		"nombre": "in, dolor. Fusce",
-		"duracion": 136,
-		"autor": "Xandra Jennings",
-		"generos": "Góspel Blues",
-		"popularidad": 10,
-		"danzabilidad": 0
+		"nombre": "a odio semper",
+		"duracion": 137,
+		"autor": "Zia Acevedo",
+		"generos": "Clásica Jazz",
+		"popularidad": 1,
+		"rating": "3, 17, 7, 19, 9, 5, 11, 15"
 	},
 	{
-		"nombre": "iaculis, lacus pede",
-		"duracion": 138,
-		"autor": "Dustin Cline",
-		"generos": "Pop Clásica Bachata Raeguetton",
-		"popularidad": 4,
-		"danzabilidad": 10
+		"nombre": "Nunc sollicitudin",
+		"duracion": 102,
+		"autor": "Uma Goodwin",
+		"generos": "Hip-Hop",
+		"popularidad": 2,
+		"rating": "15, 17, 5, 11, 3"
 	},
 	{
-		"nombre": "magna a neque.",
-		"duracion": 16,
-		"autor": "Holmes Walter",
-		"generos": "Pop",
-		"popularidad": 0,
-		"danzabilidad": 7
+		"nombre": "sed libero.",
+		"duracion": 149,
+		"autor": "Gil Watson",
+		"generos": "Góspel Soul Pop",
+		"popularidad": 2,
+		"rating": 1
 	},
 	{
-		"nombre": "Phasellus nulla. Integer",
-		"duracion": 90,
-		"autor": "Shad Carlson",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 8,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "mollis. Duis sit",
-		"duracion": 88,
-		"autor": "Damon Finch",
-		"generos": "Pop Clásica",
-		"popularidad": 10,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "velit egestas lacinia.",
-		"duracion": 78,
-		"autor": "Danielle Gamble",
-		"generos": "Metal Jazz",
-		"popularidad": 5,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "tempus mauris erat",
-		"duracion": 107,
-		"autor": "Kareem Daniel",
-		"generos": "Hip-Hop Salsa",
-		"popularidad": 7,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "metus. Aliquam erat",
-		"duracion": 39,
-		"autor": "Malcolm Cabrera",
-		"generos": "Raeguetton Hip-Hop Salsa",
-		"popularidad": 0,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "Vivamus euismod urna.",
-		"duracion": 133,
-		"autor": "Nora Aguilar",
-		"generos": "Clásica",
-		"popularidad": 4,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "Phasellus ornare. Fusce",
-		"duracion": 129,
-		"autor": "Rebekah Sawyer",
-		"generos": "Góspel Blues Country Disco",
-		"popularidad": 7,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "fringilla euismod enim.",
-		"duracion": 72,
-		"autor": "Aretha Delaney",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 9,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "scelerisque dui. Suspendisse",
-		"duracion": 117,
-		"autor": "Hashim Stephenson",
-		"generos": "Disco Techno",
-		"popularidad": 0,
-		"danzabilidad": 8
-	},
-	{
-		"nombre": "facilisis facilisis, magna",
-		"duracion": 93,
-		"autor": "Noelani Booth",
+		"nombre": "lorem ac",
+		"duracion": 156,
+		"autor": "Dillon Christensen",
 		"generos": "Country Disco Techno",
-		"popularidad": 4,
-		"danzabilidad": 2
+		"popularidad": 5,
+		"rating": "3, 11, 7, 17, 1, 19, 13, 5, 15"
 	},
 	{
-		"nombre": "imperdiet non, vestibulum",
-		"duracion": 10,
-		"autor": "Hiram Graham",
-		"generos": "Pop Clásica Bachata Raeguetton Hip-Hop",
+		"nombre": "et magnis dis",
+		"duracion": 85,
+		"autor": "Benjamin Maddox",
+		"generos": "Góspel Soul Pop",
+		"popularidad": 7,
+		"rating": "5, 3, 19"
+	},
+	{
+		"nombre": "in,",
+		"duracion": 118,
+		"autor": "Keaton Schmidt",
+		"generos": "Blues Góspel",
+		"popularidad": 2,
+		"rating": "5, 1, 13, 19, 9, 3, 11, 15, 7, 17"
+	},
+	{
+		"nombre": "Aliquam fringilla cursus",
+		"duracion": 7,
+		"autor": "Aquila Moran",
+		"generos": "Pop Rock Country",
+		"popularidad": 8,
+		"rating": "19, 5, 1, 13, 17, 3, 7, 15"
+	},
+	{
+		"nombre": "varius et,",
+		"duracion": 31,
+		"autor": "Quintessa Herrera",
+		"generos": "Rock Country",
+		"popularidad": 4,
+		"rating": "1, 13, 5, 15"
+	},
+	{
+		"nombre": "Aliquam gravida",
+		"duracion": 109,
+		"autor": "Willow Pickett",
+		"generos": "Country Disco",
+		"popularidad": 8,
+		"rating": "13, 9"
+	},
+	{
+		"nombre": "Ut nec",
+		"duracion": 95,
+		"autor": "Sydnee Hewitt",
+		"generos": "Pop Rock",
 		"popularidad": 3,
-		"danzabilidad": 5
+		"rating": "3, 19, 1, 15, 7"
 	},
 	{
-		"nombre": "vel nisl. Quisque",
-		"duracion": 67,
-		"autor": "Keelie Pearson",
-		"generos": "Hip-Hop Salsa R&B K-pop",
-		"popularidad": 1,
-		"danzabilidad": 2
+		"nombre": "sed",
+		"duracion": 133,
+		"autor": "Savannah Cannon",
+		"generos": "Soul",
+		"popularidad": 6,
+		"rating": "3, 11, 1"
 	},
 	{
-		"nombre": "justo. Proin non",
-		"duracion": 53,
-		"autor": "Vera Dillon",
-		"generos": "Raeguetton Hip-Hop Salsa",
+		"nombre": "at sem",
+		"duracion": 107,
+		"autor": "Linus Higgins",
+		"generos": "Country",
 		"popularidad": 8,
-		"danzabilidad": 5
+		"rating": "17, 9, 7, 1, 3"
 	},
 	{
-		"nombre": "mauris erat eget",
-		"duracion": 97,
-		"autor": "Eagan Chen",
-		"generos": "Clásica Bachata",
+		"nombre": "tempor, est",
+		"duracion": 15,
+		"autor": "Vance Terry",
+		"generos": "Rock",
+		"popularidad": 0,
+		"rating": "9, 13, 11, 1, 15"
+	},
+	{
+		"nombre": "ornare placerat,",
+		"duracion": 137,
+		"autor": "Burke Copeland",
+		"generos": "Góspel Soul Pop",
+		"popularidad": 0,
+		"rating": "3, 19, 5"
+	},
+	{
+		"nombre": "Nunc sed",
+		"duracion": 55,
+		"autor": "Emma Middleton",
+		"generos": "Rock Country",
+		"popularidad": 8,
+		"rating": "15, 7, 1, 13, 3, 11, 5, 9"
+	},
+	{
+		"nombre": "lacinia. Sed",
+		"duracion": 65,
+		"autor": "Kelly Hurley",
+		"generos": "Soul Pop",
+		"popularidad": 7,
+		"rating": "9, 3, 1, 15, 5, 13, 17"
+	},
+	{
+		"nombre": "vitae, sodales at,",
+		"duracion": 37,
+		"autor": "Demetrius Kelly",
+		"generos": "Hip-Hop",
 		"popularidad": 9,
-		"danzabilidad": 1
+		"rating": "17, 15"
 	},
 	{
-		"nombre": "In tincidunt congue",
-		"duracion": 130,
-		"autor": "Graiden Mendez",
+		"nombre": "Etiam ligula tortor,",
+		"duracion": 156,
+		"autor": "Sheila Bradford",
+		"generos": "Rock",
+		"popularidad": 8,
+		"rating": "19, 15, 17, 3, 7"
+	},
+	{
+		"nombre": "tristique pellentesque,",
+		"duracion": 124,
+		"autor": "Daria Sykes",
+		"generos": "Country Disco Techno",
+		"popularidad": 6,
+		"rating": "11, 13, 1, 17, 19, 7, 9"
+	},
+	{
+		"nombre": "pede ac urna.",
+		"duracion": 94,
+		"autor": "Noelani Kirk",
+		"generos": "Rock Country",
+		"popularidad": 6,
+		"rating": "13, 1, 17, 3, 19"
+	},
+	{
+		"nombre": "erat",
+		"duracion": 165,
+		"autor": "Ashton Sanders",
+		"generos": "Góspel Soul Pop",
+		"popularidad": 6,
+		"rating": "17, 5"
+	},
+	{
+		"nombre": "ipsum primis in",
+		"duracion": 75,
+		"autor": "Armand Guerra",
 		"generos": "Jazz",
-		"popularidad": 6,
-		"danzabilidad": 8
+		"popularidad": 7,
+		"rating": "17, 5, 3, 7"
 	},
 	{
-		"nombre": "ut erat. Sed",
-		"duracion": 74,
-		"autor": "Callie Mcguire",
-		"generos": "Bachata Raeguetton",
+		"nombre": "convallis convallis",
+		"duracion": 155,
+		"autor": "Savannah Mclaughlin",
+		"generos": "Soul",
 		"popularidad": 6,
-		"danzabilidad": 9
+		"rating": "11, 5, 17, 3, 15"
+	},
+	{
+		"nombre": "ac mattis",
+		"duracion": 21,
+		"autor": "Tucker Graham",
+		"generos": "Rock Country",
+		"popularidad": 6,
+		"rating": "11, 19, 13, 1, 9, 7"
+	},
+	{
+		"nombre": "aliquet vel,",
+		"duracion": 145,
+		"autor": "Noah Bullock",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 5,
+		"rating": "1, 5"
+	},
+	{
+		"nombre": "Donec at",
+		"duracion": 80,
+		"autor": "Signe Booker",
+		"generos": "Rock Country",
+		"popularidad": 5,
+		"rating": 3
+	},
+	{
+		"nombre": "consectetuer",
+		"duracion": 21,
+		"autor": "Phelan Richmond",
+		"generos": "Soul Pop Rock",
+		"popularidad": 1,
+		"rating": "19, 9, 7"
+	},
+	{
+		"nombre": "parturient",
+		"duracion": 100,
+		"autor": "Darius Carney",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 6,
+		"rating": "1, 5, 19, 13, 11, 3, 15, 17, 9, 7"
+	},
+	{
+		"nombre": "eget metus. In",
+		"duracion": 153,
+		"autor": "Tamara Hurst",
+		"generos": "Góspel Soul",
+		"popularidad": 7,
+		"rating": "5, 11, 9, 1, 7, 13, 19, 15, 3"
+	},
+	{
+		"nombre": "Phasellus",
+		"duracion": 54,
+		"autor": "Caesar Roth",
+		"generos": "Disco Techno",
+		"popularidad": 7,
+		"rating": "11, 13, 7, 9"
+	},
+	{
+		"nombre": "sit amet orci.",
+		"duracion": 142,
+		"autor": "Claire Robbins",
+		"generos": "Techno Hip-Hop Metal",
+		"popularidad": 5,
+		"rating": "3, 9, 17, 7, 11, 1"
+	},
+	{
+		"nombre": "erat",
+		"duracion": 60,
+		"autor": "Drew Mendez",
+		"generos": "Blues",
+		"popularidad": 1,
+		"rating": "7, 15, 19, 1, 9, 5, 13, 3, 17"
+	},
+	{
+		"nombre": "diam at pretium",
+		"duracion": 63,
+		"autor": "Kevyn Gray",
+		"generos": "Soul",
+		"popularidad": 0,
+		"rating": "7, 15, 11, 1, 9, 17, 13, 19, 3, 5"
+	},
+	{
+		"nombre": "sapien,",
+		"duracion": 8,
+		"autor": "Nicole Mack",
+		"generos": "Jazz Blues Góspel",
+		"popularidad": 7,
+		"rating": "3, 15, 11, 17, 13, 7, 19, 5, 9"
+	},
+	{
+		"nombre": "nec urna",
+		"duracion": 101,
+		"autor": "Joshua Fletcher",
+		"generos": "Jazz Blues",
+		"popularidad": 4,
+		"rating": "11, 9, 17"
 	},
 	{
 		"nombre": "lectus, a sollicitudin",
-		"duracion": 85,
-		"autor": "Ila Aguilar",
-		"generos": "K-pop Metal Jazz",
-		"popularidad": 3,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "tempus scelerisque, lorem",
-		"duracion": 43,
-		"autor": "Adam Love",
-		"generos": "Rock",
-		"popularidad": 2,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "malesuada malesuada. Integer",
-		"duracion": 138,
-		"autor": "Gillian Goff",
-		"generos": "Pop Clásica",
-		"popularidad": 4,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "Nulla tempor augue",
-		"duracion": 37,
-		"autor": "Jeanette Howard",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 7,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "pede, nonummy ut,",
-		"duracion": 33,
-		"autor": "Cadman Dorsey",
-		"generos": "Salsa R&B K-pop",
-		"popularidad": 7,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "risus. Morbi metus.",
-		"duracion": 63,
-		"autor": "Bell Whitley",
-		"generos": "K-pop Metal Jazz Góspel",
-		"popularidad": 2,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "Suspendisse non leo.",
-		"duracion": 62,
-		"autor": "Beau Cannon",
-		"generos": "Clásica Bachata Raeguetton Hip-Hop",
-		"popularidad": 2,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "dis parturient montes,",
-		"duracion": 168,
-		"autor": "Oren Hays",
-		"generos": "Hip-Hop Salsa",
-		"popularidad": 4,
-		"danzabilidad": 7
-	},
-	{
-		"nombre": "ullamcorper. Duis at",
-		"duracion": 133,
-		"autor": "Reuben James",
-		"generos": "Country Disco Techno",
-		"popularidad": 5,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "enim commodo hendrerit.",
-		"duracion": 153,
-		"autor": "Zeus Dorsey",
-		"generos": "Salsa R&B K-pop",
-		"popularidad": 5,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "mauris sapien, cursus",
-		"duracion": 46,
-		"autor": "Melissa Beach",
-		"generos": "Disco Techno",
-		"popularidad": 3,
-		"danzabilidad": 2
-	},
-	{
-		"nombre": "aliquam iaculis, lacus",
-		"duracion": 29,
-		"autor": "Kadeem Pitts",
-		"generos": "Rock Pop Clásica Bachata",
-		"popularidad": 5,
-		"danzabilidad": 9
-	},
-	{
-		"nombre": "arcu iaculis enim,",
-		"duracion": 8,
-		"autor": "Jenna Mclaughlin",
-		"generos": "Salsa R&B K-pop Metal Jazz",
-		"popularidad": 2,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "lacinia orci, consectetuer",
-		"duracion": 134,
-		"autor": "Troy Spears",
-		"generos": "Jazz Góspel Blues Country",
-		"popularidad": 6,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "gravida nunc sed",
-		"duracion": 33,
-		"autor": "Jaquelyn Evans",
-		"generos": "Blues",
-		"popularidad": 6,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "iaculis enim, sit",
-		"duracion": 113,
-		"autor": "Dorian Roy",
-		"generos": "Blues Country Disco Techno",
-		"popularidad": 10,
-		"danzabilidad": 3
-	},
-	{
-		"nombre": "ipsum non arcu.",
-		"duracion": 142,
-		"autor": "Flynn Roberts",
-		"generos": "R&B",
-		"popularidad": 7,
-		"danzabilidad": 10
-	},
-	{
-		"nombre": "non, vestibulum nec,",
-		"duracion": 53,
-		"autor": "Reed Rollins",
-		"generos": "Góspel Blues",
-		"popularidad": 6,
-		"danzabilidad": 1
-	},
-	{
-		"nombre": "Quisque varius. Nam",
-		"duracion": 55,
-		"autor": "Medge Cline",
-		"generos": "Jazz Góspel Blues",
-		"popularidad": 9,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "adipiscing lacus. Ut",
-		"duracion": 167,
-		"autor": "Colette Fuller",
-		"generos": "Disco",
-		"popularidad": 3,
-		"danzabilidad": 6
-	},
-	{
-		"nombre": "arcu iaculis enim,",
-		"duracion": 82,
-		"autor": "Lydia Mays",
-		"generos": "Salsa R&B K-pop Metal",
-		"popularidad": 3,
-		"danzabilidad": 4
-	},
-	{
-		"nombre": "velit eget laoreet",
-		"duracion": 159,
-		"autor": "Stone Cervantes",
-		"generos": "Pop Clásica",
+		"duracion": 165,
+		"autor": "Palmer Lawson",
+		"generos": "Soul Pop Rock",
 		"popularidad": 1,
-		"danzabilidad": 5
+		"rating": "15, 13, 17, 9, 7"
 	},
 	{
-		"nombre": "nibh vulputate mauris",
-		"duracion": 15,
-		"autor": "Vielka Mckee",
+		"nombre": "et",
+		"duracion": 80,
+		"autor": "Louis Keith",
+		"generos": "Rock Country Disco",
+		"popularidad": 3,
+		"rating": "3, 7, 1, 17, 11"
+	},
+	{
+		"nombre": "nec",
+		"duracion": 129,
+		"autor": "Camden Mercer",
+		"generos": "Pop Rock Country",
+		"popularidad": 8,
+		"rating": "9, 15, 19, 13"
+	},
+	{
+		"nombre": "Nulla aliquet.",
+		"duracion": 117,
+		"autor": "Miranda Delacruz",
+		"generos": "Blues Góspel",
+		"popularidad": 3,
+		"rating": "19, 15, 13, 5, 17"
+	},
+	{
+		"nombre": "Pellentesque habitant",
+		"duracion": 73,
+		"autor": "Sharon Wynn",
+		"generos": "Rock",
+		"popularidad": 6,
+		"rating": "19, 7, 11, 5, 1, 9, 15, 3"
+	},
+	{
+		"nombre": "aliquet diam. Sed",
+		"duracion": 107,
+		"autor": "Edan Glenn",
+		"generos": "Hip-Hop",
+		"popularidad": 0,
+		"rating": "15, 9"
+	},
+	{
+		"nombre": "elementum sem,",
+		"duracion": 64,
+		"autor": "Zelenia Palmer",
+		"generos": "Góspel",
+		"popularidad": 10,
+		"rating": "15, 5, 9, 11, 19, 13, 17, 3, 1"
+	},
+	{
+		"nombre": "arcu. Sed",
+		"duracion": 156,
+		"autor": "Olga Walters",
+		"generos": "Soul Pop",
+		"popularidad": 2,
+		"rating": "15, 19, 17, 5, 1, 11, 9, 7"
+	},
+	{
+		"nombre": "neque. In",
+		"duracion": 17,
+		"autor": "Joy Olson",
+		"generos": "Soul Pop",
+		"popularidad": 4,
+		"rating": "9, 19"
+	},
+	{
+		"nombre": "egestas. Fusce aliquet",
+		"duracion": 11,
+		"autor": "Nomlanga Caldwell",
+		"generos": "Blues",
+		"popularidad": 3,
+		"rating": "13, 17, 11, 15, 7, 1, 19"
+	},
+	{
+		"nombre": "accumsan",
+		"duracion": 53,
+		"autor": "Wade Allen",
+		"generos": "Country Disco Techno",
+		"popularidad": 1,
+		"rating": "1, 7, 13, 15, 17"
+	},
+	{
+		"nombre": "habitant morbi tristique",
+		"duracion": 4,
+		"autor": "Sade Benson",
+		"generos": "Jazz Blues Góspel",
+		"popularidad": 8,
+		"rating": "13, 19, 17, 11"
+	},
+	{
+		"nombre": "faucibus lectus,",
+		"duracion": 41,
+		"autor": "Lesley Bowen",
+		"generos": "Góspel Soul",
+		"popularidad": 9,
+		"rating": "3, 19, 5"
+	},
+	{
+		"nombre": "erat.",
+		"duracion": 91,
+		"autor": "Hollee Kirk",
+		"generos": "Hip-Hop",
+		"popularidad": 7,
+		"rating": "17, 19"
+	},
+	{
+		"nombre": "neque. Morbi",
+		"duracion": 160,
+		"autor": "Lacy Ballard",
+		"generos": "Góspel Soul Pop",
+		"popularidad": 2,
+		"rating": "13, 17, 15, 5, 11, 9, 7, 3, 19, 1"
+	},
+	{
+		"nombre": "ipsum primis",
+		"duracion": 17,
+		"autor": "Katell Wolf",
+		"generos": "Pop Rock",
+		"popularidad": 10,
+		"rating": "9, 15, 19, 11"
+	},
+	{
+		"nombre": "sem molestie",
+		"duracion": 67,
+		"autor": "Dorian Gallegos",
+		"generos": "Techno Hip-Hop Metal",
+		"popularidad": 0,
+		"rating": "5, 13, 3, 9, 15, 19, 11, 1, 17, 7"
+	},
+	{
+		"nombre": "Cras eget",
+		"duracion": 78,
+		"autor": "Ulla Leach",
+		"generos": "Disco Techno Hip-Hop",
+		"popularidad": 3,
+		"rating": "15, 1, 19, 9, 3"
+	},
+	{
+		"nombre": "risus. Donec egestas.",
+		"duracion": 105,
+		"autor": "Todd Gilliam",
+		"generos": "Metal",
+		"popularidad": 4,
+		"rating": "5, 7"
+	},
+	{
+		"nombre": "Maecenas iaculis",
+		"duracion": 28,
+		"autor": "Rajah Kirby",
+		"generos": "Jazz",
+		"popularidad": 2,
+		"rating": "1, 19, 3, 13, 9, 11"
+	},
+	{
+		"nombre": "eget nisi",
+		"duracion": 167,
+		"autor": "Jack Stanley",
+		"generos": "Rock",
+		"popularidad": 7,
+		"rating": "5, 11, 7"
+	},
+	{
+		"nombre": "erat vitae risus.",
+		"duracion": 68,
+		"autor": "Urielle Baird",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 2,
+		"rating": "11, 15"
+	},
+	{
+		"nombre": "ornare.",
+		"duracion": 154,
+		"autor": "Fitzgerald Evans",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 9,
+		"rating": "9, 11, 5, 13, 1, 17, 15, 3, 19"
+	},
+	{
+		"nombre": "posuere vulputate,",
+		"duracion": 93,
+		"autor": "Ingrid Duffy",
+		"generos": "Techno",
+		"popularidad": 8,
+		"rating": "3, 17, 1, 5, 19, 11, 9, 13"
+	},
+	{
+		"nombre": "tellus. Aenean",
+		"duracion": 126,
+		"autor": "Shelly Roberts",
+		"generos": "Pop",
+		"popularidad": 8,
+		"rating": "19, 3, 5, 13, 15, 1, 9, 11"
+	},
+	{
+		"nombre": "nulla. In tincidunt",
+		"duracion": 92,
+		"autor": "Maggie Montgomery",
+		"generos": "Disco Techno Hip-Hop",
+		"popularidad": 3,
+		"rating": "5, 15, 1, 7"
+	},
+	{
+		"nombre": "dui.",
+		"duracion": 135,
+		"autor": "Robert Cote",
+		"generos": "Rock Country Disco",
+		"popularidad": 8,
+		"rating": 15
+	},
+	{
+		"nombre": "cubilia Curae",
+		"duracion": 142,
+		"autor": "Xavier Johns",
+		"generos": "Blues Góspel",
+		"popularidad": 4,
+		"rating": "3, 5, 17"
+	},
+	{
+		"nombre": "parturient montes,",
+		"duracion": 152,
+		"autor": "Warren Roach",
+		"generos": "Soul Pop",
+		"popularidad": 9,
+		"rating": "19, 11, 3"
+	},
+	{
+		"nombre": "enim. Mauris",
+		"duracion": 54,
+		"autor": "Micah Cline",
+		"generos": "Country Disco",
+		"popularidad": 8,
+		"rating": "17, 19, 1"
+	},
+	{
+		"nombre": "convallis in,",
+		"duracion": 151,
+		"autor": "Jeremy Langley",
+		"generos": "Disco Techno",
+		"popularidad": 5,
+		"rating": "9, 15, 17, 11, 7, 5, 3"
+	},
+	{
+		"nombre": "Phasellus ornare. Fusce",
+		"duracion": 19,
+		"autor": "Melvin Marquez",
+		"generos": "Disco",
+		"popularidad": 0,
+		"rating": "17, 19, 5, 15, 13, 7, 9"
+	},
+	{
+		"nombre": "Nulla",
+		"duracion": 120,
+		"autor": "Randall Rhodes",
+		"generos": "Jazz Blues",
+		"popularidad": 5,
+		"rating": "1, 11, 13, 9, 17, 7"
+	},
+	{
+		"nombre": "placerat velit.",
+		"duracion": 71,
+		"autor": "Basia Everett",
+		"generos": "Rock",
+		"popularidad": 3,
+		"rating": "7, 17"
+	},
+	{
+		"nombre": "lectus",
+		"duracion": 83,
+		"autor": "Kato Morgan",
+		"generos": "Jazz Blues",
+		"popularidad": 3,
+		"rating": "19, 9, 1"
+	},
+	{
+		"nombre": "fringilla, porttitor",
+		"duracion": 66,
+		"autor": "MacKensie Pittman",
 		"generos": "Hip-Hop",
 		"popularidad": 6,
-		"danzabilidad": 6
+		"rating": "11, 9, 7"
 	},
 	{
-		"nombre": "risus. In mi",
-		"duracion": 16,
-		"autor": "Rana Mercado",
-		"generos": "Hip-Hop Salsa R&B K-pop Metal",
-		"popularidad": 5,
-		"danzabilidad": 5
-	},
-	{
-		"nombre": "metus facilisis lorem",
-		"duracion": 142,
-		"autor": "Ursa Love",
-		"generos": "Clásica Bachata",
+		"nombre": "sed",
+		"duracion": 50,
+		"autor": "Hamilton Rutledge",
+		"generos": "Clásica",
 		"popularidad": 7,
-		"danzabilidad": 7
+		"rating": "3, 13, 15, 7"
 	},
 	{
-		"nombre": "lobortis. Class aptent",
-		"duracion": 91,
-		"autor": "Tucker Pate",
-		"generos": "Metal Jazz Góspel Blues",
+		"nombre": "molestie",
+		"duracion": 122,
+		"autor": "Hiroko Long",
+		"generos": "Hip-Hop Metal",
+		"popularidad": 9,
+		"rating": "19, 13, 5"
+	},
+	{
+		"nombre": "et malesuada fames",
+		"duracion": 135,
+		"autor": "Colton Barnett",
+		"generos": "Jazz Blues",
+		"popularidad": 4,
+		"rating": "17, 5, 19, 15, 3, 13, 1"
+	},
+	{
+		"nombre": "auctor,",
+		"duracion": 137,
+		"autor": "Jessica Lambert",
+		"generos": "Góspel Soul Pop",
 		"popularidad": 3,
-		"danzabilidad": 9
+		"rating": "7, 9, 13, 5, 1, 15, 11, 3"
 	},
 	{
-		"nombre": "sociis natoque penatibus",
-		"duracion": 67,
-		"autor": "Fay Hudson",
-		"generos": "Raeguetton Hip-Hop",
-		"popularidad": 0,
-		"danzabilidad": 9
+		"nombre": "nunc interdum",
+		"duracion": 15,
+		"autor": "Fredericka Griffin",
+		"generos": "Pop Rock Country",
+		"popularidad": 9,
+		"rating": "11, 5, 9, 7, 13, 17"
 	},
 	{
-		"nombre": "egestas lacinia. Sed",
+		"nombre": "lacus. Cras interdum.",
+		"duracion": 32,
+		"autor": "Cecilia Byrd",
+		"generos": "Soul",
+		"popularidad": 5,
+		"rating": "9, 15, 11, 7, 19, 13"
+	},
+	{
+		"nombre": "Cras",
 		"duracion": 90,
-		"autor": "Hedley Ellison",
-		"generos": "Pop Clásica",
+		"autor": "Price Carroll",
+		"generos": "Blues Góspel",
 		"popularidad": 8,
-		"danzabilidad": 5
+		"rating": "1, 5, 3, 11, 17, 19, 15, 13"
 	},
 	{
-		"nombre": "quis urna. Nunc",
-		"duracion": 24,
-		"autor": "Brianna Hoover",
-		"generos": "Jazz Góspel",
+		"nombre": "ut, pellentesque eget,",
+		"duracion": 161,
+		"autor": "Nina Bryant",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 2,
+		"rating": "15, 11, 17, 9, 1, 5"
+	},
+	{
+		"nombre": "Sed",
+		"duracion": 37,
+		"autor": "Leah Carney",
+		"generos": "Soul Pop Rock",
+		"popularidad": 9,
+		"rating": "5, 3, 17, 15, 9, 19"
+	},
+	{
+		"nombre": "risus, at fringilla",
+		"duracion": 165,
+		"autor": "Harding French",
+		"generos": "Pop",
+		"popularidad": 5,
+		"rating": "13, 11"
+	},
+	{
+		"nombre": "non arcu. Vivamus",
+		"duracion": 30,
+		"autor": "Luke Tanner",
+		"generos": "Blues Góspel Soul",
+		"popularidad": 9,
+		"rating": 19
+	},
+	{
+		"nombre": "purus.",
+		"duracion": 67,
+		"autor": "Mariko Stanton",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 10,
+		"rating": "7, 19, 15"
+	},
+	{
+		"nombre": "parturient",
+		"duracion": 82,
+		"autor": "Tamara Reid",
+		"generos": "Góspel Soul Pop",
+		"popularidad": 8,
+		"rating": 7
+	},
+	{
+		"nombre": "diam at pretium",
+		"duracion": 60,
+		"autor": "Xantha Osborn",
+		"generos": "Techno",
+		"popularidad": 0,
+		"rating": 19
+	},
+	{
+		"nombre": "orci quis",
+		"duracion": 32,
+		"autor": "Channing Fuentes",
+		"generos": "Hip-Hop Metal",
 		"popularidad": 7,
-		"danzabilidad": 1
+		"rating": "13, 17, 3, 15"
+	},
+	{
+		"nombre": "pede nec",
+		"duracion": 92,
+		"autor": "Pandora Bridges",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 8,
+		"rating": "9, 3, 11, 5, 19, 13, 15"
+	},
+	{
+		"nombre": "mauris. Integer",
+		"duracion": 43,
+		"autor": "Sybil Spence",
+		"generos": "Country",
+		"popularidad": 8,
+		"rating": "19, 17, 3, 15, 13"
+	},
+	{
+		"nombre": "ultricies dignissim lacus.",
+		"duracion": 13,
+		"autor": "Darius Rowland",
+		"generos": "Rock Country",
+		"popularidad": 6,
+		"rating": "15, 19, 13, 3"
+	},
+	{
+		"nombre": "Proin mi. Aliquam",
+		"duracion": 163,
+		"autor": "Arthur Bird",
+		"generos": "Country Disco Techno",
+		"popularidad": 5,
+		"rating": "1, 17, 15, 5, 19, 7"
+	},
+	{
+		"nombre": "mattis. Integer eu",
+		"duracion": 143,
+		"autor": "Leonard Turner",
+		"generos": "Góspel Soul Pop",
+		"popularidad": 3,
+		"rating": "17, 11, 7, 5, 9, 19, 1, 13"
+	},
+	{
+		"nombre": "Donec",
+		"duracion": 75,
+		"autor": "Madeline Ingram",
+		"generos": "Pop Rock",
+		"popularidad": 4,
+		"rating": "17, 7, 19, 1, 5, 11, 15, 3"
+	},
+	{
+		"nombre": "non",
+		"duracion": 123,
+		"autor": "Brenden Nixon",
+		"generos": "Pop Rock Country",
+		"popularidad": 3,
+		"rating": 15
+	},
+	{
+		"nombre": "tincidunt orci",
+		"duracion": 35,
+		"autor": "Allen York",
+		"generos": "Blues Góspel",
+		"popularidad": 2,
+		"rating": "19, 13, 15"
+	},
+	{
+		"nombre": "sodales",
+		"duracion": 179,
+		"autor": "Deanna Rosa",
+		"generos": "Clásica",
+		"popularidad": 3,
+		"rating": "17, 13, 15, 7, 11, 3"
+	},
+	{
+		"nombre": "at, egestas a,",
+		"duracion": 144,
+		"autor": "Lionel Frost",
+		"generos": "Hip-Hop",
+		"popularidad": 5,
+		"rating": "17, 9, 1, 19, 5, 11, 15, 7, 13, 3"
+	},
+	{
+		"nombre": "tellus",
+		"duracion": 118,
+		"autor": "Kenneth Parrish",
+		"generos": "Techno",
+		"popularidad": 7,
+		"rating": "9, 11, 3, 1, 5, 7"
+	},
+	{
+		"nombre": "Nullam nisl.",
+		"duracion": 173,
+		"autor": "Venus Rose",
+		"generos": "Jazz Blues",
+		"popularidad": 2,
+		"rating": "7, 13, 17, 19, 15, 11, 3, 5, 1"
+	},
+	{
+		"nombre": "fringilla purus",
+		"duracion": 52,
+		"autor": "Beau Mcneil",
+		"generos": "Rock",
+		"popularidad": 8,
+		"rating": "15, 3, 11, 7, 19, 9, 1, 5"
+	},
+	{
+		"nombre": "neque sed",
+		"duracion": 40,
+		"autor": "Sade Kinney",
+		"generos": "Disco",
+		"popularidad": 4,
+		"rating": "13, 1, 5, 15"
+	},
+	{
+		"nombre": "elit. Aliquam auctor,",
+		"duracion": 38,
+		"autor": "Harper Hurley",
+		"generos": "Pop Rock",
+		"popularidad": 8,
+		"rating": "15, 19, 1, 17, 7, 3, 13"
+	},
+	{
+		"nombre": "ut odio",
+		"duracion": 25,
+		"autor": "Alvin Wright",
+		"generos": "Clásica Jazz",
+		"popularidad": 5,
+		"rating": "3, 7, 13, 19, 17, 15, 1, 11, 9"
+	},
+	{
+		"nombre": "Nunc commodo",
+		"duracion": 158,
+		"autor": "Lucius Delacruz",
+		"generos": "Pop",
+		"popularidad": 10,
+		"rating": "11, 13, 3, 9, 15, 5, 17, 7, 19, 1"
+	},
+	{
+		"nombre": "in felis. Nulla",
+		"duracion": 119,
+		"autor": "Amy Charles",
+		"generos": "Clásica Jazz Blues",
+		"popularidad": 9,
+		"rating": "1, 15, 13, 9, 5, 11"
+	},
+	{
+		"nombre": "lacus. Etiam",
+		"duracion": 31,
+		"autor": "Melissa Burks",
+		"generos": "Clásica Jazz",
+		"popularidad": 1,
+		"rating": "1, 19, 13, 17, 7, 9, 15"
+	},
+	{
+		"nombre": "varius. Nam",
+		"duracion": 130,
+		"autor": "Demetrius Sandoval",
+		"generos": "Disco",
+		"popularidad": 8,
+		"rating": "9, 7, 13, 11"
+	},
+	{
+		"nombre": "fermentum fermentum arcu.",
+		"duracion": 6,
+		"autor": "Maris Price",
+		"generos": "Country Disco",
+		"popularidad": 6,
+		"rating": "17, 7, 19, 3, 1"
+	},
+	{
+		"nombre": "Donec luctus",
+		"duracion": 5,
+		"autor": "Mason Mejia",
+		"generos": "Clásica Jazz",
+		"popularidad": 0,
+		"rating": "3, 19, 1, 13, 9, 17"
+	},
+	{
+		"nombre": "ridiculus mus.",
+		"duracion": 151,
+		"autor": "Ethan Cannon",
+		"generos": "Jazz Blues",
+		"popularidad": 5,
+		"rating": "9, 13, 17, 15, 5"
+	},
+	{
+		"nombre": "vehicula et,",
+		"duracion": 169,
+		"autor": "Fuller Christensen",
+		"generos": "Pop Rock",
+		"popularidad": 4,
+		"rating": "11, 15, 9, 7, 3, 1, 17"
+	},
+	{
+		"nombre": "tempus risus.",
+		"duracion": 37,
+		"autor": "Sylvia Palmer",
+		"generos": "Rock",
+		"popularidad": 0,
+		"rating": "11, 17, 13, 9, 1, 15, 5, 3, 19"
+	},
+	{
+		"nombre": "ut, pharetra sed,",
+		"duracion": 178,
+		"autor": "Jescie Carlson",
+		"generos": "Rock",
+		"popularidad": 5,
+		"rating": "3, 13, 19, 9, 7, 5, 11"
+	},
+	{
+		"nombre": "consequat dolor",
+		"duracion": 100,
+		"autor": "Hayley Burks",
+		"generos": "Country",
+		"popularidad": 2,
+		"rating": "1, 7, 11"
+	},
+	{
+		"nombre": "in magna.",
+		"duracion": 46,
+		"autor": "Travis Smith",
+		"generos": "Disco Techno",
+		"popularidad": 8,
+		"rating": "1, 3, 17, 5, 19, 15, 7, 9, 13"
+	},
+	{
+		"nombre": "porttitor eros",
+		"duracion": 126,
+		"autor": "May Boone",
+		"generos": "Góspel",
+		"popularidad": 7,
+		"rating": "9, 19, 7, 15, 3, 17, 5, 13, 11"
+	},
+	{
+		"nombre": "Nunc sollicitudin commodo",
+		"duracion": 89,
+		"autor": "Tucker Stein",
+		"generos": "Country Disco",
+		"popularidad": 4,
+		"rating": 3
+	},
+	{
+		"nombre": "enim nisl elementum",
+		"duracion": 170,
+		"autor": "Yolanda Whitfield",
+		"generos": "Jazz",
+		"popularidad": 7,
+		"rating": "17, 9, 3, 19, 7, 15, 11, 13, 1"
+	},
+	{
+		"nombre": "purus. Maecenas libero",
+		"duracion": 59,
+		"autor": "Lucian Moon",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 2,
+		"rating": "5, 19, 13, 3"
+	},
+	{
+		"nombre": "enim diam",
+		"duracion": 148,
+		"autor": "Breanna Beasley",
+		"generos": "Country Disco",
+		"popularidad": 10,
+		"rating": "11, 17, 5, 9, 7"
+	},
+	{
+		"nombre": "cursus a, enim.",
+		"duracion": 88,
+		"autor": "Zelda Le",
+		"generos": "Soul Pop",
+		"popularidad": 5,
+		"rating": "13, 15, 7, 1, 9"
+	},
+	{
+		"nombre": "dui",
+		"duracion": 16,
+		"autor": "Brent Townsend",
+		"generos": "Country Disco Techno",
+		"popularidad": 0,
+		"rating": "11, 5, 1, 19, 15"
+	},
+	{
+		"nombre": "arcu",
+		"duracion": 130,
+		"autor": "Angelica Maxwell",
+		"generos": "Pop Rock Country",
+		"popularidad": 2,
+		"rating": "17, 5"
+	},
+	{
+		"nombre": "ultricies",
+		"duracion": 71,
+		"autor": "Zephania Merrill",
+		"generos": "Hip-Hop Metal",
+		"popularidad": 7,
+		"rating": "13, 3, 15, 5, 11, 1, 9, 17, 19"
+	},
+	{
+		"nombre": "Aliquam",
+		"duracion": 14,
+		"autor": "Alexa Watts",
+		"generos": "Clásica",
+		"popularidad": 2,
+		"rating": "1, 7, 5"
+	},
+	{
+		"nombre": "arcu. Sed et",
+		"duracion": 160,
+		"autor": "Jeremy Brock",
+		"generos": "Soul Pop",
+		"popularidad": 5,
+		"rating": "13, 11, 7, 5, 1, 17, 3, 9"
+	},
+	{
+		"nombre": "tristique pellentesque,",
+		"duracion": 92,
+		"autor": "Germane Bowman",
+		"generos": "Jazz Blues",
+		"popularidad": 5,
+		"rating": "5, 9, 7, 17, 13, 1, 15"
+	},
+	{
+		"nombre": "ut, molestie in,",
+		"duracion": 44,
+		"autor": "Zahir Bailey",
+		"generos": "Country",
+		"popularidad": 5,
+		"rating": "19, 11, 9, 17, 13, 5"
+	},
+	{
+		"nombre": "id, blandit at,",
+		"duracion": 9,
+		"autor": "Jonah Kline",
+		"generos": "Hip-Hop Metal",
+		"popularidad": 8,
+		"rating": "9, 19, 13, 17, 7, 15, 3, 5"
+	},
+	{
+		"nombre": "vulputate velit",
+		"duracion": 126,
+		"autor": "Lucius Hebert",
+		"generos": "Rock Country",
+		"popularidad": 9,
+		"rating": "1, 3, 9, 13, 11"
+	},
+	{
+		"nombre": "scelerisque",
+		"duracion": 80,
+		"autor": "Wang Johnson",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 1,
+		"rating": "15, 5, 1, 7"
+	},
+	{
+		"nombre": "mauris id",
+		"duracion": 168,
+		"autor": "Shannon Rutledge",
+		"generos": "Disco",
+		"popularidad": 1,
+		"rating": "3, 7, 5, 9, 13, 11, 19, 1, 17"
+	},
+	{
+		"nombre": "ac mattis ornare,",
+		"duracion": 161,
+		"autor": "Macaulay Baxter",
+		"generos": "Disco Techno",
+		"popularidad": 8,
+		"rating": "1, 11, 5"
+	},
+	{
+		"nombre": "felis. Nulla tempor",
+		"duracion": 159,
+		"autor": "Ashely Riley",
+		"generos": "Rock Country",
+		"popularidad": 8,
+		"rating": "11, 19"
+	},
+	{
+		"nombre": "Phasellus dolor",
+		"duracion": 157,
+		"autor": "Elliott Leach",
+		"generos": "Rock",
+		"popularidad": 1,
+		"rating": "7, 1, 9, 15, 19, 13, 5"
+	},
+	{
+		"nombre": "In",
+		"duracion": 92,
+		"autor": "Xavier Young",
+		"generos": "Disco Techno",
+		"popularidad": 6,
+		"rating": "5, 1, 9, 17, 19"
+	},
+	{
+		"nombre": "elit,",
+		"duracion": 102,
+		"autor": "Lois Delaney",
+		"generos": "Disco",
+		"popularidad": 6,
+		"rating": "1, 7, 19, 15, 5, 9, 13, 17, 11"
+	},
+	{
+		"nombre": "quis, tristique ac,",
+		"duracion": 96,
+		"autor": "Tobias Langley",
+		"generos": "Blues Góspel",
+		"popularidad": 8,
+		"rating": "11, 13, 5, 17, 3, 1"
+	},
+	{
+		"nombre": "pellentesque eget,",
+		"duracion": 132,
+		"autor": "George Howard",
+		"generos": "Techno",
+		"popularidad": 3,
+		"rating": "19, 9, 15, 7, 5, 17, 13, 11, 1"
+	},
+	{
+		"nombre": "Duis",
+		"duracion": 160,
+		"autor": "Kimberly Hawkins",
+		"generos": "Jazz",
+		"popularidad": 10,
+		"rating": "19, 3, 1, 9, 15, 5, 13, 17, 11"
+	},
+	{
+		"nombre": "tellus. Aenean",
+		"duracion": 114,
+		"autor": "Maia Everett",
+		"generos": "Góspel Soul",
+		"popularidad": 8,
+		"rating": "1, 13, 9, 17, 11, 15, 5"
+	},
+	{
+		"nombre": "magna. Ut tincidunt",
+		"duracion": 37,
+		"autor": "Cynthia Rivera",
+		"generos": "Metal",
+		"popularidad": 2,
+		"rating": "19, 13, 3, 11"
+	},
+	{
+		"nombre": "varius",
+		"duracion": 121,
+		"autor": "Wylie Mclean",
+		"generos": "Disco Techno Hip-Hop",
+		"popularidad": 6,
+		"rating": "9, 11, 5, 1, 19, 7, 13"
+	},
+	{
+		"nombre": "ut",
+		"duracion": 51,
+		"autor": "Aspen Snider",
+		"generos": "Pop",
+		"popularidad": 5,
+		"rating": "15, 5, 9, 3, 17, 19, 13, 1, 11"
+	},
+	{
+		"nombre": "et",
+		"duracion": 8,
+		"autor": "Neve Crawford",
+		"generos": "Pop Rock Country",
+		"popularidad": 6,
+		"rating": 1
+	},
+	{
+		"nombre": "Cras eget nisi",
+		"duracion": 41,
+		"autor": "Leslie Wyatt",
+		"generos": "Country",
+		"popularidad": 4,
+		"rating": "1, 5, 19, 3, 7"
+	},
+	{
+		"nombre": "ipsum",
+		"duracion": 25,
+		"autor": "Quail Mcdowell",
+		"generos": "Pop Rock Country",
+		"popularidad": 6,
+		"rating": "7, 13, 17, 5"
+	},
+	{
+		"nombre": "enim, sit amet",
+		"duracion": 79,
+		"autor": "Mannix Finch",
+		"generos": "Blues Góspel",
+		"popularidad": 8,
+		"rating": "7, 3, 5, 15, 17, 19, 13, 9, 1"
+	},
+	{
+		"nombre": "arcu et pede.",
+		"duracion": 150,
+		"autor": "Tobias Nielsen",
+		"generos": "Soul Pop",
+		"popularidad": 0,
+		"rating": "19, 3, 7, 17"
+	},
+	{
+		"nombre": "tortor. Integer",
+		"duracion": 114,
+		"autor": "Jasper Winters",
+		"generos": "Blues Góspel Soul",
+		"popularidad": 9,
+		"rating": "7, 15, 13, 1"
+	},
+	{
+		"nombre": "Integer in magna.",
+		"duracion": 87,
+		"autor": "Omar Gilliam",
+		"generos": "Jazz Blues",
+		"popularidad": 8,
+		"rating": "9, 15, 19, 5, 1"
+	},
+	{
+		"nombre": "libero et",
+		"duracion": 45,
+		"autor": "Charity Walton",
+		"generos": "Country Disco",
+		"popularidad": 1,
+		"rating": "1, 19, 11, 5, 17, 3, 9, 7, 15, 13"
+	},
+	{
+		"nombre": "mi fringilla",
+		"duracion": 56,
+		"autor": "Connor Fitzgerald",
+		"generos": "Jazz Blues Góspel",
+		"popularidad": 10,
+		"rating": "5, 17, 3, 13, 7, 9, 1"
+	},
+	{
+		"nombre": "Ut",
+		"duracion": 176,
+		"autor": "Odette Rivera",
+		"generos": "Rock",
+		"popularidad": 5,
+		"rating": 15
+	},
+	{
+		"nombre": "Phasellus elit",
+		"duracion": 157,
+		"autor": "Dalton Foreman",
+		"generos": "Góspel Soul Pop",
+		"popularidad": 2,
+		"rating": "1, 9, 7, 11, 3, 19"
+	},
+	{
+		"nombre": "Etiam",
+		"duracion": 104,
+		"autor": "Chase Byrd",
+		"generos": "Clásica Jazz",
+		"popularidad": 2,
+		"rating": "3, 13, 9, 7, 11"
+	},
+	{
+		"nombre": "erat volutpat. Nulla",
+		"duracion": 77,
+		"autor": "Gregory Vega",
+		"generos": "Pop Rock",
+		"popularidad": 8,
+		"rating": "15, 9, 11, 1, 17, 3, 19"
+	},
+	{
+		"nombre": "vitae",
+		"duracion": 84,
+		"autor": "Hadley Kane",
+		"generos": "Country Disco",
+		"popularidad": 0,
+		"rating": "3, 19, 17, 9, 15, 13, 7"
+	},
+	{
+		"nombre": "a felis",
+		"duracion": 35,
+		"autor": "Hammett Pate",
+		"generos": "Hip-Hop",
+		"popularidad": 1,
+		"rating": "5, 1"
+	},
+	{
+		"nombre": "metus. Aliquam",
+		"duracion": 39,
+		"autor": "Charissa Cantrell",
+		"generos": "Góspel Soul",
+		"popularidad": 5,
+		"rating": "11, 19, 3, 13"
+	},
+	{
+		"nombre": "netus et malesuada",
+		"duracion": 29,
+		"autor": "Nigel Nicholson",
+		"generos": "Country",
+		"popularidad": 7,
+		"rating": "15, 9"
+	},
+	{
+		"nombre": "primis",
+		"duracion": 68,
+		"autor": "Kellie Jensen",
+		"generos": "Pop Rock",
+		"popularidad": 8,
+		"rating": "17, 13, 15, 11, 1, 3"
+	},
+	{
+		"nombre": "elit.",
+		"duracion": 157,
+		"autor": "Kaitlin Barker",
+		"generos": "Jazz Blues",
+		"popularidad": 5,
+		"rating": "9, 11, 7, 17, 15, 3, 1"
+	},
+	{
+		"nombre": "enim consequat purus.",
+		"duracion": 45,
+		"autor": "Fuller Guzman",
+		"generos": "Góspel",
+		"popularidad": 7,
+		"rating": "9, 11, 19, 5, 1, 3, 7, 17, 15"
+	},
+	{
+		"nombre": "nunc nulla",
+		"duracion": 164,
+		"autor": "Hillary Gillespie",
+		"generos": "Disco Techno Hip-Hop",
+		"popularidad": 6,
+		"rating": 1
+	},
+	{
+		"nombre": "nulla. Cras",
+		"duracion": 37,
+		"autor": "Flynn Hurst",
+		"generos": "Country",
+		"popularidad": 2,
+		"rating": "9, 13, 19, 15, 5, 3"
+	},
+	{
+		"nombre": "ligula elit, pretium",
+		"duracion": 141,
+		"autor": "Kuame Thornton",
+		"generos": "Jazz",
+		"popularidad": 5,
+		"rating": "17, 9"
+	},
+	{
+		"nombre": "rhoncus. Nullam velit",
+		"duracion": 162,
+		"autor": "Gareth Hall",
+		"generos": "Jazz Blues",
+		"popularidad": 7,
+		"rating": "13, 3, 19, 1, 17, 15, 7, 11, 9"
+	},
+	{
+		"nombre": "nostra,",
+		"duracion": 31,
+		"autor": "Ulla Graham",
+		"generos": "Rock Country",
+		"popularidad": 7,
+		"rating": "13, 3, 7, 19, 17, 1, 15, 9, 5"
+	},
+	{
+		"nombre": "interdum ligula eu",
+		"duracion": 100,
+		"autor": "Lawrence Valenzuela",
+		"generos": "Disco Techno",
+		"popularidad": 4,
+		"rating": "3, 7"
+	},
+	{
+		"nombre": "eros. Proin ultrices.",
+		"duracion": 177,
+		"autor": "Avram Gates",
+		"generos": "Jazz Blues",
+		"popularidad": 2,
+		"rating": "17, 13, 7, 15, 9, 11, 5, 3, 19, 1"
+	},
+	{
+		"nombre": "ligula. Nullam",
+		"duracion": 138,
+		"autor": "Flavia Ochoa",
+		"generos": "Country Disco Techno",
+		"popularidad": 2,
+		"rating": "13, 17, 9"
+	},
+	{
+		"nombre": "Nulla facilisi.",
+		"duracion": 29,
+		"autor": "Halee Neal",
+		"generos": "Blues Góspel Soul",
+		"popularidad": 5,
+		"rating": "17, 1, 5, 3, 11"
+	},
+	{
+		"nombre": "nisl. Quisque",
+		"duracion": 82,
+		"autor": "Dora Nelson",
+		"generos": "Jazz",
+		"popularidad": 7,
+		"rating": "19, 11, 13, 1, 5, 15"
+	},
+	{
+		"nombre": "ornare",
+		"duracion": 139,
+		"autor": "Dorian Jensen",
+		"generos": "Blues",
+		"popularidad": 2,
+		"rating": "9, 7, 1"
+	},
+	{
+		"nombre": "dui",
+		"duracion": 104,
+		"autor": "Ifeoma Rowland",
+		"generos": "Country",
+		"popularidad": 0,
+		"rating": "5, 7"
+	},
+	{
+		"nombre": "lectus quis",
+		"duracion": 114,
+		"autor": "Nolan Gay",
+		"generos": "Pop Rock Country",
+		"popularidad": 3,
+		"rating": "15, 11, 19, 7"
+	},
+	{
+		"nombre": "Vivamus euismod urna.",
+		"duracion": 21,
+		"autor": "Raymond Jackson",
+		"generos": "Blues Góspel Soul",
+		"popularidad": 9,
+		"rating": "1, 3, 9"
+	},
+	{
+		"nombre": "aliquet, metus",
+		"duracion": 60,
+		"autor": "Bevis Smith",
+		"generos": "Soul Pop Rock",
+		"popularidad": 2,
+		"rating": "5, 11"
+	},
+	{
+		"nombre": "Donec sollicitudin",
+		"duracion": 87,
+		"autor": "Indira Mccullough",
+		"generos": "Góspel",
+		"popularidad": 6,
+		"rating": "5, 19, 11, 1, 3, 15, 7, 9"
+	},
+	{
+		"nombre": "Vestibulum ante ipsum",
+		"duracion": 112,
+		"autor": "Chancellor Hopper",
+		"generos": "Góspel Soul Pop",
+		"popularidad": 3,
+		"rating": "17, 9, 7, 19"
+	},
+	{
+		"nombre": "euismod mauris eu",
+		"duracion": 18,
+		"autor": "Zoe Cooke",
+		"generos": "Jazz Blues Góspel",
+		"popularidad": 2,
+		"rating": "1, 13, 11, 17, 15, 7, 19, 3"
+	},
+	{
+		"nombre": "faucibus orci luctus",
+		"duracion": 89,
+		"autor": "Igor Hodge",
+		"generos": "Soul Pop",
+		"popularidad": 1,
+		"rating": "7, 13, 3"
+	},
+	{
+		"nombre": "Proin ultrices. Duis",
+		"duracion": 19,
+		"autor": "Reece Franco",
+		"generos": "Soul",
+		"popularidad": 2,
+		"rating": "15, 9, 11, 7, 1, 5, 17, 3, 19"
+	},
+	{
+		"nombre": "Praesent luctus.",
+		"duracion": 95,
+		"autor": "Zachary Foster",
+		"generos": "Pop Rock",
+		"popularidad": 8,
+		"rating": "9, 15, 1, 11"
+	},
+	{
+		"nombre": "sociosqu ad litora",
+		"duracion": 19,
+		"autor": "Dolan Shaffer",
+		"generos": "Pop Rock",
+		"popularidad": 1,
+		"rating": "3, 17, 13"
+	},
+	{
+		"nombre": "Proin",
+		"duracion": 141,
+		"autor": "Alvin Finley",
+		"generos": "Jazz Blues",
+		"popularidad": 0,
+		"rating": "1, 7"
+	},
+	{
+		"nombre": "quam quis",
+		"duracion": 36,
+		"autor": "Preston Bryan",
+		"generos": "Jazz Blues Góspel",
+		"popularidad": 6,
+		"rating": "19, 17, 3, 11, 7, 15, 5"
+	},
+	{
+		"nombre": "vitae odio",
+		"duracion": 141,
+		"autor": "Vaughan West",
+		"generos": "Rock Country",
+		"popularidad": 4,
+		"rating": "9, 19, 17"
+	},
+	{
+		"nombre": "elit, a feugiat",
+		"duracion": 44,
+		"autor": "Shelly Mcdonald",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 6,
+		"rating": "13, 5, 7, 19"
+	},
+	{
+		"nombre": "elit fermentum",
+		"duracion": 82,
+		"autor": "Fredericka Roberts",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 3,
+		"rating": "1, 17, 5, 9, 13"
+	},
+	{
+		"nombre": "ornare. Fusce mollis.",
+		"duracion": 116,
+		"autor": "Patricia Ellison",
+		"generos": "Góspel Soul Pop",
+		"popularidad": 4,
+		"rating": "13, 5, 1, 3, 15, 19"
+	},
+	{
+		"nombre": "tellus lorem",
+		"duracion": 169,
+		"autor": "Lisandra Fowler",
+		"generos": "Blues Góspel",
+		"popularidad": 5,
+		"rating": "17, 19, 1, 5, 9, 7"
+	},
+	{
+		"nombre": "iaculis odio. Nam",
+		"duracion": 157,
+		"autor": "Hope Bright",
+		"generos": "Rock Country Disco",
+		"popularidad": 3,
+		"rating": "15, 7, 5, 13, 9, 1"
+	},
+	{
+		"nombre": "eget",
+		"duracion": 100,
+		"autor": "Alexis Caldwell",
+		"generos": "Jazz Blues",
+		"popularidad": 8,
+		"rating": "17, 13, 9, 1, 11, 5, 3, 15, 19, 7"
+	},
+	{
+		"nombre": "adipiscing. Mauris",
+		"duracion": 134,
+		"autor": "Phyllis Pittman",
+		"generos": "Góspel",
+		"popularidad": 7,
+		"rating": "19, 3, 7"
+	},
+	{
+		"nombre": "risus, at fringilla",
+		"duracion": 33,
+		"autor": "Bertha Pacheco",
+		"generos": "Techno",
+		"popularidad": 2,
+		"rating": "7, 9"
+	},
+	{
+		"nombre": "cursus,",
+		"duracion": 112,
+		"autor": "Lillith Jones",
+		"generos": "Country Disco Techno",
+		"popularidad": 9,
+		"rating": "1, 17, 7"
+	},
+	{
+		"nombre": "dolor egestas",
+		"duracion": 29,
+		"autor": "Bruce Moss",
+		"generos": "Clásica Jazz Blues",
+		"popularidad": 1,
+		"rating": "9, 19, 13, 7, 17"
+	},
+	{
+		"nombre": "metus",
+		"duracion": 1,
+		"autor": "Thane Morrison",
+		"generos": "Disco Techno",
+		"popularidad": 10,
+		"rating": 7
+	},
+	{
+		"nombre": "imperdiet ornare.",
+		"duracion": 11,
+		"autor": "Ifeoma Moreno",
+		"generos": "Country",
+		"popularidad": 4,
+		"rating": "9, 15, 19, 1, 5"
+	},
+	{
+		"nombre": "ad litora torquent",
+		"duracion": 142,
+		"autor": "Miranda Nielsen",
+		"generos": "Hip-Hop",
+		"popularidad": 7,
+		"rating": "5, 13, 11, 7, 1, 3, 15, 19, 9"
+	},
+	{
+		"nombre": "Nulla facilisis.",
+		"duracion": 160,
+		"autor": "Bert Tyler",
+		"generos": "Techno",
+		"popularidad": 3,
+		"rating": "17, 9, 7, 5, 13"
+	},
+	{
+		"nombre": "massa.",
+		"duracion": 126,
+		"autor": "Yoshi Anthony",
+		"generos": "Hip-Hop Metal",
+		"popularidad": 6,
+		"rating": "17, 15, 3, 11, 9, 19"
+	},
+	{
+		"nombre": "urna.",
+		"duracion": 44,
+		"autor": "Marshall Wiley",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 2,
+		"rating": "13, 5, 3, 9, 15, 7, 19"
+	},
+	{
+		"nombre": "nonummy",
+		"duracion": 74,
+		"autor": "Halee Contreras",
+		"generos": "Pop Rock Country",
+		"popularidad": 3,
+		"rating": "1, 19, 3, 17, 11, 15, 7, 9"
+	},
+	{
+		"nombre": "fringilla",
+		"duracion": 0,
+		"autor": "Marshall Quinn",
+		"generos": "Country Disco",
+		"popularidad": 6,
+		"rating": "1, 13, 15, 9, 5, 17, 19, 7, 3"
+	},
+	{
+		"nombre": "elit pede,",
+		"duracion": 111,
+		"autor": "Lana Benton",
+		"generos": "Jazz Blues Góspel",
+		"popularidad": 5,
+		"rating": "13, 3, 17, 15, 7, 19, 5, 1, 11, 9"
+	},
+	{
+		"nombre": "fermentum metus.",
+		"duracion": 89,
+		"autor": "Hayley Drake",
+		"generos": "Soul Pop",
+		"popularidad": 10,
+		"rating": "15, 17, 7, 5, 13, 3, 1, 9, 19, 11"
+	},
+	{
+		"nombre": "Cras dolor dolor,",
+		"duracion": 134,
+		"autor": "Palmer Mcmillan",
+		"generos": "Techno",
+		"popularidad": 7,
+		"rating": "17, 3, 7, 19, 1, 11, 9"
+	},
+	{
+		"nombre": "tortor, dictum eu,",
+		"duracion": 177,
+		"autor": "Wang Hayes",
+		"generos": "Góspel",
+		"popularidad": 7,
+		"rating": "9, 7, 3, 19, 17"
+	},
+	{
+		"nombre": "sem",
+		"duracion": 98,
+		"autor": "Chiquita Williams",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 1,
+		"rating": "7, 3, 9, 17, 13, 1, 15"
+	},
+	{
+		"nombre": "ac metus",
+		"duracion": 34,
+		"autor": "Dennis Ray",
+		"generos": "Clásica Jazz Blues",
+		"popularidad": 2,
+		"rating": "15, 1, 3, 5, 7, 9"
+	},
+	{
+		"nombre": "vestibulum nec,",
+		"duracion": 145,
+		"autor": "Paula Potts",
+		"generos": "Country Disco",
+		"popularidad": 1,
+		"rating": "5, 1, 15, 19, 9"
+	},
+	{
+		"nombre": "neque sed",
+		"duracion": 23,
+		"autor": "Haviva Sherman",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 2,
+		"rating": "7, 3"
+	},
+	{
+		"nombre": "Mauris vel",
+		"duracion": 170,
+		"autor": "Noah Knox",
+		"generos": "Disco Techno",
+		"popularidad": 7,
+		"rating": "3, 17, 15"
+	},
+	{
+		"nombre": "aliquet molestie",
+		"duracion": 170,
+		"autor": "Calvin Kennedy",
+		"generos": "Góspel Soul Pop",
+		"popularidad": 2,
+		"rating": "7, 19, 1, 11, 13"
+	},
+	{
+		"nombre": "a",
+		"duracion": 122,
+		"autor": "Drew Randall",
+		"generos": "Clásica Jazz Blues",
+		"popularidad": 10,
+		"rating": "7, 17, 13, 19, 1"
+	},
+	{
+		"nombre": "Donec fringilla.",
+		"duracion": 13,
+		"autor": "Malcolm Riddle",
+		"generos": "Rock Country",
+		"popularidad": 6,
+		"rating": "19, 1"
+	},
+	{
+		"nombre": "ac, eleifend vitae,",
+		"duracion": 89,
+		"autor": "Julie Gould",
+		"generos": "Country",
+		"popularidad": 6,
+		"rating": "19, 9, 13, 15, 7, 5"
+	},
+	{
+		"nombre": "ipsum. Suspendisse sagittis.",
+		"duracion": 96,
+		"autor": "Kane Alston",
+		"generos": "Soul",
+		"popularidad": 9,
+		"rating": "15, 13, 1, 7, 19, 3, 11, 17, 5, 9"
+	},
+	{
+		"nombre": "ligula. Donec",
+		"duracion": 76,
+		"autor": "Dolan Johnston",
+		"generos": "Hip-Hop",
+		"popularidad": 8,
+		"rating": "9, 19, 7, 13"
+	},
+	{
+		"nombre": "vulputate mauris",
+		"duracion": 105,
+		"autor": "Harriet Morton",
+		"generos": "Soul Pop Rock",
+		"popularidad": 6,
+		"rating": 19
+	},
+	{
+		"nombre": "at",
+		"duracion": 43,
+		"autor": "Jaquelyn Valencia",
+		"generos": "Jazz Blues",
+		"popularidad": 0,
+		"rating": "19, 1"
+	},
+	{
+		"nombre": "tellus. Phasellus",
+		"duracion": 28,
+		"autor": "Lillith Weber",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 3,
+		"rating": "15, 1, 19, 7, 11, 17, 5"
+	},
+	{
+		"nombre": "imperdiet",
+		"duracion": 145,
+		"autor": "Kathleen Jacobs",
+		"generos": "Pop Rock",
+		"popularidad": 9,
+		"rating": "11, 7, 19, 15, 3, 9, 13"
+	},
+	{
+		"nombre": "enim, sit",
+		"duracion": 36,
+		"autor": "Giacomo Mclean",
+		"generos": "Rock Country",
+		"popularidad": 1,
+		"rating": "3, 15, 19, 13, 17"
+	},
+	{
+		"nombre": "auctor",
+		"duracion": 72,
+		"autor": "Ciara Pennington",
+		"generos": "Blues Góspel",
+		"popularidad": 2,
+		"rating": "15, 9, 5, 19, 11, 1, 13, 3, 17, 7"
+	},
+	{
+		"nombre": "adipiscing lacus.",
+		"duracion": 124,
+		"autor": "Jarrod Conrad",
+		"generos": "Góspel Soul",
+		"popularidad": 8,
+		"rating": "17, 7, 3"
+	},
+	{
+		"nombre": "Nulla facilisis. Suspendisse",
+		"duracion": 28,
+		"autor": "Alvin Glass",
+		"generos": "Country",
+		"popularidad": 7,
+		"rating": "15, 7"
+	},
+	{
+		"nombre": "dolor.",
+		"duracion": 65,
+		"autor": "Destiny Patel",
+		"generos": "Soul Pop Rock",
+		"popularidad": 6,
+		"rating": "7, 11, 1, 9, 17, 3, 15, 19, 5"
+	},
+	{
+		"nombre": "orci, consectetuer",
+		"duracion": 42,
+		"autor": "Gannon Lang",
+		"generos": "Góspel Soul",
+		"popularidad": 5,
+		"rating": "5, 17, 19, 15, 3, 11, 13, 9"
+	},
+	{
+		"nombre": "cursus a,",
+		"duracion": 28,
+		"autor": "Burke Potter",
+		"generos": "Disco Techno Hip-Hop",
+		"popularidad": 3,
+		"rating": "19, 1, 15, 11, 13, 5, 3"
+	},
+	{
+		"nombre": "faucibus orci",
+		"duracion": 173,
+		"autor": "Elijah Romero",
+		"generos": "Pop Rock",
+		"popularidad": 2,
+		"rating": "17, 19, 9, 7, 15, 3, 5, 13, 11, 1"
+	},
+	{
+		"nombre": "faucibus lectus,",
+		"duracion": 68,
+		"autor": "Reese Sims",
+		"generos": "Jazz Blues Góspel",
+		"popularidad": 6,
+		"rating": "15, 11, 17, 19, 5, 9, 1"
+	},
+	{
+		"nombre": "Donec at",
+		"duracion": 34,
+		"autor": "Regan Schwartz",
+		"generos": "Pop",
+		"popularidad": 10,
+		"rating": "17, 5, 1, 7, 3, 19, 9"
+	},
+	{
+		"nombre": "enim. Nunc",
+		"duracion": 4,
+		"autor": "Stephen Sharpe",
+		"generos": "Rock",
+		"popularidad": 7,
+		"rating": "1, 9, 13, 17, 15, 5, 3"
+	},
+	{
+		"nombre": "ligula. Donec luctus",
+		"duracion": 17,
+		"autor": "Zeus Ball",
+		"generos": "Jazz Blues Góspel",
+		"popularidad": 2,
+		"rating": "19, 3, 1, 7, 5, 15, 9"
+	},
+	{
+		"nombre": "scelerisque dui. Suspendisse",
+		"duracion": 172,
+		"autor": "Chaim Mathis",
+		"generos": "Clásica",
+		"popularidad": 1,
+		"rating": "15, 11, 17, 19, 7"
+	},
+	{
+		"nombre": "malesuada",
+		"duracion": 150,
+		"autor": "Arthur Sharpe",
+		"generos": "Country Disco",
+		"popularidad": 8,
+		"rating": "9, 15"
+	},
+	{
+		"nombre": "mauris sagittis",
+		"duracion": 90,
+		"autor": "Vernon Duke",
+		"generos": "Jazz Blues Góspel",
+		"popularidad": 8,
+		"rating": "1, 9, 13, 17, 15"
+	},
+	{
+		"nombre": "ultrices. Vivamus rhoncus.",
+		"duracion": 97,
+		"autor": "Sara Crane",
+		"generos": "Country Disco",
+		"popularidad": 7,
+		"rating": "9, 5, 11, 7, 17, 3, 13, 1"
+	},
+	{
+		"nombre": "malesuada vel, convallis",
+		"duracion": 87,
+		"autor": "Nehru Brady",
+		"generos": "Rock Country",
+		"popularidad": 9,
+		"rating": "11, 3, 15, 7, 9"
+	},
+	{
+		"nombre": "venenatis a,",
+		"duracion": 114,
+		"autor": "Kelsie Oneil",
+		"generos": "Blues",
+		"popularidad": 1,
+		"rating": "1, 3, 15, 19, 13, 11, 9, 17, 7"
+	},
+	{
+		"nombre": "Pellentesque tincidunt",
+		"duracion": 128,
+		"autor": "Nolan Mcdowell",
+		"generos": "Góspel Soul",
+		"popularidad": 4,
+		"rating": "3, 9, 15, 17, 7"
+	},
+	{
+		"nombre": "Sed eget lacus.",
+		"duracion": 138,
+		"autor": "Lana Dickson",
+		"generos": "Soul Pop",
+		"popularidad": 6,
+		"rating": 15
+	},
+	{
+		"nombre": "Duis ac arcu.",
+		"duracion": 34,
+		"autor": "Caldwell Foley",
+		"generos": "Hip-Hop Metal",
+		"popularidad": 8,
+		"rating": "19, 15, 1, 17, 7, 11, 5, 13, 9"
+	},
+	{
+		"nombre": "Nunc mauris",
+		"duracion": 44,
+		"autor": "Hayden Everett",
+		"generos": "Techno Hip-Hop",
+		"popularidad": 10,
+		"rating": "9, 5, 15, 17"
+	},
+	{
+		"nombre": "tempus",
+		"duracion": 144,
+		"autor": "Christopher Payne",
+		"generos": "Soul Pop Rock",
+		"popularidad": 5,
+		"rating": "9, 5, 3, 7, 11, 15, 17"
+	},
+	{
+		"nombre": "imperdiet dictum",
+		"duracion": 69,
+		"autor": "Macon Reyes",
+		"generos": "Soul Pop",
+		"popularidad": 1,
+		"rating": "3, 19, 17, 15, 1"
+	},
+	{
+		"nombre": "tincidunt orci quis",
+		"duracion": 55,
+		"autor": "Sylvester Livingston",
+		"generos": "Clásica Jazz",
+		"popularidad": 6,
+		"rating": "3, 7, 11"
+	},
+	{
+		"nombre": "porta elit, a",
+		"duracion": 15,
+		"autor": "Aimee Gilbert",
+		"generos": "Rock Country Disco",
+		"popularidad": 3,
+		"rating": "5, 1"
+	},
+	{
+		"nombre": "dictum eu,",
+		"duracion": 114,
+		"autor": "Maia Casey",
+		"generos": "Rock Country",
+		"popularidad": 5,
+		"rating": "17, 13, 15, 11, 5"
+	},
+	{
+		"nombre": "diam eu",
+		"duracion": 108,
+		"autor": "Imogene Oliver",
+		"generos": "Techno",
+		"popularidad": 0,
+		"rating": "3, 11, 1"
+	},
+	{
+		"nombre": "vulputate, risus",
+		"duracion": 156,
+		"autor": "Dolan Foley",
+		"generos": "Country Disco",
+		"popularidad": 4,
+		"rating": "13, 17"
+	},
+	{
+		"nombre": "mauris. Integer",
+		"duracion": 105,
+		"autor": "Kibo Morrison",
+		"generos": "Blues Góspel",
+		"popularidad": 4,
+		"rating": "17, 19, 7, 3, 5"
+	},
+	{
+		"nombre": "diam vel arcu.",
+		"duracion": 3,
+		"autor": "Shay Roach",
+		"generos": "Country Disco",
+		"popularidad": 0,
+		"rating": "3, 15, 5, 19, 1"
+	},
+	{
+		"nombre": "sed",
+		"duracion": 143,
+		"autor": "Tanya Harmon",
+		"generos": "Hip-Hop",
+		"popularidad": 5,
+		"rating": "19, 11, 1, 7, 15, 17, 5, 13"
+	},
+	{
+		"nombre": "quis",
+		"duracion": 34,
+		"autor": "Allen Nicholson",
+		"generos": "Soul Pop",
+		"popularidad": 8,
+		"rating": "9, 3, 19, 13, 1, 7"
+	},
+	{
+		"nombre": "non lorem vitae",
+		"duracion": 73,
+		"autor": "Heidi Haley",
+		"generos": "Techno",
+		"popularidad": 3,
+		"rating": "11, 15"
+	},
+	{
+		"nombre": "at risus. Nunc",
+		"duracion": 26,
+		"autor": "Mason Kennedy",
+		"generos": "Disco Techno",
+		"popularidad": 9,
+		"rating": "19, 1"
+	},
+	{
+		"nombre": "elementum, dui",
+		"duracion": 141,
+		"autor": "Zena Rodriquez",
+		"generos": "Rock Country Disco",
+		"popularidad": 3,
+		"rating": "5, 15, 9, 11, 7, 17, 1, 13, 19, 3"
+	},
+	{
+		"nombre": "consequat purus.",
+		"duracion": 43,
+		"autor": "Noel Ayers",
+		"generos": "Góspel Soul",
+		"popularidad": 3,
+		"rating": "5, 11, 7, 15, 17, 1, 19, 3, 9"
+	},
+	{
+		"nombre": "interdum libero dui",
+		"duracion": 151,
+		"autor": "Marsden Clark",
+		"generos": "Pop",
+		"popularidad": 6,
+		"rating": "9, 5, 15, 17, 11, 7, 19, 3, 13, 1"
+	},
+	{
+		"nombre": "cubilia Curae",
+		"duracion": 9,
+		"autor": "Emerson Bird",
+		"generos": "Country Disco",
+		"popularidad": 4,
+		"rating": "3, 11, 13, 1, 5, 19, 9, 15"
+	},
+	{
+		"nombre": "justo eu arcu.",
+		"duracion": 83,
+		"autor": "Nelle Harrell",
+		"generos": "Jazz Blues Góspel",
+		"popularidad": 6,
+		"rating": "5, 17, 19, 7, 3, 11, 9, 1"
+	},
+	{
+		"nombre": "Maecenas malesuada",
+		"duracion": 153,
+		"autor": "Harrison Kinney",
+		"generos": "Country Disco Techno",
+		"popularidad": 10,
+		"rating": "15, 19"
+	},
+	{
+		"nombre": "quis, pede.",
+		"duracion": 157,
+		"autor": "Noel Macdonald",
+		"generos": "Rock",
+		"popularidad": 7,
+		"rating": "11, 7, 15"
+	},
+	{
+		"nombre": "vehicula. Pellentesque tincidunt",
+		"duracion": 81,
+		"autor": "Wyoming Strong",
+		"generos": "Disco Techno",
+		"popularidad": 5,
+		"rating": "3, 13, 17, 15, 7, 11"
+	},
+	{
+		"nombre": "fringilla est.",
+		"duracion": 89,
+		"autor": "Victor Weiss",
+		"generos": "Soul Pop",
+		"popularidad": 5,
+		"rating": "1, 7, 17"
+	},
+	{
+		"nombre": "in",
+		"duracion": 49,
+		"autor": "Alexa Fuentes",
+		"generos": "Country Disco",
+		"popularidad": 1,
+		"rating": "17, 15, 3, 11, 7, 1, 13, 9"
+	},
+	{
+		"nombre": "erat vitae",
+		"duracion": 124,
+		"autor": "Nicole Dillon",
+		"generos": "Blues Góspel",
+		"popularidad": 8,
+		"rating": "17, 5, 9, 7, 3, 15, 11"
+	},
+	{
+		"nombre": "Vivamus",
+		"duracion": 61,
+		"autor": "Germaine Walters",
+		"generos": "Góspel",
+		"popularidad": 4,
+		"rating": "7, 17, 15"
+	},
+	{
+		"nombre": "vitae risus. Duis",
+		"duracion": 142,
+		"autor": "Bert Estes",
+		"generos": "Soul Pop Rock",
+		"popularidad": 6,
+		"rating": "3, 11, 5, 7, 15"
+	},
+	{
+		"nombre": "ornare,",
+		"duracion": 123,
+		"autor": "Karyn Bullock",
+		"generos": "Góspel Soul",
+		"popularidad": 3,
+		"rating": "15, 19, 5, 3, 17, 7"
+	},
+	{
+		"nombre": "natoque",
+		"duracion": 106,
+		"autor": "Fiona Fuller",
+		"generos": "Hip-Hop Metal",
+		"popularidad": 1,
+		"rating": "11, 13"
+	},
+	{
+		"nombre": "odio tristique",
+		"duracion": 15,
+		"autor": "Jeremy Henson",
+		"generos": "Soul Pop",
+		"popularidad": 4,
+		"rating": "13, 3, 5, 9"
+	},
+	{
+		"nombre": "neque sed dictum",
+		"duracion": 107,
+		"autor": "Jamalia Riley",
+		"generos": "Soul Pop Rock",
+		"popularidad": 6,
+		"rating": "17, 9, 1"
 	}
 ]
 
@@ -7717,8 +8177,18 @@ for reproduccion in reproducciones:
     reproduccion["usuario"] = usuario
     reproduccion["cancion"] = cancion["nombre"]
 
+for cancion in canciones:
+	if isinstance(cancion["rating"], int):
+		cancion["rating"] = [cancion["rating"]]
+	else:
+		rating = cancion["rating"].split(", ")
+	cancion["rating"] = rating
+
 
 with open('reproducciones_final.json', 'w') as file:
     json.dump(reproducciones, file, indent=4)
     file.close
 
+with open('canciones_final.json', 'w') as file:
+	json.dump(canciones, file, indent=4)
+	file.close

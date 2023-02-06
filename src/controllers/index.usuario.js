@@ -104,8 +104,34 @@ const getArtist = async (req,res) => {
 
 }
 
+const updatePassword = async (req,res) => {
+    try{
+        MongoClient.connect(uri, { useNewUrlParser: true }, async (err, client) => {
+            if (err) throw err
+            const db = client.db('SpotyStats')
+            const users = db.collection('users')
 
+
+            console.log*(req.body.nombre , " ", req.body.nuevap)
+            const contra = await users.updateOne( { "nombre": req.body.nombre }, { $set: { "password": req.body.nuevap } })
+            res.json(contra)
+        
+        })
+    }
+    catch (e){
+      console.log("ERROR")
+
+      res.json({
+          message:'Error en cambio de password',
+          error: e
+      })
+  }
+  finally {
+      // Ensures that the client will close when you finish/error
+      await client.close();
+    }
+}
 
 module.exports = {
-    getUsers,getArtist,createUser
+    getUsers,getArtist,createUser,updatePassword
 }
