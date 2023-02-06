@@ -7,18 +7,49 @@ const client_id = "3e5c97ca35184e2e907593dce6277b70"
 const client_secret = "508c63883dfc48f2a4988c39154a3d9e "
 const redirect_uri = "http://localhost:5000/callback"
 
-/*
-const userSchema = yup.object().shape({
-    email: yup.string().required(),
-    password: yup.string().required(),
-    nombre: yup.string().required(),
-    apellido: yup.string().notRequired(),
-    seguidores: yup.number().notRequired(),
-    nombre_artisitco: yup.string().notRequired(),
-    cantidad_canciones: yup.number().notRequired(),
-    generos: yup.array().of(yup.string()).required()
-});
-*/
+
+const getRegiones = async (req, res) => {
+    try{
+        MongoClient.connect(uri, { useNewUrlParser: true }, async (err, client) => {
+            const database = client.db('SpotyStats')
+
+            const reproducciones = database.collection('reproducciones')
+
+            const regiones = await reproducciones.aggregate(
+                [
+                    {
+                      $group:
+                        {
+                          _id: "$usuario.region",
+                          canciones: {
+                            $sum: 1,
+                          },
+                        },
+                    },
+                    {
+                      $project:
+                        {
+                          _id: 1,
+                        },
+                    },
+                  ]
+            )
+
+            regiones.toArray((err, data) => {
+                if (err) {
+                    console.error(err)
+                    res.status(500).send(err)
+                } else {
+                    console.log(data)
+                    res.send(data)
+                }
+                client.close()
+            })
+        })
+    }
+    catch (e) {
+    }
+}
 
 const topRegion = async (req, res) => {
     try{
@@ -31,44 +62,47 @@ const topRegion = async (req, res) => {
             const aggregateResult = await reproducciones.aggregate(
                 [
                     {
-                    $project:
+                      $project:
                         {
-                        _id: "$cancion",
-                        region: "$usuario.pais",
-                        continente: "$usuario.continente",
-                        tiempo_reproducido: "$tiempo_reproducido",
+                          _id: "$cancion",
+                          pais: "$usuario.pais",
+                          region: "$usuario.region",
+                          tiempo_reproducido: "$tiempo_reproducido",
                         },
                     },
                     {
-                    $sort:
+                      $sort:
                         {
-                        tiempo_reproducido: -1,
+                          tiempo_reproducido: -1,
                         },
                     },
                     {
-                    $group:
+                      $group:
                         {
-                        _id: {region : "$region", continente: "$continente"},
-                        canciones: {
+                          _id: {
+                            pais: "$pais",
+                            region: "$region",
+                          },
+                          canciones: {
                             $push: {
-                            cancion: "$_id",
-                            tiempo: {
+                              cancion: "$_id",
+                              tiempo: {
                                 $sum: "$tiempo_reproducido",
+                              },
                             },
-                            },
-                        },
+                          },
                         },
                     },
                     {
-                    $project:
+                      $project:
                         {
-                        _id: "$_id",
-                        canciones: {
+                          _id: "$_id",
+                          canciones: {
                             $slice: ["$canciones", 10],
-                        },
+                          },
                         },
                     },
-                ]
+                  ]
             )
             aggregateResult.toArray((err, data) => {
                 if (err) {
@@ -193,9 +227,109 @@ const getCanciones = async (req,res) => {
 }
 
 
+const topGenero = async (req, res) => {
+    try{
+        MongoClient.connect(uri, { useNewUrlParser: true }, async (err, client) => {
+            const database = client.db('SpotyStats')
+
+            const reproducciones = database.collection('reproducciones')
+
+
+            const aggregateResult = await reproducciones.aggregate(
+                [
+                    {
+                      $lookup:
+                        {
+                          from: "canciones",
+                          localField: "cancion",
+                          foreignField: "nombre",
+                          as: "cancion",
+                        },
+                    },
+                    {
+                      $project:
+
+                        {
+                          _id: "$_id",
+                          tiempo_reproducido: "$tiempo_reproducido",
+                          cancion: {
+                            $arrayElemAt: ["$cancion", 0],
+                          },
+                        },
+                    },
+                    {
+                      $project:
+                        {
+                          _id: "$cancion.nombre",
+                          tiempo_reproducido: "$tiempo_reproducido",
+                          genero: {
+                            $split: ["$cancion.generos", " "],
+                          },
+                        },
+                    },
+                    {
+                      $unwind: "$genero",
+                    },
+                    {
+                      $sort:
+                        {
+                          tiempo_reproducido: -1,
+                        },
+                    },
+                    {
+                      $group:
+                        {
+                          _id: "$genero",
+                          canciones: {
+                            $push: {
+                              cancion: "$_id",
+                              tiempo: {
+                                $sum: "$tiempo_reproducido",
+                              },
+                            },
+                          },
+                        },
+                    },
+                    {
+                      $project:
+                        {
+                          _id: "$_id",
+                          canciones: {
+                            $slice: ["$canciones", 10],
+                          },
+                        },
+                    },
+                  ]
+            )
+            aggregateResult.toArray((err, data) => {
+                if (err) {
+                    console.error(err)
+                    res.status(500).send(err)
+                } else {
+                    console.log(data)
+                    res.send(data)
+                }
+                client.close()
+            })
+        })
+    }
+    catch (e) {
+        console.log("ERROR")
+
+        res.json({
+            message:'Error en topRegion',
+            error: e
+        })
+    }
+}
+
+
 
 
 module.exports = {
     refreshSongs,
-    topRegion
+    topRegion,
+    getRegiones,
+    topGenero
+
 }

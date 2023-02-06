@@ -2,7 +2,7 @@ const {Router} = require('express')
 const router = Router()
 const {getUsers,createUser,
     passwordCheck, updatePassword}= require("../controllers/index.usuario")
-const {refreshSongs, topRegion} = require("../controllers/index.canciones")
+const {refreshSongs, topRegion, getRegiones, topGenero} = require("../controllers/index.canciones")
 const {getReproductions,deleteReproductions, updateContinents} = require("../controllers/index.reproducciones")
 
 
@@ -16,6 +16,8 @@ router.delete('/reproductions/:id', deleteReproductions)
 router.put('/cambiop/', updatePassword)
 router.get('/topRegion/', topRegion)
 router.get('/actualizar/', updateContinents)
+router.get('/regiones/', getRegiones)
+router.get('/topGenero/', topGenero)
 //router.post('/login/:pass/:correo',passwordCheck)
 //router.get('/users/:correo',getUserByID)
 //router.post('/users',createUser)
