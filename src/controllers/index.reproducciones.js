@@ -224,6 +224,38 @@ const deleteReproductions = async (req,res) => {
         client.close();
     }
 }    
+
+const updateRepro = async (req,res) => {
+    try{
+        MongoClient.connect(uri, { useNewUrlParser: true }, async (err, client) => {
+            if (err) throw err
+            const db = client.db('SpotyStats')
+            const repro = db.collection('reproducciones')
+
+
+            console.log*(req.body.nombre , " ", req.body.nuevap)
+            const reprod = await repro.updateOne( { "nombre": req.body.nombre }, { $set: { "password": req.body.nuevap } })
+            res.json(reprod)
+        
+        })
+    }
+    catch (e){
+      console.log("ERROR")
+
+      res.json({
+          message:'Error en update reproduccion',
+          error: e
+      })
+  }
+  finally {
+      // Ensures that the client will close when you finish/error
+      await client.close();
+    }
+}
+
 module.exports = {
-    getReproductions,deleteReproductions,updateContinents
+    getReproductions,
+    deleteReproductions,
+    updateContinents,
+    updateRepro
 }

@@ -3,7 +3,7 @@ const router = Router()
 const {getUsers,createUser,
     passwordCheck, updatePassword}= require("../controllers/index.usuario")
 const {refreshSongs, topRegion, getRegiones, topGenero} = require("../controllers/index.canciones")
-const {getReproductions,deleteReproductions, updateContinents} = require("../controllers/index.reproducciones")
+const {getReproductions,deleteReproductions, updateContinents, updateRepro} = require("../controllers/index.reproducciones")
 
 
 // http://localhost:5000/
@@ -18,6 +18,7 @@ router.get('/topRegion/', topRegion)
 router.get('/actualizar/', updateContinents)
 router.get('/regiones/', getRegiones)
 router.get('/topGenero/', topGenero)
+router.put('/uploadR/', updateRepro)
 //router.post('/login/:pass/:correo',passwordCheck)
 //router.get('/users/:correo',getUserByID)
 //router.post('/users',createUser)

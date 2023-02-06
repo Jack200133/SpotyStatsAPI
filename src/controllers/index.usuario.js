@@ -78,7 +78,6 @@ const createUser = async (req,res) => {
     }
 }
 
-
 const getArtist = async (req,res) => {
     try {
         const database = client.db('SpotyStats')
