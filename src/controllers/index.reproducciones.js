@@ -233,8 +233,11 @@ const updateRepro = async (req,res) => {
             const repro = db.collection('reproducciones')
 
 
-            console.log*(req.body.nombre , " ", req.body.nuevap)
-            const reprod = await repro.updateOne( { "nombre": req.body.nombre }, { $set: { "password": req.body.nuevap } })
+            console.log(req.body.id , " ", req.body.nuevaedad, " ", req.body.nuevonombre)
+            console.log(req.body.nuevaedad)
+            const ObjectId = require('mongodb').ObjectId;
+            const id = ObjectId(req.body.id)
+            const reprod = await repro.updateOne( { _id: ObjectId(req.body.id) }, { $set: { "usuario.nombre": req.body.nuevonombre ,"usuario.edad" : req.body.nuevaedad} })
             res.json(reprod)
         
         })
