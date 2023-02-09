@@ -149,84 +149,6 @@ const refreshSongs = async (req, res) => {
     }
 }
 
-
-const createSong = async (req,res) => {
-    {
-        const user = {
-            email: req.body.email,
-            password: req.body.password,
-            nombre: req.body.nombre,
-            apellido: req.body.apellido,
-            seguidores: req.body.seguidores,
-            nombre_artisitco: req.body.nombre_artisitco,
-            cantidad_canciones: req.body.cantidad_canciones,
-            generos: req.body.generos
-        }
-        
-        const db = client.db("SpotyStats")
-        const collection = db.collection("users")
-    
-        collection.insertOne(user, (err, result) => {
-            if (err) throw err
-            res.send(user)
-            client.close()
-        })
-        
-    }
-}
-
-
-const getArtist = async (req,res) => {
-    try {
-        const database = client.db('SpotyStats')
-        const users = database.collection('users')
-
-        const user = await users.findMany()
-        console.log(user)
-        res.json(user)
-        
-      } 
-      catch (e){
-        console.log("ERROR")
-
-        res.json({
-            message:'Error en getArtist',
-            error: e
-        })
-    }
-    finally {
-        // Ensures that the client will close when you finish/error
-        await client.close();
-      }
-
-}
-
-const getCanciones = async (req,res) => {
-    try {
-        const database = client.db('SpotyStats')
-        const songs = database.collection('songs')
-
-        const song = await songs.findMany()
-        console.log(song)
-        res.json(song)
-        
-      } 
-      catch (e){
-        console.log("ERROR")
-
-        res.json({
-            message:'Error en getCanciones',
-            error: e
-        })
-    }
-    finally {
-        // Ensures that the client will close when you finish/error
-        await client.close();
-      }
-
-}
-
-
 const topGenero = async (req, res) => {
     try{
         MongoClient.connect(uri, { useNewUrlParser: true }, async (err, client) => {
@@ -323,6 +245,66 @@ const topGenero = async (req, res) => {
     }
 }
 
+const getCanciones = async (req,res) => {
+  try {
+
+      MongoClient.connect(uri, { useNewUrlParser: true }, async (err, client) => {
+          if (err) throw err
+          const db = client.db('SpotyStats')
+          const collection = db.collection('canciones')
+  
+          const query = {}
+          const sort = { length: -1 }
+          const limit = 5
+          const skip = parseInt(req.params.index)
+          console.log(skip)
+          collection.aggregate([
+            { $match: query },
+            { $sort: sort },
+            { $skip: skip },
+            { $limit: limit },
+            {
+              $addFields: {
+                rating_numbers: {
+                  $map: {
+                    input: "$rating",
+                    as: "rating",
+                    in: { $toInt: "$$rating" }
+                  }
+                }
+              }
+            },
+            {
+              $addFields: {
+                avg_rating: {
+                  $round: [{$avg: "$rating_numbers"},2]
+                }
+              }
+            }
+          ]).toArray((err, data) => {
+            if (err) {
+              res.status(500).send(err)
+            } else {
+              res.send(data)
+            }
+            client.close()
+          })
+        })
+
+    } 
+    catch (e){
+      console.log("ERROR")
+
+      res.json({
+          message:'Error en getCanciones',
+          error: e
+      })
+  }
+  finally {
+      // Ensures that the client will close when you finish/error
+      await client.close();
+    }
+}
 
 
 
@@ -330,6 +312,7 @@ module.exports = {
     refreshSongs,
     topRegion,
     getRegiones,
-    topGenero
+    topGenero,
+    getCanciones
 
 }
